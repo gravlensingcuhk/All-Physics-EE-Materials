@@ -1,0 +1,246 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=2.0cm]{geometry}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,array,multirow,longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{tcolorbox}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\un}[1]{\,\mathrm{#1}}
+\newtcolorbox{warn}{colback=red!4,colframe=red!60!black,boxrule=0.6pt,arc=2pt,left=4pt,right=4pt,top=3pt,bottom=3pt,fontupper=\small}
+\newtcolorbox{tip}{colback=green!4,colframe=green!45!black,boxrule=0.6pt,arc=2pt,left=4pt,right=4pt,top=3pt,bottom=3pt,fontupper=\small}
+\newtcolorbox{why}{colback=blue!4,colframe=blue!50!black,boxrule=0.6pt,arc=2pt,left=4pt,right=4pt,top=3pt,bottom=3pt,fontupper=\small}
+
+\title{\vspace{-1.5cm}Experimental plan for the redo\\[2pt]\large Coupled magnetic--mechanical oscillator: one run of $8$ separations $\times$ $5$ trials}
+\author{}
+\date{Planning document --- numbers are \emph{predictions} from the first data set ($f_1=0.811\un{Hz}$, $C=2.08\times10^{-9}\un{m^5\,s^{-2}}$); they will be replaced by the measured values}
+
+\begin{document}
+\maketitle
+\vspace{-1.2cm}
+
+\section*{0. First: the Tracker screenshot}
+
+Your clip settings are \textbf{correct}: frame rate $240\un{s^{-1}}$, frame dt $=4.17\times10^{-3}\un{s}$, 4947 frames $\Rightarrow$ the clip is $4947\times0.00417=20.6\un{s}$ of real time. So the time base is right and the earlier ``11 beats in 6 s'' was simply 11 turning points (5.7 oscillations at $f_{\rm avg}\approx0.94\un{Hz}$) and about $1.4$ beats. Nothing was wrong with the frame rate; the 40 mm outlier of the first run comes from the record being shorter than three beat periods (see \S3).
+
+\section{What is measured and why}
+
+\begin{center}\small
+\begin{tabular}{@{}p{3.5cm}p{4.9cm}p{7.2cm}@{}}
+\toprule
+quantity & how & used for\\
+\midrule
+$f_1,\ f_2$ at each $d$ & FFT of $x_1(t)$ and $x_2(t)$ from Tracker; also FFT of $x_1\!+\!x_2$ and $x_1\!-\!x_2$ & main graph $\ln(f_2^2-f_1^2)$ vs $\ln d$ (gradient $-5$); $f_{\rm avg}$, $f_{\rm beat}$\\
+$d$ (centre to centre) & $d=g+t$: gap $g$ between magnet faces (digital calliper / photo with scale) $+$ magnet thickness $t$ & independent variable\\
+$f_a,\ f_b$ & each spring plucked alone (other magnet removed) & identical-spring check, detuned model, gives $k/m$\\
+$k$ & static load--deflection graph (\S6) & absolute test of $C$; non-linear model\\
+$M,\ \mu L$ & balance & effective mass $m=M+\tfrac{33}{140}\mu L$, cross-check of $m=k/\omega_1^2$\\
+$L,\ b,\ h$ & ruler / calliper / micrometer & $k=Ebh^3/4L^3-(1.2M+0.375\mu L)g/L$ cross-check (gravity term, \S2); Rayleigh factor\\
+magnet $D,\ t,\ B_{\rm r}$ or $\mu_{\rm m}$ & calliper; data sheet or pull-force / Hall probe & $\mu_{\rm m}\approx B_{\rm r}V/\mu_0$, finite-size correction\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{why}
+\textbf{Why $f_2^2-f_1^2$.} Subtracting the two mode results $\omega_1^2=k/m$, $\omega_2^2=(k+2\gamma)/m$ removes $k$: $f_2^2-f_1^2=\gamma/2\pi^2m=Cd^{-5}$. The \emph{exponent} therefore needs only frequencies and $d$; $k$, $m$ and $\mu_{\rm m}$ are needed only for the absolute value of $C$. Angular frequencies are not required anywhere ($\omega=2\pi f$ cancels in every ratio), so the FFT frequencies can be used directly; convert to $\omega$ only if you want to quote $k/m=\omega_1^2$.
+\end{why}
+
+\section{Apparatus and set-up}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=2pt]
+\item \textbf{Base and clamps.} Non-magnetic base (wood/aluminium), two clamps. Mark the base with a mm scale or fix a steel rule \emph{behind the plane of the magnets} (out of the plane, so it does not attract them).
+\item \textbf{Springs.} Two strips from the same stock (same $b$ and $h$ --- check $h$ with a micrometer, $k\propto h^3$), same free length $L$ above the clamp jaws. Which of your lengths to use is decided by the \emph{single-spring frequency} $f_a$, not by $L$ itself --- see ``Which spring length'' on p.~\pageref{box:length}. Measure $L$ from the top of the jaw to the \emph{centre of the magnet}; write down $L$ before every session because re-clamping changes it.
+\item \textbf{Magnets.} Glue (or double-sided tape) each magnet flat on the \emph{inner face} of the strip with its centre a few mm below the tip, like poles facing. It does \emph{not} have to be exactly at the very tip --- what matters is that (i) both are at the same height, (ii) the strip length is quoted to the magnet centre, (iii) the position never changes between runs. Put a small high-contrast dot (white marker / sticker) on the visible side of each magnet: this is what Tracker follows.
+\item \textbf{Alignment.} Magnets coaxial: same height ($\pm1\un{mm}$), same depth from the camera, faces parallel. Check by eye from above and from the front.
+\item \textbf{Camera.} Phone on a tripod, lens at the height of the magnets, $\ge0.8\un{m}$ away and \emph{square} to the plane of motion (parallax otherwise turns a straight motion into a curved one). Zoom until the two magnets plus $\approx30\un{mm}$ on either side fill the frame width. Fix focus and exposure (tap and hold). Bright, even light; no flicker (LED/daylight, avoid old fluorescent tubes at 240 fps).
+\item \textbf{Scale.} A ruler in the plane of the magnets, visible in every video (calibration stick in Tracker). Since $d$ is measured with a calliper this scale only sets the mm/pixel factor for amplitudes.
+\end{enumerate}
+
+\begin{warn}
+\textbf{Things that silently ruin a run:} magnets glued at different heights (they stop being coaxial and $F$ is no longer along $x$); a steel rule, steel clamp screw or the phone's own magnet within a few cm of the magnets; the clamps loosening between trials ($f_1$ drifts --- re-measure the ``Infinity'' frequency at the end of the session); camera not square to the motion.
+\end{warn}
+
+\subsection*{Which spring length?}\label{box:length}
+The magnets do not care about $L$; they care about how stiff each strip is compared with the magnetic stiffness, i.e.\ about the \emph{frequency of one spring alone with its magnet}, $f_a$. Every prediction in this plan depends on $f_a$ only, so choose the strip by $f_a$: attach one magnet temporarily (Blu-Tack of the same mass is good enough), clamp the candidate strip, time 10 swings with a stopwatch, $f_a=10/t_{10}$. Remember that only the \emph{free} length above the jaws counts --- a long strip can always be clamped shorter (the excess sits below the jaw), so any two strips of the same thickness that are at least as long as the target length make a pair; what you cannot fix afterwards is a thickness difference. Same magnets as in run~1 and the ladder of \S3, this is what each $f_a$ buys you:
+\begin{center}\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccclcccc@{}}
+\toprule
+$f_a$ / Hz & \begin{tabular}[c]{@{}c@{}}$t_{10}$\\ / s\end{tabular} & \begin{tabular}[c]{@{}c@{}}$f_2-f_1$\\ at 23 mm\end{tabular} & \begin{tabular}[c]{@{}c@{}}$f_2-f_1$\\ at 44 mm\end{tabular} & \begin{tabular}[c]{@{}c@{}}records / s\\ for $d=23\ldots44\un{mm}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}video\\ total\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\delta$\\ at 23 mm\end{tabular} & \begin{tabular}[c]{@{}c@{}}lean\\ per $1^\circ$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$2\gamma/k$\\ at 23 mm\end{tabular}\\
+\midrule
+0.50 & 20.0 & 0.257 Hz & 12.5 mHz & 60/60/60/60/60/100/160/250 & 68 min & 3.7 mm & 17 mm & 1.29\\
+\textbf{0.60} & \textbf{16.7} & 0.227 Hz & 10.4 mHz & 60/60/60/60/80/120/180/290 & 76 min & 2.6 mm & 12 mm & 0.90\\
+\textbf{0.70} & \textbf{14.3} & 0.202 Hz & 9.0 mHz & 60/60/60/60/90/140/210/340 & 85 min & 1.9 mm & 9 mm & 0.66\\
+0.81 (run~1) & 12.3 & 0.179 Hz & 7.7 mHz & 60/60/60/60/100/160/250/400 & 96 min & 1.4 mm & 7 mm & 0.49\\
+1.00 & 10.0 & 0.150 Hz & 6.3 mHz & 60/60/60/80/120/190/300/480 & 112 min & 0.9 mm & 4 mm & 0.32\\
+1.20 & 8.3 & 0.128 Hz & 5.2 mHz & 60/60/60/90/140/230/360/580 & 132 min & 0.6 mm & 3 mm & 0.22\\
+\bottomrule
+\end{tabular}
+\end{center}
+(records $=\max(60\un{s},\,3T_{\rm beat})$ rounded up to 10 s; ``video total'' is for 5 trials; ``lean'' is the sideways displacement of a tip when the base is tilted by $1^\circ$ (both tips move together, so $d$ is unaffected --- it is a measure of floppiness); $C$ taken as unchanged --- the same magnets on a slightly longer strip change $m$ by $\le3\,\%$.)
+
+\textbf{Recommendation: the strip whose $f_a$ is $0.6$--$0.7\un{Hz}$ (10 swings in 14--17 s), i.e.\ somewhat softer than in run~1.} Softer means the magnetic stiffness is a larger fraction of the spring stiffness, so $f_2-f_1$ grows at \emph{every} $d$ (by 15--30\,\%), the second peak at 40--44 mm is resolved with shorter records (76--85 min of video instead of 96), and $2\gamma/k$ at the closest point approaches 1 --- a strong, obviously non-trivial coupling --- while the linear model still holds for $A=5\un{mm}$ (the non-linear shift of $f_2$ at 23 mm for $A=5\un{mm}$ stays $\approx1.3\,\%$; it is set mainly by $A/d$). Do not go below $f_a\approx0.55\un{Hz}$: the static bend $\delta$ passes 3 mm (raises $d_{\min}$, magnets visibly splayed), a $1^\circ$ tilt of the base leans the tips by more than 12 mm, and the strip is close to buckling (box below). Stiffer strips ($f_a\ge1\un{Hz}$) are safe but need 8--10 min records at 44 mm and show a smaller effect everywhere. If none of your lengths lands in the window, take the one nearest to it from above (0.7--0.85 Hz) rather than a floppy one.
+
+\begin{why}
+\textbf{Why frequency rather than length is the right label: gravity.} A vertical strip carrying a magnet is an inverted pendulum. When the strip bends, the magnet and the strip's own weight move sideways \emph{and down}, so gravity feeds energy into the bend and \emph{reduces} the restoring stiffness. With the tip-load shape used in the essay,
+\[k_{\rm eff}=k-\frac{g}{L}\bigl(1.2\,M+0.375\,m_{\rm s}\bigr),\qquad k=\frac{Ebh^3}{4L^3},\quad m_{\rm s}=\mu L\ \text{(mass of the free strip)},\]
+(setting $k_{\rm eff}=0$ reproduces the Euler buckling load $\pi^2EI/4L^2$ to about 1\,\%). How big is it? $\omega_a^2=k_{\rm eff}/m=26\un{s^{-2}}$ for $f_a=0.81\un{Hz}$, whereas the gravity term divided by $m=M+\frac{33}{140}m_{\rm s}$ lies between $1.2\,g/L$ and $1.5\,g/L$ whatever the split between magnet and strip mass, i.e.\ $40$--$75\un{s^{-2}}$ for $L=0.2$--$0.3\un{m}$. It does not depend on $E$, $b$ or $h$: for any copper strip that swings at $0.8\un{Hz}$ with its magnet, gravity cancels \emph{60--75\,\%} of the elastic stiffness --- the strip already carries 60--75\,\% of its Euler buckling load. You can see this with a stopwatch: without gravity a $10\,\%$ longer strip would swing $13\,\%$ slower ($f\propto L^{-3/2}$); here you will find it 30--50\,\% slower. Consequences: (i) near the working point $f_a\propto L^{-3}$ to $L^{-4}$, so the strip you want is probably only $\approx5\,\%$ longer than the old one, and $15\,\%$ longer may already be floppy; measure $f_a$, do not calculate it. (ii) ``Identical'' springs must be \emph{tuned}: a $0.3\,\%$ difference in $L$ ($0.6\un{mm}$ on $200\un{mm}$) or $0.2\,\%$ in $h$ changes $f_a$ by $\approx1\,\%$. Cut both strips from the same stock, then slide one of them in its clamp by fractions of a millimetre until $f_a$ and $f_b$ agree to better than $1\,\%$ (the detuned model in the essay covers the remainder). (iii) $k$ must be measured with the strip \emph{vertical} and the magnet on (\S6); a horizontal strip gives the elastic $k$, which can be 2--3 times larger. Nothing else in the theory changes: $k_{\rm eff}$ simply replaces $k$ everywhere, because it is what $F=k\delta$, $\omega_1^2=k/m$ and the load--deflection graph all measure --- only the formula $k=Ebh^3/4L^3$ in the essay (\S5.1 and the $k$ cross-check) needs the gravity term added, and the equal-spring condition becomes a tuning step.
+\end{why}
+
+\section{Separations, amplitude and record length}
+
+\subsection*{Which separations}
+Choose them roughly \emph{evenly spaced in $\ln d$} (equal steps on the log--log graph), covering the largest range in which the second peak can still be resolved in a practical record. Eight values:
+\begin{center}\small
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+$d$ / mm (target) & 23 & 25 & 27.5 & 30 & 33 & 36.5 & 40 & 44\\
+predicted $f_2$ / Hz & 0.990 & 0.933 & 0.889 & 0.862 & 0.843 & 0.831 & 0.823 & 0.819\\
+predicted $f_2-f_1$ / Hz & 0.18 & 0.12 & 0.078 & 0.051 & 0.032 & 0.020 & 0.012 & 0.008\\
+predicted $T_{\rm beat}$ / s & 5.6 & 8.2 & 13 & 20 & 31 & 51 & 81 & 129\\
+minimum ($3T_{\rm beat}$) / s & 17 & 25 & 39 & 59 & 93 & 153 & 242 & 388\\
+\textbf{record length} / s & \textbf{60} & \textbf{60} & \textbf{60} & \textbf{60} & \textbf{100} & \textbf{160} & \textbf{250} & \textbf{400}\\
+frames at 240 fps & 14400 & 14400 & 14400 & 14400 & 24000 & 38400 & 60000 & 96000\\
+static outward bend $\delta$ / mm & 1.4 & 1.0 & 0.7 & 0.5 & 0.3 & 0.2 & 0.15 & 0.1\\
+\bottomrule
+\end{tabular}
+\end{center}
+All predictions in this table are for $f_a=0.81\un{Hz}$ (run 1). With the recommended softer strip ($f_a\approx0.6$--$0.7\un{Hz}$, \S2) $f_2-f_1$ is 15--30\,\% larger everywhere and the last four records shorten to 80--90, 120--140, 180--210 and 290--340 s (table in \S2); the rule is always $T\ge3T_{\rm beat}$, so after the first video at each $d$ count the swellings and lengthen the record if there are fewer than three. The smallest value is set by the clamp width: with the clamps touching, $d_{\min}=$ clamp width $+2\delta$; if that is $23$--$24\un{mm}$, start there. The exact values do not matter (you cannot set $d$ precisely anyway because the springs bend outwards by $\delta$ when the second magnet is mounted): set the clamps, \emph{then measure $d$ as it is}. Do not go below $d\approx2D$ ($D$ = magnet diameter; dipole approximation) or below $g\approx8\un{mm}$. Steps of $\approx9\,\%$ in $d$ give equal spacing on the log--log graph; if the clamps only allow $d_{\min}\approx26\un{mm}$, shift the whole ladder: 26, 28, 30.5, 33, 36, 39.5, 43, 47 mm (last record $\approx8\un{min}$).
+
+\begin{tip}
+\textbf{One trick to reach smaller $d$ if you want it.} The clamps limit the \emph{clamp} spacing $d_0$, not $d$. Mount the magnets on the \emph{inner} faces (already planned) and, if the clamp jaws are wide, offset each strip towards the inner edge of its jaw. Alternatively clamp the two strips in one wide clamp with a spacer block between them: $d_0=$ spacer $+\,h$.
+\end{tip}
+
+\begin{tip}
+\textbf{Ladder order.} Do the eight separations in \emph{random} order, not from small to large, and mark the clamp positions on the base so that a spoiled point can be repeated. Move only clamp~2 to change $d$; clamp~1, the camera and the amplitude stop then stay where they are. One trial of each $d$ first, then the remaining four --- if something is wrong you find out after 8 videos, not 40.
+\end{tip}
+
+\subsection*{Release amplitude}
+Pull spring 1 \emph{outwards} (away from spring 2) by $A=5\un{mm}$ at the magnet, against a stop or a mark (below), hold still for $\approx2\un{s}$ (spring~2 settles), release. Same $A$ in every trial: $A$ is a controlled variable because the non-linear force shifts $f_2$ by an amount that depends on the amplitude:
+\begin{center}\small
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+$d$ / mm & 23 & 25 & 27.5 & 30 & 33 & 36.5 & 40 & 44\\
+$f_2$ shift, $A=5\un{mm}$ & $+1.4\,\%$ & $+1.1\,\%$ & $+0.8\,\%$ & $+0.5\,\%$ & $+0.3\,\%$ & $+0.2\,\%$ & $+0.1\,\%$ & $+0.05\,\%$\\
+$f_2$ shift, $A=10\un{mm}$ & $+5.1\,\%$ & $+4.4\,\%$ & $+3.2\,\%$ & $+2.2\,\%$ & $+1.3\,\%$ & $+0.7\,\%$ & $+0.4\,\%$ & $+0.2\,\%$\\
+\bottomrule
+\end{tabular}
+\end{center}
+(anti-phase mode with separation swing $\pm A$; simulated with the full $r^{-4}$ force). $A=5\un{mm}$ keeps this at or below the FFT uncertainty except at the two closest points, while still giving $\approx100$ pixels of motion if the frame width is $\approx120\un{mm}$; the residual shift is exactly what the non-linear model in the evaluation predicts, so it becomes a test rather than an error. Why outwards: pulling apart lowers the repulsion during the hold, so spring~2 is not pushed off-axis and the magnets can never touch.
+
+\paragraph{How to pull by 5 mm without Tracker.} Tracker is never needed \emph{during} the session: it is run once, afterwards, on the 40 clips, and if the tripod is not moved a single calibration stick and set of axes serve all clips (analyse the first clip, save the \texttt{.trk}, then \textsf{File $\triangleright$ Import $\triangleright$ Tracker file} to bring the calibration and axes into each new clip). Nor should you measure the gap between the two tips while pulling --- spring~2 follows spring~1 by $x_{20}=A\gamma/(k+\gamma)$ ($\approx1\un{mm}$ at $23\un{mm}$, $\approx0.1\un{mm}$ at $44\un{mm}$), so the tip-to-tip distance grows by more than $A$ and by a different amount at each $d$. Reference spring~1 to the base instead:
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt]
+\item \textbf{Recommended: a stop set once per separation with a 5 mm gauge.} Fix a small post on the base outside spring 1, at magnet height (a bolt in a slotted bracket, a block on Blu-Tack, or a wooden dowel in a clip --- anything non-magnetic that you can slide and fix). After the clamps are set and both springs are at rest, lock a calliper at $5.00\un{mm}$ and use its inside jaws (or a $5\un{mm}$ drill shank / stack of card measured with the calliper) as a gauge: hold it against the outer face of strip 1, push the post up to the gauge, fix the post, remove the gauge. Time: 20 s, once per $d$ (the rest position of strip 1 shifts by at most $1.4\un{mm}$ between separations because $\delta$ changes, so the post must be re-set each time $d$ changes, but not between trials). Every trial is then: pull strip 1 against the post with two fingertips, hold 2 s, open the fingers. $A$ is identical for the five trials to $\pm0.1\un{mm}$ with nothing to read or aim at. After release the strip can never reach the post again: its outward excursion is bounded by $A$ (energy argument --- the initial state is the one with all the energy in the springs) and damping plus the imperfect re-alignment of the two modes keep the closest return a few tenths of a millimetre short, arriving at zero velocity. Check the first clip at $23\un{mm}$ anyway (closest return, at the first beat maximum) and glue a scrap of felt on the post face if you ever see a tap.
+\item \textbf{Alternative: two pencil marks.} A card fixed behind magnet~1 (in the plane of the tracked dot) with a mm scale or two marks 5 mm apart; note the rest reading once per $d$, pull until the dot is at rest $-5$. Sighting error $\approx0.5\un{mm}$ ($10\,\%$ of $A$) is harmless: $A$ affects only the peak heights and the small non-linear shift ($\propto A^2$: $\pm10\,\%$ in $A$ moves $f_2$ at $23\un{mm}$ by $\pm0.3\,\%$, less elsewhere), never $f_1$.
+\item Pull \emph{at the magnet height}, not half-way down the strip (so the strip shape is the static tip-load curve assumed by the theory), and pull with fingertips on the outer face so that the release is an opening of the fingers, never a push.
+\item The actual $A$ of every trial comes free with the analysis --- it is the first maximum of $x_1(t)$ after release --- and is what you report in the data table; the stop or the marks only guide your hand.
+\end{itemize}
+
+\subsection*{Frame rate and record length}
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt]
+\item \textbf{240 fps for all runs is fine as a controlled variable} (the Tracker settings shown are correct). In Tracker use \textbf{step size 4} (effective 60 fps, still 60 points per oscillation) --- it does not lose information and makes autotracking four times faster. Check that your phone can record 240 fps continuously for $5\un{min}$ (some phones cap slow-motion clips at $1$--$3\un{min}$); if not, record the two longest separations at $60\un{fps}$ (step size 1) --- frame rate has no effect on frequency resolution, only $T$ has.
+\item \textbf{Record length does not need to be constant.} It sets the frequency resolution $\approx1/T$, not the frequency. Rule: $T\ge3T_{\rm beat}$ (three swellings) so that the two peaks are separated; the table above applies it with a margin (60 s minimum, which also gives a uniform $1/T=0.017\un{Hz}$ bin for the four closest points). Quote $T$ per $d$ in the data table.
+\item Start the camera, wait $3\un{s}$ (rest frames for the equilibrium position), pull, hold $2\un{s}$, release, keep recording for the time in the table. The analysed window starts $\approx1\un{s}$ after release.
+\end{itemize}
+
+\begin{figure}[!tb]\centering
+\includegraphics[width=0.92\textwidth]{design_plot.pdf}
+\caption{(a) Predicted mode frequencies at the chosen separations. (b) Beat period, the ``three beats'' minimum, and the recommended record length. A 30 s clip resolves the two peaks only up to $d\approx26\un{mm}$; that is why 40 mm was an outlier in the first run.}
+\end{figure}
+
+\begin{figure}[!tb]\centering
+\includegraphics[width=0.72\textwidth]{beats_vs_oscillations.png}
+\caption{One \emph{beat} is one swelling of the envelope ($T_{\rm beat}=1/(f_2-f_1)$), not one swing. Six seconds at $d=21\un{mm}$ contain 5.7 oscillations (11 turning points) but only 1.4 beats, and the FFT of such a record shows a single merged peak.}
+\end{figure}
+
+\section{The measurement session --- step by step (8 separations $\times$ 5 trials)}
+
+\subsection*{Once per session}
+\begin{enumerate}[leftmargin=1.6em,itemsep=1pt]
+\item Photograph the set-up with the ruler; note date, room temperature, camera model, fps, distance camera--springs, which strip is ``spring 1'' (mark them with tape; they are never swapped).
+\item Measure $L$ (jaw to magnet centre), $b$, $h$ (micrometer, 5 places along the strip), magnet $D$ and $t$, mass $M$ of each magnet with its glue/dot (weigh before gluing, or weigh identical spares), mass of a measured length of strip ($\mu$).
+\item \textbf{Tune the pair.} With the magnets far apart, time 10 swings of each spring with a stopwatch; if the periods differ by more than $1\,\%$, slide the faster (stiffer) strip a fraction of a millimetre \emph{up} in its clamp (or the slower one down) and repeat until they agree; then tighten fully and re-measure $L$. Because of gravity (\S2) $f_a$ is very sensitive to $L$, so this takes a few iterations but only minutes.
+\item \textbf{``Infinity'' videos}: remove magnet 2 (or move spring 2 $>150\un{mm}$ away), pull spring 1 by $5\un{mm}$, record $30\un{s}$; three trials. Same for spring 2 alone. Repeat at the \emph{end} of the session to detect drift.
+\end{enumerate}
+
+\subsection*{Per separation (repeat for the 8 values, random order)}
+\begin{enumerate}[leftmargin=1.6em,itemsep=1pt]
+\item Move clamp 2 to the target spacing (clamp 1 stays); tighten; wait until both springs are at rest.
+\item Measure the gap $g$ between magnet faces at rest with a calliper (three readings, do not touch the magnets) or from a photo against the ruler; $d=g+t$.
+\item Set the amplitude stop: calliper locked at $5.00\un{mm}$ against the outer face of strip 1, slide the post up to it, fix, remove the calliper (\S3).
+\item Camera on, $3\un{s}$ rest, pull strip 1 outwards against the stop, hold $2\un{s}$, release cleanly (open the fingers, do not push), record for the time in the table, stop. Do \emph{not} touch the base while recording.
+\item Repeat five times. Between trials wait until both springs are still ($30$--$60\un{s}$; at large $d$ the beat is slow and residual motion of spring 2 changes the initial condition).
+\item Name files \texttt{d23\_t1.mp4} \dots; keep a log line: file, $g$, $d$, $T$, anything unusual (hand touched, strip tapped the stop, wobble, draught).
+\end{enumerate}
+
+\subsection*{More things to watch}
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt]
+\item \textbf{Both springs at rest before every trial} --- at $d=40$--$44\un{mm}$ the energy swaps back and forth for minutes; a residual $0.5\un{mm}$ motion of spring 2 changes the mode amplitudes (not the frequencies, but it spoils the peak-ratio test). Damp them by touching both magnets briefly with a finger, then wait 10 s.
+\item \textbf{Hold time} $\approx2\un{s}$, the same every trial: spring 2 needs $\sim1$ s to settle to $x_{20}$ after you pull.
+\item \textbf{Don't let the phone sleep / auto-stop.} Long clips: disable auto-lock, check storage ($240$ fps $\approx1\un{GB/min}$ on many phones), and verify after each of the long runs that the file really contains the whole time.
+\item \textbf{Light flicker}: at 240 fps mains-powered lamps produce a 100 Hz brightness ripple that confuses autotracking. Use daylight or a battery lamp, and a matt background.
+\item \textbf{Temperature}: do all 40 videos in one session (Young's modulus and remanence both drift $\sim0.1\,\%$/K); note the room temperature at the start and end.
+\item \textbf{Clamp creep}: after the session re-record the ``Infinity'' videos. If $f_1$ moved by more than $0.5\,\%$, treat the drift as a systematic error (interpolate linearly in time between the two calibrations).
+\item \textbf{Keep the dots}: the tracked dot must not be repainted or moved between trials; if a magnet is knocked, re-measure $g$.
+\item \textbf{Tripod and camera}: don't touch the tripod during recording; use the volume button/remote or a 3 s timer to start; lock focus and exposure.
+\end{itemize}
+
+\subsection*{Release with a burnt thread instead of fingers?}
+Not needed here. The thread-and-flame release is for \emph{vertical} pendulums where a hand disturbs the plane; for a leaf spring pulled sideways by $5\un{mm}$, letting go with two fingertips gives a clean start, and the analysis window begins $1\un{s}$ later anyway. A thread would also have to be tied at the magnet, exactly where you track. If you prefer a mechanical release, a small wooden wedge pulled away horizontally works.
+
+\section{Instead of a second run: the data-processing comparison}
+
+Repeating the whole grid is not needed if the first run already follows the rules above; the ``method development'' can be done entirely in the analysis, on the same tracks, and it is worth more marks than a second identical run because it isolates the effect of each analysis choice. For every video compute $f_1$, $f_2$ with:
+\begin{enumerate}[leftmargin=1.6em,itemsep=1pt]
+\item \textbf{Rectangular window, full record} --- the naive FFT; peak positions from the highest bin. Expected uncertainty $\pm\tfrac12\cdot1/T$.
+\item \textbf{Rectangular window, first 30 s only} --- reproduces the first run's problem at large $d$ (peaks merge); shows why $T$ matters.
+\item \textbf{Hann window + zero padding} ($N_{\rm FFT}\ge2^{18}$) --- suppresses leakage between the two peaks; peak from the interpolated maximum; uncertainty $\approx0.1/T$ for a clean peak.
+\item \textbf{Normal coordinates} $x_A+x_B$ (only $f_1$) and $x_A-x_B$ (only $f_2$) --- no resolution problem; requires identical springs, so its disagreement with method 3 is itself a measurement of the detuning.
+\item \textbf{Two-tone least-squares fit} $x=a\cos(2\pi f_1t+\phi_1)+b\cos(2\pi f_2t+\phi_2)$ (optionally $\times e^{-t/\tau}$) --- model-based, sharpest, and gives $a/b$ and $\tau$ directly.
+\end{enumerate}
+Present one table per method (8 rows of mean $\pm$ SD over 5 trials), the resulting ln--ln gradient for each, and the comparison with the theoretical resolution $1/T$; then adopt method 3 (or 4) for the main result and explain why. This replaces ``run 2'' in the write-up, and the amplitude effect (\S3) becomes the non-linear model test in the evaluation.
+
+\section{Static stiffness $k$ (needed once; do it after the videos)}
+
+Two things to get right. (a) The stiffness that enters the theory is $k_{\rm eff}$ of the \emph{vertical} strip \emph{with its magnet on} (gravity term, \S2): do not lay the base on its side. (b) The forces are tiny. For $f_a\approx0.7\un{Hz}$ and a moving mass of $3$--$10\un{g}$, $k_{\rm eff}=m\omega_a^2\approx0.06$--$0.2\un{N\,m^{-1}}$: a $1\un{g}$ mass hung horizontally over a pulley would pull the tip $5$--$15\un{cm}$. Slotted masses are useless here, and pulley friction ($\sim$mN) is comparable with the loads. Use one of these instead:
+\begin{enumerate}[leftmargin=1.6em,itemsep=1pt]
+\item \textbf{Tilt method (recommended, friction-free, 10 min).} Remove magnet~2 (or move spring~2 far away). Tilt the whole base by a small angle $\theta$ about an axis parallel to the strips' faces, so that gravity has a component along $x$: raise one edge of the base on shims of known thickness (calliper; coins, card), $\theta=\arctan(\text{rise}/\text{base width})$ --- a $1\un{mm}$ shim under a $300\un{mm}$ base is $0.19^\circ$, far finer than a phone spirit level. Photograph the tip against the ruler at $\theta=0$ and four or five shim heights on each side, keeping the tip deflection below $10\un{mm}$ (expect $8$--$13\un{mm}$ per degree for the softer strip, so $\theta\lesssim0.8^\circ$). The ruler must be fixed to the base, so that tilting does not move the zero. The generalised force for the tip-load shape is $F=g\sin\theta\,(M+0.375\,\mu L)$; $k_{\rm eff}$ is the gradient of $F$ against tip deflection $x$. Both signs of $\theta$ cancel any zero offset.
+\item \textbf{Horizontal thread, tiny loads.} If a very free pulley (or a thread over a smooth glass rod) is available, use loads of $0.1$--$1\un{g}$ --- paper squares or wire pieces weighed on a $0.01\un{g}$ balance --- with the thread attached at the magnet centre, horizontal, loading and unloading.
+\item \textbf{Dynamic check.} Add known masses $\Delta m=0.5,1,2\un{g}$ (weighed Blu-Tack) at the magnet and measure $f_a$ each time. With gravity, $(2\pi f_a)^2(m+\Delta m)=k_{\rm eff}-1.2\,g\,\Delta m/L$: plotting the left side against $\Delta m$ (with $m=M+\frac{33}{140}\mu L$ from the balance) gives $k_{\rm eff}$ as the intercept and tests the gravity coefficient through the gradient.
+\end{enumerate}
+Keep $x\le10\un{mm}$ (linear region). Then compare $m_{\rm eff}=k_{\rm eff}/(2\pi f_a)^2$ with $M+\frac{33}{140}\mu L$, and $k_{\rm eff}$ with $Ebh^3/4L^3-(1.2M+0.375\mu L)g/L$.
+
+\textit{Moment of inertia} is not needed: the magnet is treated as a point mass moving with the tip; its rotation contributes $\tfrac12 I\dot\theta^2$ with $\theta\approx1.5x/L$, i.e.\ a fraction $\sim(I/M)(1.5/L)^2\sim(D/L)^2/10\lesssim10^{-3}$ of the kinetic energy. Mention it as a negligible correction, do not measure it.
+
+\section{Data processing checklist}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=1pt]
+\item Tracker: Clip Settings as in the screenshot (240 fps), start frame $\approx1\un{s}$ after release, step size 4; calibration stick; axes with origin on the dot of magnet 1 in a rest frame, $x$ horizontal; point mass A on magnet 1, point mass B on magnet 2 (autotracker); export \texttt{t, x\_A, x\_B} as text.
+\item Python: subtract the mean of each track, then the five methods of \S5; beat period from the envelope; peak-height ratios $r_1$, $r_2$ (identical-spring test); actual $A$ from the first maximum.
+\item Per $d$: mean and standard deviation of the 5 trials (random error), compared with the FFT uncertainty (systematic floor); take the larger.
+\item Graphs: $f_1,f_2$ vs $d$; $\ln(f_2^2-f_1^2)$ vs $\ln d$ with weighted fit (gradient vs $-5$); $f_{\rm avg}$ and $f_{\rm beat}$ vs $d$; residuals; then the non-linear and finite-size models in the evaluation.
+\end{enumerate}
+
+\needspace{14\baselineskip}
+\section*{Summary card (print and keep at the bench)}
+\begin{center}\small
+\begin{tabular}{@{}lp{13.5cm}@{}}
+\toprule
+fps & 240, step size 4 in Tracker (60 fps if the phone cannot hold 240 for 5 min)\\
+spring & the length whose single-spring $f_a$ is $0.6$--$0.7\un{Hz}$ (10 swings in 14--17 s); tune $f_a=f_b$ to $<1\,\%$ by sliding one strip in its clamp\\
+release & spring 1 pulled \textbf{outwards} against the stop (set once per $d$ with the calliper locked at 5.00 mm), hold 2 s, open the fingertips\\
+$d$ & set clamps, then \emph{measure} $g$ with calliper, $d=g+t$; 3 readings\\
+record & 3 s rest before pull; then 60, 60, 60, 60, 100, 160, 250, 400 s for $d\approx23$, 25, 27.5, 30, 33, 36.5, 40, 44 mm\\
+ & (for $f_a=0.81\un{Hz}$; with the softer strip 80--90, 120--140, 180--210, 290--340 s for the last four); always $\ge3$ swellings\\
+trials & 5 per $d$, random order of $d$; wait until still between trials\\
+also & ``Infinity'' (each spring alone) $3\times30$ s at start and end; photo of set-up; $L,b,h,M,\mu,D,t$; $k_{\rm eff}$ by the tilt method (strip vertical, magnet on)\\
+never & steel/phone near the magnets; touching the base or tripod during a recording; changing $L$, the dots or the magnet positions during the session\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{document}

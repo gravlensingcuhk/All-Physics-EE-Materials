@@ -1,0 +1,188 @@
+\section{Evaluation}\label{sec:evaluation}
+
+Each sub-section below treats one source of error and ends with its \textbf{sign} (the direction in which it moves the gradient of Graph~1), its \textbf{size} for the conditions of this experiment, and its \textbf{remedy}. Table~\ref{tab:errsummary} at the end collects the results.
+
+\subsection{FFT resolution, leakage and peak pulling (measurement; assumption g)}\label{sec:fftres}
+
+\paragraph{Resolvability.} Table~\ref{tab:resolution} lists, for each separation, the measured peak spacing $f_2-f_1$, the number of bins it corresponds to at $T=30\un{s}$, and the minimum record length for the two peaks to be one bin apart (rectangular window) or two bins apart (Hann). At $21$--$28\un{mm}$ the peaks are $3$--$7$ bins apart and well resolved. At $31\un{mm}$ they are $2.2$ bins apart, at $35\un{mm}$ only $1.2$ bins, and at $40\un{mm}$ $0.3$ bins: the last is not resolvable in principle with a $30\un{s}$ record, and the two values listed for it in Table~\ref{tab:rawfreq} are the positions of a merged peak and its shoulder, not two frequencies. Beyond $40\un{mm}$ a record of $2$--$10$ minutes would be needed, longer than the oscillation lasts.
+
+\paragraph{Peak pulling.} To find out how much the overlapping lobes displace the peaks that \emph{are} resolved, synthetic records were generated with exactly the measured frequencies of each row, the measured decay time, the actual frame rate and record length, and a realistic amount of tracking noise, and then analysed with exactly the same procedure as the data (Appendix~\ref{app:code}, Part~A). The last six columns of Table~\ref{tab:resolution} give the error (recovered minus true) for each frequency. With the rectangular window at $T=30\un{s}$ the peaks are pushed \emph{apart} by $1$--$4\un{mHz}$ each, i.e.\ $f_2-f_1$ is overestimated by $2$--$8\un{mHz}$, rising with $d$; with the Hann window the errors are smaller at small $d$ but at $35\un{mm}$ the two four-bin-wide lobes overlap so much that the peaks are pulled by $13\un{mHz}$; at $40\un{mm}$ the Hann spectrum shows a single peak. With $T=90\un{s}$ all errors fall below $1$--$2\un{mHz}$ up to $40\un{mm}$. Figure~\ref{fig:resolution} shows the corresponding spectra.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Resolvability of the two peaks, and the peak-position errors (recovered $-$ true, in mHz) obtained by analysing synthetic two-tone records with the frequencies of each row ($\tau=25\un{s}$, $240\un{fps}$, $0.1\un{mm}$ rms tracking noise) with the same procedure as the data. `--' = only one peak found.}
+\label{tab:resolution}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}c c c cc cc cc cc@{}}
+\toprule
+$d$ & $f_2-f_1$ & bins & \multicolumn{2}{c}{$T_{\min}$ / s} & \multicolumn{2}{c}{$T=30$ s, rect} & \multicolumn{2}{c}{$T=30$ s, Hann} & \multicolumn{2}{c}{$T=90$ s, rect}\\
+/ mm & / Hz & at 30 s & rect & Hann & $\delta f_1$ & $\delta f_2$ & $\delta f_1$ & $\delta f_2$ & $\delta f_1$ & $\delta f_2$\\
+\midrule
+\tabinput{tables/tab_resolution}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{F_resolution}
+\caption{Synthetic two-tone spectra with the measured frequencies at $25$, $35$ and $40\un{mm}$ (dotted lines) for $T=30\un{s}$ (top, as in the experiment) and $T=90\un{s}$ (bottom), rectangular (red) and Hann (blue) windows; triangles mark the detected peaks. At $35\un{mm}$ the $30\un{s}$ Hann spectrum barely resolves the peaks and pulls them; at $40\un{mm}$ neither window resolves them.}
+\label{fig:resolution}
+\end{figure}
+
+\paragraph{Effect on the gradient.} A positive error in $f_2-f_1$ that grows with $d$ inflates $\Y$ most at the large-$d$ end and therefore makes the gradient of Graph~1 \emph{shallower}. The errors look small in absolute terms, but at $35\un{mm}$ an extra $8\un{mHz}$ on a spacing of $39\un{mHz}$ is a $20\,\%$ overestimate of $f_2-f_1$ and hence a $26\,\%$ overestimate of $\Y$, against $1\,\%$ at $21\un{mm}$. Subtracting the Table~\ref{tab:resolution} errors from the measured frequencies moves the measured gradient from $\ngradSix$ to $-4.14$; equivalently, in the synthetic test of Section~\ref{sec:simulation}, a system that obeys the dipole law exactly appears to have a gradient of $\ngradPullOnly$ when analysed with a $30\un{s}$ record and a rectangular window. The effect therefore has the right sign and accounts for roughly one third of the discrepancy, but not all of it. Its second consequence is the loss of every point beyond $35\un{mm}$, which halves the usable range of $\ln d$ and makes the gradient hostage to the two least reliable points. A third consequence concerns $f_1$: the pulling pushes $f_1$ \emph{down} by an amount that grows with $d$ (Table~\ref{tab:resolution}), so part of the observed fall of $f_1$ with $d$ ($21\un{mHz}$ between $21$ and $40\un{mm}$) is an analysis artefact; the simulation of the original procedure reproduces about $\noldFoneDrift\un{mHz}$ of it.
+
+\paragraph{Damping linewidth.} With $\tau\approx25\un{s}$ the intrinsic linewidth $\nlwAmp\un{Hz}$ (Section~\ref{sec:fftbackground}) is already comparable to $f_2-f_1$ at $35\un{mm}$ and larger than it at $40\un{mm}$. Lengthening the record therefore helps only up to $T\sim2\tau$; beyond $\sim40\un{mm}$ no spectral analysis of a single coordinate can separate the modes, however long the record. Escaping this limit requires either a different coordinate (Section~\ref{sec:further}, normal coordinates) or a different estimator (time-domain fitting).
+
+\paragraph{Sign, size, remedy.} \textbf{Sign:} shallower. \textbf{Size:} $+2$--$8\un{mHz}$ in $f_2-f_1$ at $T=30\un{s}$; gradient $-5.0\to\ngradPullOnly$; all points beyond $35\un{mm}$ lost. \textbf{Remedy:} $T\geq90\un{s}$; track both magnets and transform the normal coordinates; fit two damped sinusoids in the time domain (Section~\ref{sec:further}).
+
+\subsection{Amplitude non-linearity of the magnetic force (model; assumption b)}\label{sec:nonlinear}
+
+Equation~\eqref{eq:eom} kept only the first-order term of $F(d+u)$. The repulsive force $F\propto r^{-4}$ is convex: it rises more steeply when the magnets approach than it falls when they recede. Over a full anti-phase swing of amplitude $a$ the average restoring force is therefore \emph{larger} than the linear term $\gamma u$, so the effective stiffness of the anti-phase mode increases with amplitude. This is a \emph{hardening} non-linearity, and its consequence is that a finite-amplitude measurement \emph{over}estimates $f_2$.
+
+Quantitatively, expanding $F(d-\xi)-F(d)$ to third order in the anti-phase coordinate $\xi=x_1-x_2$ (Appendix~\ref{app:nonlinear}) gives the equation of motion
+\begin{equation}
+\ddot\xi+\omega_2^2\xi+\alpha\xi^2+\beta\xi^3=0,\qquad
+\alpha=\frac52\,\frac{g\,\omega_2^2}{d},\quad
+\beta=\frac{5\,g\,\omega_2^2}{d^2},\quad
+g\equiv\frac{f_2^2-f_1^2}{f_2^2},
+\label{eq:duffing}
+\end{equation}
+where $g$ is the fraction of the anti-phase stiffness that is magnetic. The standard perturbation result for the frequency of such an oscillator at amplitude $a$ \cite{landau} is
+\begin{equation}
+\frac{\Delta\omega}{\omega_2}=\left(\frac{3\beta}{8\omega_2^2}-\frac{5\alpha^2}{12\omega_2^4}\right)a^2
+=\left(\frac{a}{d}\right)^2\left(\frac{15g}{8}-\frac{125g^2}{48}\right)>0 .
+\label{eq:LL}
+\end{equation}
+For the release used here the anti-phase amplitude is close to the release displacement, $a=\xi_0\approx A=10\un{mm}$ (equation~\eqref{eq:solution}; the hold-and-release correction of equation~\eqref{eq:heights} reduces it by about $20\,\%$, which only weakens the shifts estimated below). At $d=21\un{mm}$, $g=0.40$ and $a/d=0.48$, giving $\Delta\omega/\omega_2=+7\,\%$; at $35\un{mm}$, $g=0.09$, $a/d=0.29$ and the shift is $+0.9\,\%$. Because $a/d$ is far from small at $21\un{mm}$ the perturbation series is not reliable there, so the full non-linear equations of motion were also integrated numerically (Section~\ref{sec:simulation}); the results, Table~\ref{tab:amplitude} and Figure~\ref{fig:amplitude}, confirm the sign and show that the true shift at $21\un{mm}$ is $+\nshiftTwentyOneAten\,\%$, somewhat larger than the perturbation estimate. The frequency shift measured in a real record is smaller than these initial values because the amplitude decays during the $30\un{s}$ record and the FFT peak represents an average; but the average is still positive.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Percentage increase of $f_2$ relative to its small-amplitude value, from numerical integration of the full dipole-force equations with the parameters of this experiment; last column: perturbation formula~\eqref{eq:LL} for $A=10\un{mm}$.}
+\label{tab:amplitude}
+\begin{tabular}{@{}c c cccccc c@{}}
+\toprule
+$d$ / mm & $f_2(A\to0)$ / Hz & $A=1$ & 2 & 3 & 5 & 7 & 10 mm & eq.~\eqref{eq:LL}, 10 mm\\
+\midrule
+\tabinput{tables/tab_amplitude}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{F_amplitude}
+\caption{Left: amplitude dependence of $f_2$ from the numerical integration (solid) and the perturbation formula (dashed). Right: the effect on Graph 1. Because the shift is largest at small $d$, a finite release amplitude makes the ln--ln line \emph{steeper}, not shallower: gradient $\ngradAthree$ for $A=3\un{mm}$, $\ngradAten$ for $A=10\un{mm}$.}
+\label{fig:amplitude}
+\end{figure}
+
+\paragraph{Effect on the gradient.} The overestimate of $f_2$ is largest at the \emph{small}-$d$ end, where $\Y$ is largest. It therefore lifts the left-hand end of Graph~1 and makes the gradient \emph{steeper}: $-5.00\to\ngradAten$ for $A=10\un{mm}$ in the simulation. This is the opposite of what is observed. The amplitude non-linearity therefore cannot explain the measured $-3.75$; on the contrary, the measured gradient, once corrected for it, would be even shallower, so the shallowing effects discussed next must be somewhat larger than the raw discrepancy suggests.
+
+\paragraph{Tilt of the magnets (assumption f).} A related consequence of finite amplitude is that the tip of a cantilever does not translate; it rotates by the tip slope $\theta\simeq3A/(2L)$ (Appendix~\ref{app:cantilever}), which for $A=10\un{mm}$ and $L=\TBM{150}\un{mm}$ is $\ntiltRad\un{rad}=\ntiltDeg^\circ$. The interaction energy of two dipoles at angles $\alpha_1,\alpha_2$ to their common axis is proportional to $3\cos\alpha_1\cos\alpha_2-\cos(\alpha_1-\alpha_2)$ (Appendix~\ref{app:dipole}); for the equal-and-opposite tilts of the anti-phase motion the factor $2$ of the coaxial case becomes $2-\theta^2$, a weakening of the magnetic stiffness by $\theta^2/2\approx0.5\,\%$ at the extreme of the swing (and $2-3\theta^2$, i.e.\ $1.5\,\%$, for the equal tilts of the in-phase motion, where the separation does not change and the effect is irrelevant). Averaged over a cycle and decaying with the amplitude, the effect on $\Y$ is a few tenths of a per cent and independent of $d$ to first order, so it does not affect the gradient. \textbf{Sign:} steeper (amplitude), negligible (tilt). \textbf{Size:} $f_2$ $+\nshiftTwentyOneAten\,\%$ at $21\un{mm}$, $+\nshiftThirtyFiveAten\,\%$ at $35\un{mm}$ for $A=10\un{mm}$; below $0.7\,\%$ everywhere for $A=3\un{mm}$. \textbf{Remedy:} release with $A\leq3\un{mm}$; analyse late (small-amplitude) segments of each record; extrapolate $f_2$ to zero amplitude (Section~\ref{sec:furtherdata}).
+
+\subsection{Finite size of the magnets (model; assumption a)}\label{sec:finite}
+
+The point-dipole force law is the leading term of an expansion in $D/d$. A real cylindrical magnet can be modelled exactly (for uniform magnetisation) by two uniformly ``charged'' discs of opposite sign, one on each flat face, whose surface pole density is $\pm B_r/\muz$ \cite{griffiths}; the force between two magnets is then the sum of the Coulomb-like forces between the four discs (Appendix~\ref{app:finite}). Two effects follow. First, the nearest faces of the two magnets are closer than the centres, and the farthest faces are farther away, so the force at a given $d$ differs from the dipole value. Second, and decisively, the charge on each face is spread over a disc of radius $D/2$: at separations comparable to $D$ much of the disc-to-disc force acts obliquely and partly cancels, so the axial force is \emph{weaker} than the point-dipole formula predicts, and the shortfall grows as $d$ decreases (Figure~\ref{fig:finite}, left).
+
+A force that is depressed below $d^{-4}$ at small $d$ has a magnetic stiffness $\gamma=-\dd F/\dd d$ that falls \emph{more slowly} than $d^{-5}$ over the measured range. The apparent gradient of $\ln\gamma$ against $\ln d$ over $21$--$35\un{mm}$, computed with this model, is given in Table~\ref{tab:finite} and Figure~\ref{fig:finite} (right) for several magnet sizes: $\nfsGradSix$ for a $6\un{mm}$ magnet, $\nfsGradTen$ for $10\un{mm}$, $\nfsGradFifteen$ for $15\un{mm}$ and $\nfsGradTwenty$ for $20\un{mm}$, nearly independent of the thickness $t$. The finite size of the magnets is therefore the one effect examined so far that has both the right \emph{sign} and a plausible \emph{size}: a magnet of diameter $\approx\TBM{D}\un{mm}$ \TBM{compare with the actual magnet} would account for essentially all of the discrepancy. The model also predicts a concave-down curvature of the ln--ln plot (the local gradient steepens towards $-5$ as $d$ grows), which is the pattern hinted at by the residuals in Figure~\ref{fig:G3}.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Apparent gradient of $\ln\gamma$ against $\ln d$ over $21$--$35\un{mm}$ for cylindrical magnets of diameter $D$ and thickness $t$, from the charged-disc model (Appendix~\ref{app:finite}). The point-dipole value is $-5$.}
+\label{tab:finite}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$D$ / mm & $t$ / mm & apparent gradient\\
+\midrule
+\tabinput{tables/tab_finite}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{F_finite_size}
+\caption{Finite-size effect. Left: ratio of the exact force between two uniformly magnetised cylinders (charged-disc model) to the point-dipole force, normalised at $65\un{mm}$; the grey band is the measured range. Right: apparent ln--ln gradient of the magnetic stiffness over $21$--$35\un{mm}$ against magnet diameter. A $20\un{mm}$ magnet reproduces the measured gradient exactly; the actual magnet size is \TBM{$D$}.}
+\label{fig:finite}
+\end{figure}
+
+\paragraph{Sign, size, remedy.} \textbf{Sign:} shallower. \textbf{Size:} gradient $-5\to\nfsGradSix$ ($D=6\un{mm}$) \ldots $\nfsGradTwenty$ ($D=20\un{mm}$) over $21$--$35\un{mm}$. \textbf{Remedy:} replace the point-dipole force by the finite-size force in the model (Section~\ref{sec:nonlinfit}), or measure at $d\gtrsim4D$ where the dipole law is accurate to a few per cent, which collides with the resolution problem of Section~\ref{sec:fftres} and forces the improvements of Section~\ref{sec:further}.
+
+\subsection{Non-identical springs (model; assumption c)}\label{sec:detuned}
+
+If the two springs have different uncoupled angular frequencies $\omega_a\neq\omega_b$ (because of small differences in $L$, $h$, clamping or magnet mass), the in-phase mode no longer leaves the coupling untouched. Solving the coupled equations with $k_a/m_a=\omega_a^2$, $k_b/m_b=\omega_b^2$ and equal masses (Appendix~\ref{app:detuned}) gives
+\begin{equation}
+\omega_{1,2}^2=\bar\omega^2+\kappa\mp\sqrt{\Delta^2+\kappa^2},\qquad
+\kappa=\frac{\gamma}{m},\quad
+\Delta=\frac{\omega_b^2-\omega_a^2}{2},\quad
+\bar\omega^2=\frac{\omega_a^2+\omega_b^2}{2},
+\label{eq:detuned}
+\end{equation}
+which reduces to \eqref{eq:modes} when $\Delta=0$. Two limits explain the observations. When the coupling is weak ($\kappa\ll\Delta$, large $d$), $\omega_1\to\omega_a$ and $\omega_2\to\omega_b$: the ``modes'' are just the two springs oscillating separately at their own frequencies, and $f_2^2-f_1^2$ saturates at $|f_b^2-f_a^2|$ instead of tending to zero. When the coupling is strong ($\kappa\gg\Delta$), $\omega_1^2\to\bar\omega^2$ from below, so \emph{$f_1$ rises as the magnets approach} and levels off at $\bar f$, while $\omega_2^2\to\bar\omega^2+2\kappa$ grows without bound. Squaring and subtracting the two roots of \eqref{eq:detuned} gives the modified test relation
+\begin{equation}
+\Y^2=\big(f_b^2-f_a^2\big)^2+\big(Cd^{-5}\big)^2 ,
+\label{eq:detunedY}
+\end{equation}
+so a ln--ln plot of $\Y$ is a straight line of gradient $-5$ only where $Cd^{-5}\gg|f_b^2-f_a^2|$, and flattens towards a horizontal asymptote at large $d$.
+
+Both predicted signatures are present in the data: $f_1$ rises from $0.802$ to $0.823\un{Hz}$ as $d$ falls, and the large-$d$ end of Graph~1 is flatter than the small-$d$ end. Fitting \eqref{eq:detuned} to all twelve resolved frequencies with $f_a$, $f_b$ and $C$ free (Figure~\ref{fig:detuned}) gives $f_a=\nfaFit\pm\nfaFitErr\un{Hz}$ and $f_b=\nfbFit\pm\nfbFitErr\un{Hz}$, a detuning of $7\,\%$; the fitted curve reproduces the drift of $f_1$ ($\ndetFoneLarge\to\ndetFoneSmall\un{Hz}$ against the observed $0.802\to0.823\un{Hz}$) and halves the residual sum of squares compared with the identical-spring dipole model ($\chi^2$ from $\nchiIdentical$ to $\nchiDetuned$ for the same number of points). The fit is not perfect, and a $7\,\%$ detuning is larger than expected from the construction tolerances, so this explanation must be checked directly by measuring $f_a$ and $f_b$ with each spring alone (Section~\ref{sec:further}); but it is the only mechanism identified that explains the drift of $f_1$. A second, independent check is already available in the beat records: for identical springs the ratio of the two peak heights must be the same in the spectra of spring~1 and spring~2 (Section~\ref{sec:modes}), whereas for detuned springs the in-phase mode shape tilts from $(1,1)$ to $(a_1,b_1)$ and the ratios differ by the factor $(a_1/b_1)^2$, with $a_1/b_1-b_1/a_1=2\Delta/\kappa$. In the record of Figure~\ref{fig:beats_example} the two ratios differ by about $10\,\%$, which corresponds to $|f_b-f_a|\approx0.01\un{Hz}$ (about $1\,\%$, spring~2 the stiffer)---much smaller than the $0.056\un{Hz}$ of the fit. \TBM{Recompute from the final records with \texttt{plot\_beats.py}, which prints $r_1$, $r_2$ and the implied $f_b-f_a$.} Taken together, the peak-height test suggests that detuning is real but too small to be the main cause of the shallow gradient.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{F_detuned}
+\caption{Non-identical springs. Left: $f_1$, $f_2$ data with the detuned model \eqref{eq:detuned} fitted ($f_a=\nfaFit$, $f_b=\nfbFit\un{Hz}$); the dotted lines are the fitted uncoupled frequencies. Right: the same model in the ln--ln plane: it follows the dipole line at small $d$ and bends towards the saturation value $\ln|f_b^2-f_a^2|$ at large $d$.}
+\label{fig:detuned}
+\end{figure}
+
+\paragraph{Sign, size, remedy.} \textbf{Sign:} shallower, increasingly so at large $d$; also produces the observed rise of $f_1$. \textbf{Size:} with $f_b-f_a=0.056\un{Hz}$, $\Y$ saturates at $\nYsatDetuned\un{Hz^2}$, which is already comparable to the measured $\Y$ at $35\un{mm}$. \textbf{Remedy:} measure $f_a$, $f_b$ directly and fit equation~\eqref{eq:detunedY} with them fixed; match the springs (trim $L$) so that $|f_b-f_a|<0.005\un{Hz}$.
+
+\subsection{Damping and other minor effects (assumptions d, e)}
+
+\paragraph{Damping.} Light damping lowers the frequency of an oscillator by a fraction $\tfrac12(1/2\omega\tau)^2$; with $\tau=25\un{s}$ and $\omega\approx5\un{s^{-1}}$ this is $10^{-5}$, utterly negligible. Damping matters only through its linewidth (Section~\ref{sec:fftres}). Eddy-current damping of the magnets by the copper strip is part of the measured $\tau$.
+
+\paragraph{Lumped mass.} The numerical comparison of the lumped model with the continuous beam (Appendix~\ref{app:cantilever}) gives an error in $\Y$ of $0.4\,\%$ for $M/\mu L=0.8$ and $1\,\%$ for $0.4$; the ratio here is \TBM{$M/\mu L=\ldots$}. Because the error is the same at every $d$ it changes $C$ slightly but not the gradient.
+
+\paragraph{Distance.} $\Delta d=0.5\un{mm}$ is $2.4\,\%$ of $21\un{mm}$ and enters $\Y$ five-fold, i.e.\ $12\,\%$; it is the dominant contribution to the horizontal error bars at small $d$ and a strong argument for reading $d$ from a calibrated video frame rather than with a rule. A \emph{systematic} error in $d$, such as measuring the gap $g$ instead of $g+t$, or setting the clamp separation before the magnets push the springs apart, would offset every $d$ by roughly the same amount. Table~\ref{tab:deflection} shows what the second mistake would have done: the outward deflection $2\delta$ calculated from the data ranges from $3.7\un{mm}$ at $21\un{mm}$ to $0.2\un{mm}$ at $40\un{mm}$, and plotting $\Y$ against the clamp separation $d-2\delta$ instead of the true $d$ would change the gradient from $\ngradSix$ to $\ngradSet$. Conversely, the fact that $d$ \emph{was} read at equilibrium means that this particular error is absent, but the size of the effect shows how sensitive the exponent is to the definition of $d$.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Static outward deflection $\delta$ of each spring, calculated from the measured frequencies ($\delta=\pi^2\Y d/2\omega_1^2$, Section~\ref{sec:remarks}), and the clamp separation that would have produced each $d$.}
+\label{tab:deflection}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$d$ / mm & $\Y$ / Hz$^2$ & $\delta$ / mm & $d+2\delta$ / mm & $2\delta/d$ / \%\\
+\midrule
+\tabinput{tables/tab_deflection}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Random errors}
+
+The random uncertainty of $\pm5\un{mHz}$ assigned to each frequency comes from the half-range of the three trials at each $d$, which reflects tracking noise, frame-timing jitter and the repeatability of the release and of $d$. With zero-padding and parabolic interpolation the bin-centring error is removed; tracking noise of $0.1\un{mm}$ rms on a $10\un{mm}$ oscillation sampled $7200$ times contributes well under $1\un{mHz}$. The random errors are therefore small compared with the systematic ones identified above, which is consistent with the smallness of the residual scatter about the (wrong) straight line of Graph~1.
+
+\subsection{Summary of systematic effects}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Systematic effects, their direction on the gradient of Graph 1, their size under the conditions of the original measurements, and the remedy applied in Sections~\ref{sec:further}--\ref{sec:simulation}.}
+\label{tab:errsummary}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.9cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}p{3.5cm}@{}}
+\toprule
+Effect & Type & Sign on gradient & Size (this experiment) & Remedy\\
+\midrule
+FFT resolution, peak pulling, linewidth & measurement (g) & shallower; large-$d$ points lost & $+2$ to $+8\un{mHz}$ in $f_2-f_1$ at $T=30\un{s}$; gradient $-5.0\to\ngradPullOnly$; nothing beyond 35\,mm & $T\geq90\un{s}$; normal-coordinate FFT; two-tone time-domain fit\\[2pt]
+Amplitude non-linearity (hardening) & model (b) & \emph{steeper} & $f_2$ $+\nshiftTwentyOneAten\,\%$ (21\,mm), $+\nshiftThirtyFiveAten\,\%$ (35\,mm) at $A=10\un{mm}$; gradient $-5.00\to\ngradAten$ & $A\leq3\un{mm}$; segment analysis; extrapolation to $a\to0$\\[2pt]
+Finite magnet size & model (a) & shallower & gradient $-5\to\nfsGradTen$ ($D=10\un{mm}$), $\nfsGradTwenty$ ($D=20\un{mm}$) & finite-size force in the fit; $d\gtrsim4D$\\[2pt]
+Non-identical springs & model (c) & shallower at large $d$; $f_1$ rises at small $d$ & $f_b-f_a\approx0.06\un{Hz}$ (fit); $\Y$ saturates at $\nYsatDetuned\un{Hz^2}$ & measure $f_a$, $f_b$; fit eq.~\eqref{eq:detunedY}; match springs\\[2pt]
+Tilt of magnets & model (f) & none (same at all $d$) & $<1\,\%$ of $\Y$ & $A\leq3\un{mm}$\\[2pt]
+Damping & model (e) & none & $10^{-5}$ shift; linewidth $\nlwAmp\un{Hz}$ & --\\[2pt]
+Lumped mass & model (d) & none & $<1\,\%$ of $C$ & --\\[2pt]
+Distance $d$ & random / systematic & random: none; offset: strongly shallower & $12\,\%$ of $\Y$ at 21\,mm per 0.5\,mm; a $2\delta$ offset would give $\ngradSet$ & video scale bar; define $d$ at equilibrium\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Two conclusions follow. The gradient of $-3.75$ is the combined result of at least three shallowing effects, finite magnet size, spring detuning and FFT peak pulling, partly masked by one steepening effect, the release amplitude. And none of them can be disentangled from the present data alone, because the same six points must serve to fix four or more parameters. The next sections therefore describe an improved measurement designed to separate them.

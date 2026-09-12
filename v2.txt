@@ -1,0 +1,740 @@
+
+--- PAGE 1 ---
+Physics Extended Essay — Detailed Structure Plan (v2)
+Investigation on the frequencies of oscillations of a coupled
+magnetic–mechanical oscillator
+Working document: Edwin’s skeleton + INTERNATIONAL’s evaluation loop
+•
+v2, revised and
+expanded
+September 8, 2026 — all placeholder numbers to be regenerated with your own inputs
+What is new or changed in v2 (compared with the previous plan)
+1. Word budget rebalanced to ≈3950 words (the old plan summed to ≈4250 — over the
+limit). Section 5–6 and 10–13 were trimmed; never shrink §10–13 at the expense of anything
+else.
+2. d is now defined unambiguously: record the face-to-face gap g (calipers) and the magnet
+thickness t, and use the centre-to-centre separation d = g + t everywhere. State this once in
+Variables and never mix the two.
+3. Per-spring dynamic calibration promoted to the primary way of fixing k/m: pluck each
+bare spring and use f =
+1
+2π
+p
+k/m. This removes E(T), the Rayleigh factor 33/140 and the
+lumped-mass approximation from the theory of f1; the static k becomes a cross-check. It
+also sharpens the detuning analysis of §10.4.
+4. FFT section: add an explicit detrend step (subtract the mean / remove the DC peak —
+the equilibrium offset of the magnets puts a peak at 0 Hz that leaks into the low-frequency
+region), and add horizontal error bars ∆(ln d) = ∆d/d, which are comparable to the vertical
+ones at small d.
+5. Magnet tilt / non-coaxiality listed explicitly as a quantified sub-effect of the nonlinear force
+(one-line estimate + RK4 check), instead of being implicit.
+6. Assessment-criteria map added (§8): every section is now tied to a criterion A–E.
+7. Suggested writing order added at the end of §6 (write the middle first, intro/conclusion
+last).
+8. Small additions: report reduced χ2 for each model fit; archive raw videos (not only Tracker
+exports) as authenticity evidence.
+Storyline (keep this on your wall)
+Two identical copper leaf springs with repelling magnets form two coupled oscillators. The
+in-phase mode (f1) should not feel the magnets; the anti-phase mode (f2) is stiffened by the
+magnetic coupling γ. Modelling the magnets as point dipoles gives
+f2
+2 −f2
+1 = 3µ0µ2
+m
+π3m d5 ,
+i.e. a d−5 power law. f1, f2 are measured by video tracking + FFT for d = 21–60 mm. The ln–ln
+gradient was −3.75 ± 0.19, f1 drifted by 2.6%, and points beyond 35 mm could not be resolved.
+The evaluation identifies four systematic effects (FFT resolution/leakage, amplitude-dependent
+non-linearity of the r−4 force, finite magnet size, non-identical springs). A modified method
+(normal-coordinate tracking, longer records, small release, time-domain two-tone fitting, non-
+linear least squares) plus an RK4 simulation of the full non-linear equations quantifies each
+effect and recovers the dipole law within its range of validity.
+1
+
+--- PAGE 2 ---
+Linearised dipole model
+f 2
+2 −f 2
+1
+= C d−5
+(ln–ln slope −5)
+Measured: −3.75 ± 0.19 (unweighted), −3.48 ± 0.24 (weighted);
+f1 drifts 2.6%; d
+≥
+40 mm unresolved
+Measurement errors
+FFT resolution ∆f = 1/T,
+leakage, bin centring, frame
+jitter, damping linewidth
+→§10.1, §11–12: longer T, win-
+dow study, detrend, two-tone fit
+Model errors
+amplitude nonlinearity of
+the r−4 force, finite magnet
+size, spring detuning, tilt
+→§10.2–10.5, §13: NLLS,
+RK4, exact finite-size force
+Outcome: each effect quantified with sign and size; exponent re-
+covered by the two-tone fit; dipole law accepted within its validity
+range (d ≳4D), with the finite-size model as the improved theory
+Figure 1: The logic of the essay as a flow chart: one prediction, one measurement, two families of
+error, one resolved conclusion.
+1
+Research question
+RQ. How does the equilibrium centre-to-centre separation d of the magnets in a coupled magnetic–
+mechanical oscillator affect its two normal-mode frequencies f1 and f2, and does the coupling term
+f2
+2 −f2
+1 follow the inverse-fifth-power law predicted by the magnetic-dipole model?
+Why this wording: it names the independent variable (d), the dependent variables (f1, f2),
+the derived quantity that is actually tested (f2
+2 −f2
+1 ) and the theoretical claim (d−5). Keep the title
+as it is; put the RQ in §1.3.
+Definition of d: record the face-to-face gap g with calipers and the magnet thickness t; the
+quantity used in every plot and formula is the centre-to-centre separation d = g + t. Decide this
+once, state it in Variables, and never mix the two conventions.
+2
+Mapping: Edwin’s structure →yours →INTERNATIONAL
+additions
+Word budget is for a 4000-word essay (equations, tables, captions, appendices and references do not
+count). Budget rebalanced to ≈3950 words to leave a safety margin. If you overrun, shrink §6.1
+and §9 first; never shrink §10–13.
+2
+
+--- PAGE 3 ---
+Edwin
+Yours (section title)
+Words
+1
+Introduc-
+tion
+§1
+1.1–1.3: system (done), modes
+& beats, motivation & RQ
+350
+2
+Qual-
+itative
+prediction
+§2
+§2
+70
+3
+Hypothe-
+sis
+§3
+§3 (quantitative: slope −5)
+50
+4
+Variable
+table
+§4
+§4 (table; FFT settings as con-
+trolled)
+60
+9
+Theoreti-
+cal model
+§9
+§5 (moved before methodology,
+as INTERNATIONAL does;
++§5.4 remarks)
+500
+5–7
+Method.,
+data
+col-
+lection,
+procedures
+§5–7
+§6: 6.1 FFT background, 6.2
+set-up, 6.3 data collection, 6.4
+procedures
+600
+8 Data
+§8
+§7 raw data (+ resolved? col-
+umn)
+180
+10 Processed
+data
+§10
+§8 analysis: table, ln–ln graph,
+Y vs d−5, f1 vs d, comparison
+420
+11
+Dis-
+cussion
+&
+conclusion
+§11
+§9 discussion (preliminary)
+230
+12
+Evalua-
+tion
+§12
+§10 evaluation: §10.1–10.5 sys-
+tematic, §10.6 random
+500
+–
+–
+§11 further methodology (IN-
+TERNATIONAL §11)
+200
+–
+–
+§12 further data & discussion
+(INTERNATIONAL §12–13)
+320
+–
+–
+§13 numerical simulation, RK4
+(INTERNATIONAL §14)
+250
+11.2, 13 Con-
+clusion,
+ex-
+tension
+§11.2, §13
+§14 conclusion & extensions
+220
+A–E Appen-
+dices
+A–E
+A–H (§9 of this plan)
+0
+3
+
+--- PAGE 4 ---
+Structure at a glance
+Edwin skeleton
+INTERNATIONAL addition
+v2 emphasis
+§1 Introduction (motivation paragraph from INTL §1.4)
+350
+§2 Qualitative prediction
+70
+§3 Hypothesis quantitative: slope = −5
+50
+§4 Variables — FFT settings as controlled variables
+60
+§5 Theoretical model (moved early; + INTL-style remarks §5.4)
+500
+§6 Methodology — §6.1 FFT background mirrors INTL §6.1
+600
+§7 Raw data (+ resolved? column, half-range uncertainty)
+180
+§8 Analysis: processed table, ln–ln graph, Y vs d−5, f1 vs d
+420
+§9 Discussion (preliminary) — hand over to evaluation
+230
+§10 Evaluation: systematic §10.1–10.5, random §10.6 (sign, size,
+remedy)
+500
+§11 Further methodology (INTL §11)
+200
+§12 Further data & discussion (INTL §12–13)
+320
+§13 Numerical simulation — RK4 of the full equations (INTL
+§14)
+250
+§14 Conclusion & extensions
+220
+Appendices A–H (derivations, propagation, code, extra tables)
+0
+Figure 2: The essay spine. Colours show where each section comes from; the italic numbers are word
+budgets.
+3
+Section-by-section content
+3.1
+1 Introduction
+1.2 Modes of oscillation and beats (≈150 words). Same ideas as Edwin’s 1.2 but for translational
+displacements x1, x2 of the magnets: in-phase mode (f1: magnets move together, separation constant,
+magnets “invisible”); anti-phase mode (f2: separation oscillates, magnetic force does work). Any
+release is a superposition, hence beats with favg = (f1 + f2)/2 and fbeat = (f2 −f1)/2. Include the
+identity
+4 favgfbeat = f2
+2 −f2
+1 ,
+(1)
+which ties your test quantity to Edwin’s average/beat language and explains why the beats vanish
+at large d (f2 →f1). Figure 2: your own sketch of the two modes (do not copy the IYPT slides).
+Figure 3: one of your own x(t) traces showing beats.
+1.3 Motivation & RQ (≈150 words). Origin: IYPT 2023 problem 6 “Magnetic Pendulums”
+(cite the problem statement); analogy to contactless/magnetically coupled resonators; personal angle
+(coupling can be tuned continuously by moving the springs, unlike a fixed spring). State the RQ.
+3.2
+2 Qualitative prediction
+&
+3 Hypothesis
+Repulsion ∝d−4, so the stiffness added to the anti-phase mode, γ = −dF/dd ∝d−5, collapses
+quickly with d: f2 →f1 and the beat period →∞; f1 stays constant.
+4
+
+--- PAGE 5 ---
+Hypothesis: f1 is independent of d; f2
+2 −f2
+1 ∝d−5, i.e. ln(f2
+2 −f2
+1 ) against ln d is a straight
+line of gradient −5.
+3.3
+4 Variables (table, Edwin style)
+Independent: d (centre-to-centre = g+t; magnets mounted, measured at equilibrium). Dependent:
+f1, f2 (hence f2
+2 −f2
+1 ). Controlled: same spring pair; clamped length L; clamp torque; same
+magnet pair and orientation; initial displacement (magnitude and which spring); release method;
+camera fps, resolution and distance; record length T; FFT settings (window, N, zero-padding) —
+INTERNATIONAL lists FFT settings as controlled variables, do the same. Uncontrolled: air
+currents; temperature (E of copper); residual clamp slip.
+3.4
+5 Theoretical model (≈500 words)
+5.1 Leaf spring as an oscillator. Cantilever tip stiffness k = 3EI/L3; effective mass m =
+M + 33
+140µL (Rayleigh), so ω2
+0 = k/m (derivation in Appendix A, or cite). One sentence: the Euler–
+Bernoulli continuum model of the IYPT slides reduces to this for a heavy tip mass; a finite-element
+check shows < 1% difference in f2
+2 −f2
+1 for M/(µL) ≥0.4 (numbers in §10). Recommended (v2):
+do not rely on E at all — pluck each bare spring and use f =
+1
+2π
+p
+k/m to fix k/m for that spring
+directly. The static load–deflection measurement then only cross-checks k, and the temperature
+dependence of E, the Rayleigh factor and the lumped approximation all drop out of the final theory
+of f1.
+5.2 Magnetic force. Coaxial identical dipoles, like poles facing (from F = ∇(µ · B), Appendix
+B):
+F(r) = 3µ0µ2
+m
+2πr4
+(repulsive).
+(2)
+Equilibrium: springs bend outward by δ with kδ = F(d). You measure d directly, so the IYPT
+quintic for the equilibrium point is not needed — say so.
+5.3 Linearised coupling and normal modes. F(d + x2 −x1) ≈F(d) −γ (x2 −x1) with
+γ = −F ′(d) = 6µ0µ2
+m
+πd5 .
+(3)
+Equations of motion (x1, x2 positive in the same lab direction, cf. Fig. 4; m = effective oscillator
+mass, M = magnet mass, µm = magnetisation moment, µ = linear density):
+m¨x1 = −kx1 + γ (x2 −x1),
+m¨x2 = −kx2 −γ (x2 −x1).
+(4)
+Normal coordinates η = x1 + x2, ξ = x1 −x2 (matrix form exactly like Edwin’s eqs. 12–15):
+ω2
+1 = k
+m,
+ω2
+2 = k + 2γ
+m
+=⇒
+f2
+2 −f2
+1 =
+γ
+2π2m = 3µ0µ2
+m
+π3m d5 .
+(5)
+Linearised forms for graphs: (i) ln(f2
+2 −f2
+1 ) = ln C−5 ln d with C = 3µ0µ2
+m/(π3m); (ii) f2
+2 −f2
+1 = Cd−5
+(straight line through the origin against d−5; compare its gradient with C from independently
+measured µm, m).
+5.4 Remarks (INTERNATIONAL §5.3 style). Dimensional check [µ0µ2
+m/(md5)] = s−2. List the
+assumptions you will revisit: (a) point dipoles, (b) linearised force (small amplitude), (c) identical
+springs, (d) lumped mass, (e) no damping, (f) magnets stay coaxial, (g) the FFT returns the true
+frequencies.
+5
+
+--- PAGE 6 ---
+3.5
+6 Methodology (≈600 words)
+6.1 FFT background — INTERNATIONAL §6.1 adapted to frequency measurement; the physics
+you need is in §4 of this plan.
+6.2 Set-up & apparatus: labelled photo (Edwin Fig. 3), apparatus list, magnet specification
+(grade, D × t, mass), spring dimensions (L, b, h), camera (model, fps, resolution), tracking software.
+6.3 Method of data collection — narrate like Edwin §6: Method 1 (read beat and average
+periods from x(t)) failed at large d because the envelope disappears when f2 −f1 is small; Method 2
+(FFT of x(t)) adopted. Show one x(t) and its FFT with the two peaks labelled (Edwin Figs. 4–6).
+6.4 Procedures:
+1. spring stiffness k: static load–deflection, plot F vs x, LINEST (Edwin §7.1);
+2. magnet moment µm: either datasheet Br (µm = BrV/µ0) or, better, one magnet on an electronic
+balance, the other brought coaxially above it at measured r, F = ∆mg, fit F ∝r−4 (doubles as
+an independent check of the r−4 law);
+3. per-spring dynamic calibration: fa, fb of each spring alone (pluck, FFT). These give k/m per
+spring with no E, no 33/140 and no lumping assumption — they are also the two detuned
+frequencies used in §10.4;
+4. masses M, µ;
+5. f1, f2 vs d: set d, displace one spring by A = 10 mm, release, record T s at fs fps, track, detrend,
+FFT, read the two highest peaks, 3–5 trials per d.
+3.6
+7 Raw data (≈180 words)
+Table 1 basic quantities (L, b, h, M, µ, k ± ∆k, µm ± ∆µm, m; fa, fb). Table 2 F vs x for k. Tables
+3/4 f1 and f2 per trial with mean and half-range (justify half-range vs standard deviation as
+INTERNATIONAL §8.2 does: n = 3–5 is too small for SD). State T, fs, N and the bin width
+1/T in the caption and add a column “resolved? (f2 −f1 ≥2/T)”. Rows d = 40–60 mm: “peaks
+unresolved” — this is a result, not a gap.
+3.7
+8 Analysis (≈420 words)
+8.1 Processed table: d, ln d ± ∆d/d, Y = f2
+2 −f2
+1 , ∆Y = 2(f1∆f1 + f2∆f2), ln Y ± ∆Y/Y ,
+d−5 ± 5(∆d/d)d−5. One sample calculation (Edwin style).
+8.2 Graph 1: ln Y vs ln d with error bars on both axes (∆(ln d) = ∆d/d ≈2–5% — see §4.7),
+best- and worst-fit lines (or LINEST if the bars are too small). Report the gradient −3.75 ± 0.19
+(unweighted) and note the weighted value −3.48 ± 0.24 — the disagreement itself exposes the
+ln-transform problem.
+8.3 Graph 2: Y vs d−5 (theory: straight line through the origin, gradient C). Graph 3: f1 vs d
+(theory: horizontal) — you will see the 2.6% drift.
+8.4 Comparison table (Edwin Tables 13/14): theoretical gradient −5 (exact) vs experimental;
+theoretical C from µm, m vs the experimental gradient of Graph 2; percentage differences.
+3.8
+9 Discussion — preliminary (≈230 words)
+Trend confirmed (Y falls steeply, f2 →f1), but: exponent −3.75̸ = −5; f1 not constant; points
+beyond 35 mm unresolved; residuals systematic (curvature) rather than random. Frame the four
+candidate causes and hand over to §10.
+3.9
+10 Evaluation (≈500 words)
+One sub-section per effect, each with sign, size, remedy.
+• 10.1 FFT resolution & leakage (methodological/procedural). Two tones closer than ∼1/T
+(rectangular) or ∼2/T (Hann) merge or “pull” each other; f2 −f1 = 0.039 Hz at 35 mm needs
+T ≥26–51 s, and 0.009 Hz at 40 mm needs T ≥110–220 s (table in §4.1).
+6
+
+--- PAGE 7 ---
+• 10.2 Amplitude nonlinearity (the linearisation itself). The anti-phase oscillation modulates
+the separation, γ is not constant over a cycle, and the oscillation samples a softer-than-dipole
+force. Perturbation estimate (Appendix D), RK4 (§13) and amplitude-segment analysis of the
+data (f2 vs A, extrapolate A →0). Include the tilt estimate: the tip rotation is θ ≃3A/(2L) ≈6◦
+at A = 10 mm, L = 150 mm, so cos θ ≈0.5% and the coaxial force is slightly overestimated —
+one line of estimate, one RK4 check.
+• 10.3 Finite magnet size. The dipole law is the d ≫magnet-size limit; your d/D ≈2–6.
+Charged-disc model (Appendix E): the apparent ln–ln gradient over 21–35 mm falls from −4.9
+(D = 6 mm) to −3.75 (D = 20 mm) — the data are consistent with a soft force law at short
+range.
+• 10.4 Non-identical springs (detuning). f1 drifting up by 2.6% as d decreases is exactly
+what the detuned model predicts: ω2
+1,2 = ¯ω2 + κ ∓
+√
+∆2 + κ2 with κ = γ/m — as the coupling
+grows, both modes are pushed towards ¯ω. Fit fa, fb (from §6.4.3) with n = 5 fixed: reproduces
+f1 : 0.798 →0.819 Hz.
+• 10.5 Damping & other minor effects: damping linewidth ≈1/(πτ) (see §4.5); copper
+creep/temperature; measurement of d (∆d = 0.5 mm gives 2.4% on Y at 21 mm).
+• 10.6 Random errors: peak-reading scatter; release impulse; d placement; mitigated by 3–5
+trials, half-range uncertainty.
+3.10
+11 Further methodology (≈200 words)
+INTERNATIONAL’s “further methodology” move, adapted: (1) longer records T ≥90 s; (2)
+A = 3 mm release (plus one A = 10 mm run for the amplitude study); (3) track both magnets
+and form the normal coordinates η = x1 + x2 (removes the common-mode motion and the drift),
+ξ = x1−x2 (pure anti-phase); (4) three windows (rect / Hann / Blackman — INTL-style comparison),
+and a time-domain two-damped-sinusoid least-squares fit (beats the 1/T limit; gives a statistical
+∆f).
+3.11
+12 Further data & discussion (≈320 words)
+Table: gradient±∆for each method (rect / Hann / Blackman / two-tone fit / normal-coordinate
+FFT) — like INTERNATIONAL Figs. 26–27. Graph: f2 vs amplitude (segments) with extrapolation
+to zero amplitude. Graph: ln Y vs ln d for old vs new data with both theory curves (point dipole and
+finite size). Discuss which correction moved the gradient towards −5 and by how much; be explicit
+if a residual discrepancy remains and what it implies (e.g. “the dipole law is valid only for d ≳4D”).
+3.12
+13 Numerical simulation (≈250 words)
+RK4 integration of the full equations (optionally with the finite-size F), using your measured
+k, m, CF :
+m¨x1 = −kx1 −
+F(d + x2 −x1) −F(d)
+,
+m¨x2 = −kx2 +
+F(d + x2 −x1) −F(d)
+,
+(6)
+with F = CF r−4 (signs per Fig. 4 convention). Two uses: (i) predict f2(A, d) →the amplitude
+correction used in §12; (ii) generate synthetic x(t) at your fps and T and push them through the
+same FFT pipeline →isolates the bias caused purely by the analysis (in my test at T = 40 s, window
+peak-picking gave gradients −3.3 to −3.5 while the two-tone fit recovered the true value). Code →
+Appendix G.
+3.13
+14 Conclusion & extensions (≈220 words)
+Answer the RQ in three sentences (f1 constant within . . . ; f2
+2 −f2
+1 falls as d−n with n = · · ·±. . . ; the
+dipole law holds for d ≥. . . ). Name the dominant systematic error and what fixed it. Extensions:
+7
+
+--- PAGE 8 ---
+vary µm (magnet grade) at fixed d to test the µ2
+m dependence; attractive orientation (softening →
+instability at a critical d); three springs; eddy-current damping with a copper plate.
+4
+FFT error analysis — what to write
+INTERNATIONAL needed amplitudes (SNR), so its corrections were energy-correction factors and
+baseline-noise subtraction. You need frequencies, so the relevant FFT physics is different — say this
+explicitly.
+1. Resolution. Xk = PN−1
+n=0 xne−2πikn/N; bin spacing ∆fbin = fs/N = 1/T. Two tones are
+separable only if |f2 −f1| ≳1/T (rectangular) or ≳2/T (Hann; main lobe twice as wide). From
+your data:
+d/mm
+f2 −f1/Hz
+bins at T = 20 s
+Tmin rect/s
+Tmin Hann/s
+21
+0.240
+4.8
+4
+8
+25
+0.141
+2.8
+7
+14
+28
+0.097
+1.9
+10
+21
+31
+0.074
+1.5
+14
+27
+35
+0.039
+0.8
+26
+51
+40
+0.009
+0.2
+111
+222
+2. Leakage & windows. Rectangular: narrowest main lobe (best for two close peaks of similar
+height) but −13 dB side lobes; Hann: 4-bin main lobe, −31 dB; Blackman: 6-bin, −58 dB.
+Because both your peaks have similar amplitude and there is no strong interferer, the rectangular
+(or Hann) window is the right choice — the opposite of the usual “Hann by default” advice, and
+unlike INTERNATIONAL’s case. Amplitude correction factors are not needed because you only
+read peak positions.
+3. Peak pulling. When main lobes overlap, the two maxima are pushed apart or merge; in my
+synthetic test (T = 20 s) the errors were ±2–7 mHz at 21–31 mm, ±10 mHz at 35 mm and total
+failure at 40 mm — quote your own numbers from ee_simulations.py Part A with your real T
+and fs.
+4. Scalloping / bin centring. The true frequency lies anywhere within ±1
+2 bin, i.e. ±1/(2T),
+unless you zero-pad and interpolate (parabola through the three bins around the peak). Zero-
+padding interpolates the spectrum, it does not add resolution — make that distinction.
+5. Damping linewidth. e−t/τ cos(2πft) has FWHM ≈1/(πτ); with τ ≈25 s that is 0.013 Hz —
+comparable to f2 −f1 at 40 mm, so beyond ∼35 mm the modes cannot be separated by any
+spectral method applied to a single coordinate →justification for normal-coordinate tracking
+and time-domain fitting.
+6. Sampling & pre-processing. fs = fps (30/60 Hz) ≫2f: no aliasing; but video frame timing
+jitters and frames drop →resample to a uniform grid before the FFT (the script reports the
+jitter). Detrend: subtract the mean (or fit and remove a constant) — the equilibrium offset of
+the magnets puts a DC peak at 0 Hz (cf. the offset term in eq. (4)), and its leakage contaminates
+the low-frequency region where your small-d peaks are far away but your large-d peaks are not.
+Archive the raw videos, not only the Tracker exports.
+7. Propagation into your graph. ∆(ln Y ) = 2(f1∆f1 + f2∆f2)/Y grows from 0.04 to 1.1 across
+your range for ∆f = 5 mHz, so error bars must be drawn in ln-space and the fit weighted;
+otherwise the noisy large-d points dominate the gradient. Do not forget the horizontal error bars:
+∆(ln d) = ∆d/d. With ∆d = 1 mm this is 4.8% at 21 mm — already comparable to ∆(ln Y )
+there — and it propagates as 5 ∆d/d into any d−5 comparison.
+8
+
+--- PAGE 9 ---
+0.7
+0.8
+0.9
+1
+1.1
+bin 1/T
+f / Hz
+amplitude (a.u.)
+(a) resolved: d = 21 mm
+0.72
+0.76
+0.8
+0.84
+0.88
+f1, f2
+f / Hz
+amplitude (a.u.)
+(b) unresolved: d = 40 mm
+Figure 3: Synthetic two-tone spectra through the same FFT pipeline as the data (T = 20 s). Left:
+separation 0.245 Hz ≈5 bins — both peaks read. Right: separation 0.009 Hz = 0.2 bins — the two
+true frequencies (dotted) are unresolvable; only one merged peak exists. This is the mechanism
+behind the “#NUM!” rows at d ≥40 mm.
+5
+“Non-linearisation” improvements — three levels (use all three,
+in order)
+Level 1 — analysis (cheap, do it now).
+Replace “take logs then LINEST” with a weighted non-linear least-squares fit of Y = C d−n (and
+Y = C d−5 with n fixed) to the un-transformed data. Advantages to state: no point is discarded
+because ln(0) or ln(negative) fails; heteroscedastic errors are handled by the weights; C and n come
+with proper uncertainties. With your 6 points: n = 3.5 ± 0.2 (vs ln–ln −3.75) — report both and
+explain the difference.
+Level 2 — physics (the systematic-error story).
+The model linearised F(r) about d. Keep the full r−4 (or finite-size) force: perturbation formula
+(Appendix D) in the body, RK4 (§13) for exact numbers, amplitude-segment analysis + extrapolation
+to A →0 for the data. Tabulate the size of the correction at each d.
+Level 3 — model (finite size + detuning).
+Fit models (c) and (d) of §11 step 5: (c) finite-size charged-disc force; (d) detuned springs. Present
+the comparison of residual patterns / reduced χ2 as the decisive evidence for which assumption
+failed. Report reduced χ2 (or simply χ2/dof) for each fit, not only R2.
+6
+Lab / data checklist (you have lab access and the raw tracks)
+□Magnet dimensions D, t, mass M, grade (Br) — needed for §10.3 and the theoretical C.
+□Spring L, b, h, µ (weigh a known length), k by static loading; fa, fb of each spring alone — the
+primary calibration (§6.4.3).
+□Balance measurement of F(r) for 4–6 values of r (checks r−4 and gives µm).
+□Re-run d = 21 . . . 60 mm with both magnets tracked, T ≥90 s, A = 3 mm (and one A = 10 mm
+run each). Name files d21_trial1.csv etc.
+□python analyse_tracks.py "tracks/*.csv" –out results →per-file diagnostic figure (x(t)
++ two-tone fit, three-window FFT, f2 vs amplitude), summary.csv, and the ln–ln gradient per
+method. Then form η, ξ from the two tracked magnets and run the same script on them.
+□Archive raw videos per run (examiner authenticity).
+□Sanity check of magnitudes: γ = 2π2mY from your data vs γ = 6µ0µ2
+m/(πd5) from µm. If they
+differ by more than a factor ∼2, revisit the coaxial-dipole assumption or the definition of d before
+9
+
+--- PAGE 10 ---
+writing §8.4.
+□Re-derive the f2 −f1 requirement with your real T: if your original records were ∼20–40 s, say
+in §7 that 35 mm was marginal and 40 mm unresolvable.
+Suggested writing order (new in v2)
+Collect data →write §5 (model) and §6 (methodology) →§4 variables →§7–8 (raw data, analysis,
+graphs) →§9–13 (discussion, evaluation, further work, simulation) →§1–3 and §14 last (abstrac-
+t/contents last of all). The middle of the essay is stable once the data exist; the ends depend on
+everything else.
+7
+Figures and tables (final list)
+Figures: 1 set-up sketch (done) · 2 mode sketch · 3 set-up photo · 4 x(t) with beats (small d)
+· 5 x(t) with no visible envelope (large d) · 6 FFT with two peaks · 7 F vs x (k) · 8 F vs r on
+the balance (µm) · 9 ln Y vs ln d (Graph 1) · 10 Y vs d−5 (Graph 2) · 11 f1 vs d (Graph 3) · 12
+synthetic-spectrum resolution figure · 13 f2 vs amplitude · 14 gradient by method (further data) · 15
+old vs new data with dipole and finite-size theory · 16 RK4 vs linearised prediction.
+Tables: 1 constants · 2 k data · 3/4 f1, f2 raw · 5 processed · 6 theory vs experiment (gradient,
+C) · 7 systematic-error summary (effect, sign, size, remedy) · 8 further raw data (appendix) · 9
+gradient/C per method and per model · 10 simulated vs measured f2 shift.
+3
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+3.8
+−4
+−3
+−2
+−1
+ln d
+(d in mm; adding a constant shifts the intercept only)
+ln(f 2
+2 −f 2
+1 ) / Hz2
+dipole model: slope −5
+best fit, 6 pts: −3.75 ± 0.19
+resolved data (21–35 mm)
+40 mm: unresolved (open)
+Figure 4: Your current data (triangles) against the dipole prediction and the 6-point best fit. The
+40 mm point (open) sits far below the resolved trend — consistent with the resolution limit of Fig. 3b,
+not with a new physical regime. Note the possible downward curvature of the resolved points at
+small d — the finite-size signature (§10.3).
+10
+
+--- PAGE 11 ---
+8
+Assessment-criteria map (new in v2)
+Criterion
+Where this plan earns it
+A: Focus & method
+RQ (§1); variables incl. FFT settings (§4); justified method choices, attempt
+1 →attempt 2 narrative (§6.3).
+B: Knowledge & under-
+standing
+Full derivation chain (§5); FFT/DFT theory (§6.1, §4 of this plan); correct
+physics vocabulary throughout.
+C: Critical thinking
+(12 marks)
+Quantitative hypothesis; comparison with theory (§8.4); error propagation &
+weighting (§8.1–8.2); two distinct error types (measurement §10.1 vs model
+§10.2–10.5) each with sign, size, remedy; improvements quantified (§12);
+simulation verification (§13).
+D: Presentation
+Numbered figures/tables (§7 of this plan); captions that state the point of
+each figure; derivations and bulk data pushed to appendices A–H.
+E: Engagement
+Personal angle and IYPT origin (§1.3); honest reflection on residual discrep-
+ancy (§12); independence evidenced by your own scripts (§6 of this plan).
+9
+Appendices to write
+A Cantilever stiffness 3EI/L3, effective mass
+33
+140µL, and FEM check of lumped vs beam model
+(< 1%). + dynamic calibration method (f =
+1
+2π
+p
+k/m).
+B Dipole field →force between coaxial dipoles F = 3µ0µ2
+m/(2πr4) →γ = 6µ0µ2
+m/(πd5).
+C Detuned normal modes ω2
+1,2 = ¯ω2 + κ ∓
+√
+∆2 + κ2 and the d−5 limit.
+D Series expansion of F(d −ξ), α and β, Landau–Lifshitz amplitude shift (a/d)2(15g/8 −125g2/48),
+comparison with RK4.
+E Finite-size (charged-disc) magnet force and apparent-gradient table.
+F Uncertainty propagation (∆Y , ∆ln Y , ∆d−5, LINEST worst lines). + the x-error ∆(ln d) = ∆d/d.
+G Python: analyse_tracks.py (FFT windows, two-tone fit, segments), ee_simulations.py (RK4,
+synthetic FFT), finite_size_magnets.py.
+H Further raw data tables (all windows/methods), as INTERNATIONAL Appendix A.
+10
+Ready-made numbers from my checks
+Replace with your own values once you have real inputs. Assumed in the scripts: fs, τ, magnet size
+and mass — marked # ASSUMED.
+• ln–ln fit, 6 points: gradient −3.75 ± 0.19, intercept 10.68 (matches your chart); weighted
+(∆f = 5 mHz): −3.48 ± 0.24. Free power law on raw Y : n = 3.5 ± 0.2.
+• Non-linear force, A = 10 mm release: f2+9.8% (21 mm), +1.1% (35 mm); gradient −5.00 →−5.16.
+A = 2 mm: +0.3%/ + 0.03%.
+• Finite-size discs, apparent gradient over 21–35 mm: D = 6 mm −4.87; 10 mm −4.6; 12 mm −4.5;
+15 mm −4.2; 20 mm −3.75; 25 mm −3.4 (t = 3–6 mm changes these by < 0.1).
+• Lumped vs beam: Y differs by 0.03% (M/µL = 3.3), 0.4% (0.8), 1% (0.4).
+• Detuned model fitted with n = 5: fa = 0.793 Hz, fb = 0.849 Hz reproduces the f1 drift
+0.798 →0.819 Hz.
+• Synthetic tracks at T = 40 s: window peak-picking gradients −3.3 to −3.5; two-tone fit −4.9
+(true −4.9) →the analysis method alone can shift the gradient by more than 1.
+11
+Pitfalls to avoid (examiner’s eye)
+• Do not present the 40 mm point as data; present the unresolved range as a measured limit of the
+method.
+11
+
+--- PAGE 12 ---
+• Do not claim “f1 constant” when it drifts 2.6%; explain it (§10.4).
+• Do not copy IYPT slide figures or equations without derivation; cite the IYPT problem and
+derive the lumped model yourself.
+• Keep all corrections quantitative (sign and size) — hand-waving loses evaluation marks.
+• Every graph: error bars on both axes, best/worst lines or LINEST uncertainty, units, gradient
+with uncertainty, theory line overlaid where possible.
+• Word count: equations, tables, captions, appendices excluded — move derivations there ruthlessly.
+v2 — green text marks additions/changes over the previous plan. Regenerate every placeholder number with
+your own inputs before it enters the essay.
+12

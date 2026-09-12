@@ -1,0 +1,106 @@
+42 files, separations: [24.5, 26.5, 28.5, 31.0, 33.5, 36.0, 39.0, 42.0, inf]
+d = 24.5 mm trial 1: T = 10.6 s, fs = 119.39 Hz, f1 = 6.4194, f2 = 8.5403 Hz (eta/xi), A-only: 6.419/8.540, T_beat env 0.472 vs 1/(f2-f1) 0.471 s, rA 0.48 rB 0.53 pred 0.56
+      WARNING: mean(xB) - mean(xA) = 27.1 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: mass B was already swinging (+-2.8 mm) during 0.08-0.31 s while A was still held -> f1, f2 unaffected (analysis starts at A's release), but the peak-height-ratio / beat-minimum tests do not apply to this trial (hold A, pull it slowly, wait until B is still, release)
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 24.5 mm trial 2: T = 9.6 s, fs = 120.00 Hz, f1 = 6.4213, f2 = 7.8398 Hz (eta/xi), A-only: 6.421/7.840, T_beat env 0.701 vs 1/(f2-f1) 0.705 s, rA 0.66 rB 0.66 pred 0.67
+      WARNING: mean(xB) - mean(xA) = 27.5 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 24.5 mm trial 3: T = 9.6 s, fs = 120.00 Hz, f1 = 6.4195, f2 = 7.9420 Hz (eta/xi), A-only: 6.420/7.942, T_beat env 0.654 vs 1/(f2-f1) 0.657 s, rA 0.66 rB 0.66 pred 0.65
+      WARNING: mean(xB) - mean(xA) = 27.5 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 24.5 mm trial 4: T = 9.5 s, fs = 120.00 Hz, f1 = 6.4164, f2 = 7.9880 Hz (eta/xi), A-only: 6.417/7.988, T_beat env 0.628 vs 1/(f2-f1) 0.636 s, rA 0.66 rB 0.66 pred 0.65
+      WARNING: mean(xB) - mean(xA) = 27.5 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 24.5 mm trial 5: T = 9.4 s, fs = 120.00 Hz, f1 = 6.4200, f2 = 7.8904 Hz (eta/xi), A-only: 6.420/7.891, T_beat env 0.669 vs 1/(f2-f1) 0.680 s, rA 0.66 rB 0.66 pred 0.66
+      WARNING: mean(xB) - mean(xA) = 27.5 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 26.5 mm trial 1: T = 9.6 s, fs = 120.00 Hz, f1 = 6.4255, f2 = 7.4605 Hz (eta/xi), A-only: 6.426/7.461, T_beat env 0.951 vs 1/(f2-f1) 0.966 s, rA 0.74 rB 0.74 pred 0.74
+      WARNING: mean(xB) - mean(xA) = 29.5 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 26.5 mm trial 2: T = 9.4 s, fs = 120.00 Hz, f1 = 6.4175, f2 = 7.4754 Hz (eta/xi), A-only: 6.418/7.476, T_beat env 0.928 vs 1/(f2-f1) 0.945 s, rA 0.74 rB 0.74 pred 0.74
+      WARNING: mean(xB) - mean(xA) = 29.5 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 26.5 mm trial 3: T = 9.4 s, fs = 120.00 Hz, f1 = 6.4227, f2 = 7.5008 Hz (eta/xi), A-only: 6.423/7.501, T_beat env 0.917 vs 1/(f2-f1) 0.927 s, rA 0.74 rB 0.74 pred 0.73
+      WARNING: mean(xB) - mean(xA) = 29.5 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 26.5 mm trial 4: T = 9.5 s, fs = 120.00 Hz, f1 = 6.4145, f2 = 7.4636 Hz (eta/xi), A-only: 6.415/7.464, T_beat env 0.942 vs 1/(f2-f1) 0.953 s, rA 0.74 rB 0.74 pred 0.74
+      WARNING: mean(xB) - mean(xA) = 29.5 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 26.5 mm trial 5: T = 9.4 s, fs = 120.00 Hz, f1 = 6.4227, f2 = 7.4482 Hz (eta/xi), A-only: 6.423/7.448, T_beat env 0.967 vs 1/(f2-f1) 0.975 s, rA 0.74 rB 0.74 pred 0.74
+      WARNING: mean(xB) - mean(xA) = 29.5 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 28.5 mm trial 1: T = 9.4 s, fs = 120.00 Hz, f1 = 6.4193, f2 = 7.1458 Hz (eta/xi), A-only: 6.420/7.145, T_beat env 1.328 vs 1/(f2-f1) 1.376 s, rA 0.80 rB 0.80 pred 0.81
+      WARNING: mean(xB) - mean(xA) = 31.5 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 28.5 mm trial 2: T = 9.5 s, fs = 120.00 Hz, f1 = 6.4129, f2 = 7.1456 Hz (eta/xi), A-only: 6.413/7.146, T_beat env 1.334 vs 1/(f2-f1) 1.365 s, rA 0.80 rB 0.80 pred 0.81
+      WARNING: mean(xB) - mean(xA) = 31.5 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 28.5 mm trial 3: T = 9.3 s, fs = 120.00 Hz, f1 = 6.4221, f2 = 7.1711 Hz (eta/xi), A-only: 6.423/7.171, T_beat env 1.309 vs 1/(f2-f1) 1.335 s, rA 0.80 rB 0.80 pred 0.80
+      WARNING: mean(xB) - mean(xA) = 31.5 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 28.5 mm trial 4: T = 9.5 s, fs = 120.00 Hz, f1 = 6.4180, f2 = 7.1657 Hz (eta/xi), A-only: 6.418/7.165, T_beat env 1.303 vs 1/(f2-f1) 1.337 s, rA 0.80 rB 0.80 pred 0.80
+      WARNING: mean(xB) - mean(xA) = 31.5 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 28.5 mm trial 5: T = 9.5 s, fs = 120.00 Hz, f1 = 6.4211, f2 = 7.1256 Hz (eta/xi), A-only: 6.421/7.125, T_beat env 1.399 vs 1/(f2-f1) 1.419 s, rA 0.80 rB 0.80 pred 0.81
+      WARNING: mean(xB) - mean(xA) = 31.5 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 31.0 mm trial 1: T = 11.6 s, fs = 120.00 Hz, f1 = 6.4160, f2 = 6.9404 Hz (eta/xi), A-only: 6.416/6.940, T_beat env 1.886 vs 1/(f2-f1) 1.907 s, rA 0.86 rB 0.86 pred 0.85
+      WARNING: mean(xB) - mean(xA) = 34.0 mm but folder says d = 31.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 31.0 mm trial 2: T = 11.6 s, fs = 120.00 Hz, f1 = 6.4202, f2 = 6.8649 Hz (eta/xi), A-only: 6.421/6.865, T_beat env 2.212 vs 1/(f2-f1) 2.248 s, rA 0.86 rB 0.86 pred 0.87
+      WARNING: mean(xB) - mean(xA) = 34.0 mm but folder says d = 31.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 31.0 mm trial 3: T = 11.4 s, fs = 120.00 Hz, f1 = 6.4165, f2 = 6.9395 Hz (eta/xi), A-only: 6.417/6.939, T_beat env 1.862 vs 1/(f2-f1) 1.912 s, rA 0.86 rB 0.86 pred 0.85
+      WARNING: mean(xB) - mean(xA) = 34.0 mm but folder says d = 31.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 31.0 mm trial 4: T = 11.4 s, fs = 120.00 Hz, f1 = 6.4168, f2 = 6.9315 Hz (eta/xi), A-only: 6.417/6.931, T_beat env 1.880 vs 1/(f2-f1) 1.943 s, rA 0.86 rB 0.86 pred 0.86
+      WARNING: mean(xB) - mean(xA) = 34.0 mm but folder says d = 31.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 31.0 mm trial 5: T = 11.3 s, fs = 120.00 Hz, f1 = 6.4230, f2 = 6.9198 Hz (eta/xi), A-only: 6.423/6.920, T_beat env 1.974 vs 1/(f2-f1) 2.013 s, rA 0.86 rB 0.86 pred 0.86
+      WARNING: mean(xB) - mean(xA) = 34.0 mm but folder says d = 31.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 33.5 mm trial 1: T = 14.5 s, fs = 120.00 Hz, f1 = 6.4217, f2 = 6.7694 Hz (eta/xi), A-only: 6.422/6.769, T_beat env 2.826 vs 1/(f2-f1) 2.877 s, rA 0.90 rB 0.90 pred 0.90
+      WARNING: mean(xB) - mean(xA) = 36.5 mm but folder says d = 33.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 33.5 mm trial 2: T = 14.5 s, fs = 120.00 Hz, f1 = 6.4193, f2 = 6.7873 Hz (eta/xi), A-only: 6.419/6.787, T_beat env 2.681 vs 1/(f2-f1) 2.717 s, rA 0.90 rB 0.90 pred 0.89
+      WARNING: mean(xB) - mean(xA) = 36.5 mm but folder says d = 33.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 33.5 mm trial 3: T = 14.4 s, fs = 120.00 Hz, f1 = 6.4178, f2 = 6.7807 Hz (eta/xi), A-only: 6.418/6.780, T_beat env 2.715 vs 1/(f2-f1) 2.755 s, rA 0.90 rB 0.90 pred 0.90
+      WARNING: mean(xB) - mean(xA) = 36.5 mm but folder says d = 33.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 33.5 mm trial 4: T = 14.6 s, fs = 120.00 Hz, f1 = 6.4208, f2 = 6.7674 Hz (eta/xi), A-only: 6.421/6.767, T_beat env 2.849 vs 1/(f2-f1) 2.885 s, rA 0.90 rB 0.90 pred 0.90
+      WARNING: mean(xB) - mean(xA) = 36.5 mm but folder says d = 33.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 33.5 mm trial 5: T = 14.4 s, fs = 120.00 Hz, f1 = 6.4226, f2 = 6.7114 Hz (eta/xi), A-only: 6.423/6.711, T_beat env 3.393 vs 1/(f2-f1) 3.462 s, rA 0.90 rB 0.90 pred 0.92
+      WARNING: mean(xB) - mean(xA) = 36.5 mm but folder says d = 33.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 36.0 mm trial 1: T = 19.4 s, fs = 120.00 Hz, f1 = 6.4175, f2 = 6.6146 Hz (eta/xi), A-only: 6.418/6.614, T_beat env 4.828 vs 1/(f2-f1) 5.073 s, rA 0.93 rB 0.93 pred 0.94
+      WARNING: mean(xB) - mean(xA) = 39.0 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 36.0 mm trial 2: T = 19.1 s, fs = 120.00 Hz, f1 = 6.4243, f2 = 6.6422 Hz (eta/xi), A-only: 6.425/6.642, T_beat env 4.479 vs 1/(f2-f1) 4.588 s, rA 0.93 rB 0.93 pred 0.94
+      WARNING: mean(xB) - mean(xA) = 39.0 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 36.0 mm trial 3: T = 19.4 s, fs = 120.00 Hz, f1 = 6.4225, f2 = 6.6974 Hz (eta/xi), A-only: 6.423/6.697, T_beat env 3.600 vs 1/(f2-f1) 3.638 s, rA 0.93 rB 0.93 pred 0.92
+      WARNING: mean(xB) - mean(xA) = 39.0 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 36.0 mm trial 4: T = 19.5 s, fs = 120.00 Hz, f1 = 6.4136, f2 = 6.6808 Hz (eta/xi), A-only: 6.414/6.681, T_beat env 3.682 vs 1/(f2-f1) 3.742 s, rA 0.93 rB 0.93 pred 0.92
+      WARNING: mean(xB) - mean(xA) = 39.0 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 36.0 mm trial 5: T = 19.6 s, fs = 120.00 Hz, f1 = 6.4220, f2 = 6.6706 Hz (eta/xi), A-only: 6.422/6.670, T_beat env 3.899 vs 1/(f2-f1) 4.024 s, rA 0.93 rB 0.93 pred 0.93
+      WARNING: mean(xB) - mean(xA) = 39.0 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 39.0 mm trial 1: T = 29.5 s, fs = 120.00 Hz, f1 = 6.4151, f2 = 6.5976 Hz (eta/xi), A-only: 6.415/6.597, T_beat env 5.428 vs 1/(f2-f1) 5.481 s, rA 0.95 rB 0.95 pred 0.95
+      WARNING: mean(xB) - mean(xA) = 42.0 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 39.0 mm trial 2: T = 29.2 s, fs = 120.00 Hz, f1 = 6.4260, f2 = 6.6487 Hz (eta/xi), A-only: 6.426/6.649, T_beat env 4.409 vs 1/(f2-f1) 4.492 s, rA 0.95 rB 0.95 pred 0.93
+      WARNING: mean(xB) - mean(xA) = 42.0 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 39.0 mm trial 3: T = 29.1 s, fs = 120.00 Hz, f1 = 6.4216, f2 = 6.5624 Hz (eta/xi), A-only: 6.422/6.562, T_beat env 6.998 vs 1/(f2-f1) 7.104 s, rA 0.95 rB 0.95 pred 0.96
+      WARNING: mean(xB) - mean(xA) = 42.0 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 39.0 mm trial 4: T = 29.2 s, fs = 120.00 Hz, f1 = 6.4224, f2 = 6.6340 Hz (eta/xi), A-only: 6.422/6.634, T_beat env 4.678 vs 1/(f2-f1) 4.726 s, rA 0.95 rB 0.95 pred 0.94
+      WARNING: mean(xB) - mean(xA) = 42.0 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 39.0 mm trial 5: T = 29.3 s, fs = 120.00 Hz, f1 = 6.4231, f2 = 6.5949 Hz (eta/xi), A-only: 6.423/6.595, T_beat env 5.764 vs 1/(f2-f1) 5.821 s, rA 0.95 rB 0.95 pred 0.95
+      WARNING: mean(xB) - mean(xA) = 42.0 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 42.0 mm trial 1: T = 44.1 s, fs = 120.00 Hz, f1 = 6.4133, f2 = 6.4979 Hz (eta/xi), A-only: 6.414/6.498, T_beat env 11.258 vs 1/(f2-f1) 11.813 s, rA 0.97 rB 0.97 pred 0.97
+      WARNING: mean(xB) - mean(xA) = 45.0 mm but folder says d = 42.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 42.0 mm trial 2: T = 44.1 s, fs = 120.00 Hz, f1 = 6.4208, f2 = 6.5449 Hz (eta/xi), A-only: 6.421/6.545, T_beat env 7.725 vs 1/(f2-f1) 8.061 s, rA 0.97 rB 0.97 pred 0.96
+      WARNING: mean(xB) - mean(xA) = 45.0 mm but folder says d = 42.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 42.0 mm trial 3: T = 44.0 s, fs = 120.00 Hz, f1 = 6.4214, f2 = 6.5226 Hz (eta/xi), A-only: 6.422/6.522, T_beat env 9.633 vs 1/(f2-f1) 9.877 s, rA 0.97 rB 0.97 pred 0.97
+      WARNING: mean(xB) - mean(xA) = 45.0 mm but folder says d = 42.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 42.0 mm trial 4: T = 44.1 s, fs = 120.00 Hz, f1 = 6.4205, f2 = 6.5164 Hz (eta/xi), A-only: 6.421/6.516, T_beat env 10.160 vs 1/(f2-f1) 10.422 s, rA 0.96 rB 0.96 pred 0.97
+      WARNING: mean(xB) - mean(xA) = 45.0 mm but folder says d = 42.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = 42.0 mm trial 5: T = 44.4 s, fs = 120.00 Hz, f1 = 6.4205, f2 = 6.5569 Hz (eta/xi), A-only: 6.421/6.557, T_beat env 7.207 vs 1/(f2-f1) 7.329 s, rA 0.97 rB 0.97 pred 0.96
+      WARNING: mean(xB) - mean(xA) = 45.0 mm but folder says d = 42.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+d = inf mm trial 1: T = 44.7 s, fs = 120.00 Hz, f1 = 6.4200, f2 = nan Hz (two-peak(A)), A-only: 6.420/nan, T_beat env nan vs 1/(f2-f1) nan s, rA nan rB nan pred nan
+d = inf mm trial 2: T = 44.7 s, fs = 120.00 Hz, f1 = 6.4200, f2 = nan Hz (two-peak(A)), A-only: 6.420/nan, T_beat env nan vs 1/(f2-f1) nan s, rA nan rB nan pred nan
+
+FITS
+  ln-ln: n = 5.013 (LINEST s.e. 0.126); max/min gradient lines: n_max = 6.058, n_min = 4.280 -> n = 5.0 ± 0.9; R^2 = 0.9962
+         ln C = -15.498 +- 0.433 -> C = 1.860e-07 m^5 s^-2 (+- 5.8e-07 from max/min lines)
+  fixed n = 5: C = 1.991e-07 (least squares); mean of C_i = 0.000000195 ± 0.000000017; chi^2/dof = 0.7/7
+  f1: mean 6.4198 Hz, half-range 0.0016, slope vs d 0.05 +- 0.07 mHz/mm, largest deviation 0.0018 Hz vs mean uncertainty 0.0362 Hz
+  Infinity (uncoupled) recordings: Infinity_1.txt: fA = 6.4200 Hz (T = 45 s), Infinity_2.txt: fA = 6.4200 Hz (T = 45 s)
+
+WINDOW COMPARISON (same records, same trimming; only the FFT window / extraction method changes)
+  normal coordinates: single peak of FFT(xA+xB) and FFT(xB-xA)
+    rectangular : n = 5.013 +- 0.889 (max/min), s.e. 0.126, R^2 = 0.9962, C = 1.860e-07, mean f1 = 6.4198 Hz
+    Hann        : n = 5.013 +- 0.889 (max/min), s.e. 0.126, R^2 = 0.9962, C = 1.859e-07, mean f1 = 6.4199 Hz
+    Hamming     : n = 5.013 +- 0.889 (max/min), s.e. 0.126, R^2 = 0.9962, C = 1.859e-07, mean f1 = 6.4198 Hz
+    Blackman    : n = 5.013 +- 0.889 (max/min), s.e. 0.126, R^2 = 0.9962, C = 1.859e-07, mean f1 = 6.4199 Hz
+    spread of n over the four windows: +-0.000   (max/min-gradient uncertainty of one fit: +-0.89)
+  conventional: two peaks in FFT(xA) alone
+    rectangular : n = 4.979 +- 0.871 (max/min), s.e. 0.121, R^2 = 0.9965, C = 2.119e-07, mean f1 = 6.4177 Hz
+    Hann        : n = 5.020 +- 0.894 (max/min), s.e. 0.126, R^2 = 0.9962, C = 1.813e-07, mean f1 = 6.4201 Hz
+    Hamming     : n = 5.005 +- 0.885 (max/min), s.e. 0.125, R^2 = 0.9963, C = 1.918e-07, mean f1 = 6.4193 Hz
+    Blackman    : n = 5.016 +- 0.891 (max/min), s.e. 0.126, R^2 = 0.9962, C = 1.842e-07, mean f1 = 6.4200 Hz
+    spread of n over the four windows: +-0.020   (max/min-gradient uncertainty of one fit: +-0.87)

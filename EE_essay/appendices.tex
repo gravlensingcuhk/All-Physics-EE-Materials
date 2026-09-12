@@ -1,0 +1,243 @@
+\clearpage
+\section{Cantilever stiffness, effective mass and tip tilt}\label{app:cantilever}
+
+\subsection{Static deflection and stiffness}
+
+For a beam bent in the $x$--$z$ plane, the bending moment $M(z)$ at a section a distance $z$ from the clamp is related to the curvature by the Euler--Bernoulli relation $EI\,x''(z)=M(z)$ \cite{gere}, where $x(z)$ is the transverse deflection and $I=\int y^2\,\dd A$ is the second moment of area of the cross-section about the neutral axis. For a rectangle of width $b$ and thickness $h$,
+\begin{equation}
+I=\int_{-h/2}^{h/2}y^2\,b\,\dd y=\frac{bh^3}{12}.
+\end{equation}
+A transverse force $F$ at the free end $z=L$ produces the bending moment $M(z)=F(L-z)$, so
+\begin{equation}
+EI\,x''=F(L-z)\;\Rightarrow\;EI\,x'=F\Big(Lz-\frac{z^2}{2}\Big)\;\Rightarrow\;EI\,x=F\Big(\frac{Lz^2}{2}-\frac{z^3}{6}\Big),
+\end{equation}
+using $x(0)=x'(0)=0$ at the clamp. At the tip,
+\begin{equation}
+x(L)=\frac{FL^3}{3EI}\quad\Rightarrow\quad k=\frac{F}{x(L)}=\frac{3EI}{L^3},
+\qquad
+\theta_{\rm tip}=x'(L)=\frac{FL^2}{2EI}=\frac{3}{2}\,\frac{x(L)}{L}.
+\end{equation}
+The last expression is the tip slope used in Section~\ref{sec:nonlinear}: a tip displacement $A$ is accompanied by a rotation $\theta=3A/(2L)$ of the magnet.
+
+\subsection{Effective mass (Rayleigh's method)}
+
+Assume the strip vibrates with the shape of its static deflection curve, $x(z,t)=X(t)\,\phi(z)$ with
+\begin{equation}
+\phi(z)=\frac{3Lz^2-z^3}{2L^3},\qquad \phi(L)=1 .
+\end{equation}
+The kinetic energy of the strip (mass per unit length $\mu$) is
+\begin{equation}
+K_{\rm strip}=\frac12\int_0^L\mu\,\dot X^2\phi^2\,\dd z=\frac12\dot X^2\,\mu\int_0^L\frac{(3Lz^2-z^3)^2}{4L^6}\,\dd z .
+\end{equation}
+Expanding, $\int_0^L(9L^2z^4-6Lz^5+z^6)\,\dd z=\frac95L^7-L^7+\frac17L^7=\frac{33}{35}L^7$, so
+\begin{equation}
+K_{\rm strip}=\frac12\dot X^2\,\mu\,\frac{33}{140}L\quad\Rightarrow\quad m_{\rm eff}=M+\frac{33}{140}\mu L .
+\end{equation}
+The potential energy is $\frac12kX^2$ with $k=3EI/L^3$ from above, so $\omega_0^2=k/m_{\rm eff}$. This is an upper bound to the true fundamental frequency (Rayleigh's principle); for a bare cantilever ($M=0$) it gives $\omega_0=3.567\sqrt{EI/\mu L^4}$ against the exact $3.516$, an error of $1.5\,\%$.
+
+\subsection{Check of the lumped model against the continuous beam}
+
+The lumped model was compared with a finite-element solution of the Euler--Bernoulli beam (40 elements, consistent mass matrix, tip mass $M$ and tip ``magnetic'' spring $2\gamma$ for the anti-phase mode). The quantity compared was $f_2^2-f_1^2$, which in the lumped model equals $\gamma/(2\pi^2m_{\rm eff})$. Results: for $M/\mu L=3.3$, $0.8$ and $0.4$ the beam value differs from the lumped value by $0.03\,\%$, $0.4\,\%$ and $1\,\%$ respectively. Because the difference is independent of $d$ it affects only $C$, not the exponent.
+
+\section{Force between two coaxial magnetic dipoles}\label{app:dipole}
+
+The vector potential of a point dipole $\bm\mu$ at the origin is $\bm A=\frac{\muz}{4\pi}\frac{\bm\mu\times\hat{\bm r}}{r^2}$, and its field is \cite{griffiths}
+\begin{equation}
+\bm B(\bm r)=\frac{\muz}{4\pi r^3}\Big[3(\bm\mu\cdot\hat{\bm r})\hat{\bm r}-\bm\mu\Big].
+\end{equation}
+On the axis of the dipole ($\hat{\bm r}\parallel\bm\mu$) this gives $\bm B=\frac{\muz}{4\pi}\frac{2\bm\mu}{r^3}$, equation~\eqref{eq:Baxis}.
+
+The energy of a second dipole $\bm\mu_2$ in this field is $U=-\bm\mu_2\cdot\bm B_1$. For two dipoles whose centres lie on the $x$~axis a distance $r$ apart, with moments at angles $\alpha_1$, $\alpha_2$ to that axis (both measured in the same sense, in the plane of motion),
+\begin{equation}
+U=-\frac{\muz\mu_1\mu_2}{4\pi r^3}\Big[3\cos\alpha_1\cos\alpha_2-\cos(\alpha_1-\alpha_2)\Big].
+\label{eq:Ugeneral}
+\end{equation}
+With like poles facing and no tilt, $\alpha_1=0$ and $\alpha_2=\pi$ (the second moment points back towards the first), the bracket is $-2$ and
+\begin{equation}
+U(r)=+\frac{\muz\mum^2}{2\pi r^3},\qquad
+F(r)=-\frac{\dd U}{\dd r}=\frac{3\muz\mum^2}{2\pi r^4},\qquad
+\gamma(d)=-\frac{\dd F}{\dd r}\bigg|_d=\frac{6\muz\mum^2}{\pi d^5},
+\end{equation}
+which are equations~\eqref{eq:F} and \eqref{eq:gamma}; the positive energy confirms that the configuration is repulsive.
+
+\paragraph{Tilt.} When the tip of spring~1 is displaced by $x_1$ its tangent rotates by $\theta_1=3x_1/(2L)$ (Appendix~\ref{app:cantilever}), and the magnet glued perpendicular to the strip rotates with it, so $\alpha_1=-\theta_1$; similarly for spring~2, $\alpha_2=\pi-\theta_2$ with $\theta_2=3x_2/(2L)$. Substituting in \eqref{eq:Ugeneral} and using $\cos(\pi-\theta_2)=-\cos\theta_2$, $\cos(-\theta_1-\pi+\theta_2)=-\cos(\theta_2-\theta_1)$,
+\begin{equation}
+U=\frac{\muz\mum^2}{4\pi r^3}\Big[2\cos\theta_1\cos\theta_2-\sin\theta_1\sin\theta_2\Big].
+\end{equation}
+In the anti-phase motion $x_2=-x_1$, so $\theta_2=-\theta_1=-\theta$ and the bracket is $2\cos^2\theta+\sin^2\theta=2-\theta^2+O(\theta^4)$: the interaction, and with it $F$ and $\gamma$, is weakened by the factor $1-\theta^2/2$, i.e.\ by $0.5\,\%$ at the extreme of a swing with $\theta=0.10\un{rad}$. In the in-phase motion $\theta_2=\theta_1=\theta$ and the bracket is $2\cos^2\theta-\sin^2\theta=2-3\theta^2$, a weakening by $1.5\,\%$; but in that motion the separation does not change, so this only modulates the static force and does not affect $f_1$ to first order. Averaged over a cycle and over the decaying amplitude, the effect on $\Y$ is a few tenths of a per cent, and because $\theta$ depends on $A$ and $L$ but not on $d$ it is the same at every separation and leaves the exponent unchanged.
+
+\section{Normal modes of two non-identical coupled oscillators}\label{app:detuned}
+
+With $k_a/m=\omega_a^2$, $k_b/m=\omega_b^2$ and coupling stiffness $\gamma$ (equal masses), the equations of motion are
+\begin{equation}
+\ddot x_1=-\omega_a^2x_1+\kappa(x_2-x_1),\qquad \ddot x_2=-\omega_b^2x_2-\kappa(x_2-x_1),\qquad \kappa=\gamma/m .
+\end{equation}
+Seeking $x_{1,2}=X_{1,2}e^{i\omega t}$ gives the eigenvalue problem
+\begin{equation}
+\begin{pmatrix}\omega_a^2+\kappa-\omega^2 & -\kappa\\ -\kappa & \omega_b^2+\kappa-\omega^2\end{pmatrix}
+\begin{pmatrix}X_1\\X_2\end{pmatrix}=0 ,
+\end{equation}
+whose determinant vanishes when
+\begin{equation}
+(\omega_a^2+\kappa-\omega^2)(\omega_b^2+\kappa-\omega^2)=\kappa^2 .
+\end{equation}
+Writing $\bar\omega^2=\tfrac12(\omega_a^2+\omega_b^2)$ and $\Delta=\tfrac12(\omega_b^2-\omega_a^2)$, so that $\omega_a^2=\bar\omega^2-\Delta$, $\omega_b^2=\bar\omega^2+\Delta$, and $s=\bar\omega^2+\kappa-\omega^2$, the condition is $(s-\Delta)(s+\Delta)=\kappa^2$, i.e.\ $s^2=\Delta^2+\kappa^2$, hence
+\begin{equation}
+\omega_{1,2}^2=\bar\omega^2+\kappa\mp\sqrt{\Delta^2+\kappa^2},
+\end{equation}
+equation~\eqref{eq:detuned}. Limits: (i) $\Delta=0$: $\omega_1^2=\bar\omega^2$, $\omega_2^2=\bar\omega^2+2\kappa$, the identical-spring result. (ii) $\kappa\ll\Delta$: $\sqrt{\Delta^2+\kappa^2}\approx\Delta+\kappa^2/2\Delta$, so $\omega_1^2\approx\omega_a^2+\kappa-\kappa^2/2\Delta$ and $\omega_2^2\approx\omega_b^2+\kappa+\kappa^2/2\Delta$: the modes are the individual springs, each stiffened by $\kappa$ and repelled from each other by $\kappa^2/2\Delta$. (iii) $\kappa\gg\Delta$: $\omega_1^2\to\bar\omega^2-\Delta^2/2\kappa\to\bar\omega^2$ from below, $\omega_2^2\to\bar\omega^2+2\kappa$. The difference of the squares is $\omega_2^2-\omega_1^2=2\sqrt{\Delta^2+\kappa^2}$, and dividing by $4\pi^2$ and squaring gives equation~\eqref{eq:detunedY}. The eigenvectors show that in the ``in-phase'' mode the spring with the lower frequency has the larger amplitude, so tracking the two magnets and forming $x_1\pm x_2$ still isolates the modes well as long as $\Delta\lesssim\kappa$.
+
+\section{Non-linear (anharmonic) correction to the anti-phase frequency}\label{app:nonlinear}
+
+With identical springs, subtracting the two equations \eqref{eq:fulleom} (without damping) gives, for $\xi=x_1-x_2$ and separation $r=d-\xi$,
+\begin{equation}
+m\ddot\xi=-k\xi-2\big[F(d-\xi)-F(d)\big].
+\end{equation}
+Expanding $F(d-\xi)=C_F(d-\xi)^{-4}$ in powers of $\xi/d$:
+\begin{equation}
+F(d-\xi)-F(d)=F(d)\Big[4\frac{\xi}{d}+10\frac{\xi^2}{d^2}+20\frac{\xi^3}{d^3}+\ldots\Big],
+\end{equation}
+so, with $\gamma=4F(d)/d$,
+\begin{equation}
+\ddot\xi+\frac{k+2\gamma}{m}\xi+\frac{2\gamma}{m}\cdot\frac{5}{2d}\,\xi^2+\frac{2\gamma}{m}\cdot\frac{5}{d^2}\,\xi^3=0 .
+\end{equation}
+Since $2\gamma/m=\omega_2^2-\omega_1^2=g\,\omega_2^2$ with $g=(f_2^2-f_1^2)/f_2^2$, this is equation~\eqref{eq:duffing} with $\alpha=\tfrac52g\omega_2^2/d$ and $\beta=5g\omega_2^2/d^2$. For $\ddot\xi+\omega_0^2\xi+\alpha\xi^2+\beta\xi^3=0$ the method of successive approximations (Landau and Lifshitz \cite{landau}, \S28) gives the amplitude-dependent frequency
+\begin{equation}
+\omega=\omega_0+\Big(\frac{3\beta}{8\omega_0}-\frac{5\alpha^2}{12\omega_0^3}\Big)a^2 ,
+\end{equation}
+and substituting $\alpha$, $\beta$:
+\begin{equation}
+\frac{\Delta\omega}{\omega_2}=\frac{a^2}{d^2}\Big(\frac{15g}{8}-\frac{125g^2}{48}\Big),
+\end{equation}
+equation~\eqref{eq:LL}. The bracket is positive for $g<0.72$, which covers the whole experiment ($g\leq0.40$), so the non-linearity is hardening. The quadratic term $\alpha\xi^2$ also shifts the centre of the oscillation (the magnets spend more time at large separation, where the force is weaker); this static shift is second order in $a$ and is automatically included in the numerical integration.
+
+\section[Force between two cylindrical magnets]{Force between two cylindrical magnets: the charged-disc model}\label{app:finite}
+
+A uniformly magnetised cylinder of magnetisation $M_{\rm s}$ along its axis is equivalent, for the field outside it, to two discs of uniform surface ``magnetic charge'' density $\pm\sigma=\pm M_{\rm s}$ on its flat faces \cite{griffiths,camacho}. The force between two charged discs of radius $R$, coaxial and a distance $z$ apart, is
+\begin{equation}
+F_{\rm dd}(z)=\frac{\muz\sigma^2}{4\pi}\iint\frac{z\,\dd A_1\,\dd A_2}{\big[|\bm\rho_1-\bm\rho_2|^2+z^2\big]^{3/2}},
+\end{equation}
+where $\bm\rho_{1,2}$ are positions in the two discs. Two magnets of thickness $t$ with centres $d$ apart and like poles facing have their four faces at axial separations $d-t$ (the two facing poles, like charges, repulsive), $d+t$ (the two far poles, like charges, repulsive) and $d$ (twice; unlike charges, attractive), so
+\begin{equation}
+F(d)=F_{\rm dd}(d-t)+F_{\rm dd}(d+t)-2F_{\rm dd}(d).
+\end{equation}
+For $d\gg R,t$ each $F_{\rm dd}$ tends to the point-charge form $\muz q^2/(4\pi z^2)$ with $q=\sigma\pi R^2$, and the combination above reduces to the second difference of $z^{-2}$, i.e.\ $\propto t^2\,\dd^2(z^{-2})/\dd z^2=6t^2/d^4$: the dipole law with $\mum=qt=M_{\rm s}\pi R^2t=M_{\rm s}V$, as it should. At finite $d/R$ the disc integral is smaller than the point-charge value (the oblique contributions partially cancel), which is the origin of the softening. The double integral was evaluated numerically on a $24\times36$ polar grid per disc (relative accuracy better than $10^{-3}$ for $z\geq0.3R$); the stiffness $\gamma=-\dd F/\dd d$ was obtained by central differences, and the apparent gradient of $\ln\gamma$ against $\ln d$ over the measured separations is listed in Table~\ref{tab:finite}. In the fits of Section~\ref{sec:nonlinfit} the overall scale of $F$ (which contains $\sigma^2$) is a free parameter and only the shape, which depends on $D$ and $t$, is used.
+
+\section{Uncertainty propagation and least-squares formulae}\label{app:uncertainty}
+
+For independent uncertainties the first-order propagation rule $\Delta q=\sum_i|\partial q/\partial x_i|\Delta x_i$ (maximum-error form, as used in IB physics) gives:
+\begin{align}
+\Y&=f_2^2-f_1^2: & \Delta\Y&=2f_2\Delta f_2+2f_1\Delta f_1,\\
+\ln\Y: & & \Delta(\ln\Y)&=\Delta\Y/\Y,\\
+\ln d: & & \Delta(\ln d)&=\Delta d/d,\\
+d^{-5}: & & \Delta(d^{-5})&=5d^{-6}\Delta d=5\,(\Delta d/d)\,d^{-5},\\
+C=3\muz\mum^2/(\pi^3m): & & \Delta C/C&=2\Delta\mum/\mum+\Delta m/m,\\
+m=k/\omega_a^2: & & \Delta m/m&=\Delta k/k+2\Delta f_a/f_a .
+\end{align}
+For the straight line $y=a+bx$ fitted to $n$ points by unweighted least squares (Excel LINEST),
+\begin{gather}
+b=\frac{n\sum xy-\sum x\sum y}{n\sum x^2-(\sum x)^2},\qquad
+a=\bar y-b\bar x,\qquad
+s^2=\frac{\sum(y_i-a-bx_i)^2}{n-2},\\
+\Delta b=s\sqrt{\frac{n}{n\sum x^2-(\sum x)^2}},\qquad
+\Delta a=s\sqrt{\frac{\sum x^2}{n\sum x^2-(\sum x)^2}} .
+\end{gather}
+For the weighted fit each sum is replaced by $\sum w_i(\cdot)$ with $w_i=1/\Delta y_i^2$ and $n$ by $\sum w_i$. For Graph~1 with $n=6$: $\sum x=19.720$, $\sum x^2=64.998$, $\sum y=-9.829$, $\sum xy=-32.796$, giving $b=-3.749$, $a=10.68$, $s=0.084$, $\Delta b=0.195$, $\Delta a=0.64$.
+
+\section{Further raw data}\label{app:rawdata}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{\SIM{} -- frequencies (Hz) recovered by each method from the synthetic records of Section~\ref{sec:simmethods}. `--' = only one peak found. Columns: true values; original procedure ($T=30\un{s}$, $A=10\un{mm}$, FFT of $x_1$, rectangular); new records ($T=90\un{s}$, $A=3\un{mm}$): FFT of $x_1$ (rectangular), FFT of $\eta$ and $\xi$, two-tone fit.}
+\label{tab:simdata}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}c cc cc cc cc cc@{}}
+\toprule
+$d$ & \multicolumn{2}{c}{true} & \multicolumn{2}{c}{original, $x_1$ FFT} & \multicolumn{2}{c}{$90\un{s}$, $x_1$ FFT} & \multicolumn{2}{c}{$90\un{s}$, $\eta$/$\xi$ FFT} & \multicolumn{2}{c}{$90\un{s}$, two-tone fit}\\
+/ mm & $f_1$ & $f_2$ & $f_1$ & $f_2$ & $f_1$ & $f_2$ & $f_1$ & $f_2$ & $f_1$ & $f_2$\\
+\midrule
+\tabinput{tables/tab_simdata}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\TBM{Add here: load--deflection data for spring 2; the three trials of $f_a$ and $f_b$; the balance readings for $\mum$; the per-trial frequencies of the re-measurement for every window and method (as in Table~\ref{tab:simdata} but measured).}
+
+\section{Python code}\label{app:code}
+
+The complete scripts are supplied with the essay (\texttt{make\_figures.py}, \texttt{fit\_models.py}, \texttt{analyse\_tracks.py}). The core routines are reproduced here.
+
+\subsection*{G.1 Peak detection with zero-padding and parabolic interpolation}
+\begin{lstlisting}
+def peaks_two(x, fs, window="rect", nfft=2**20, fmin=0.4, fmax=2.0, thr=0.03):
+    """Return the two highest separate peaks of the amplitude spectrum of x."""
+    n = len(x); x = x - x.mean()                      # detrend (remove DC offset)
+    w = {"rect": np.ones(n), "hann": np.hanning(n),
+         "blackman": np.blackman(n)}[window]
+    X = np.abs(np.fft.rfft(x * w, nfft))              # zero-padded amplitude spectrum
+    fq = np.fft.rfftfreq(nfft, 1 / fs)
+    idx = np.where((fq > fmin) & (fq < fmax))[0]; Xm = X[idx].max(); pk = []
+    for i in idx[1:-1]:
+        if X[i] > X[i-1] and X[i] >= X[i+1] and X[i] > thr * Xm:   # local maximum
+            a, b, c = X[i-1], X[i], X[i+1]
+            p = 0.5 * (a - c) / (a - 2*b + c)         # parabolic refinement
+            pk.append((fq[i] + p * (fq[1] - fq[0]), b))
+    pk.sort(key=lambda z: -z[1])
+    return sorted(q[0] for q in pk[:2])
+\end{lstlisting}
+
+\subsection*{G.2 Full non-linear equations of motion (Section~\ref{sec:simulation})}
+\begin{lstlisting}
+def rhs_full(t, s, d, wa2, wb2, K, tau):
+    """s = [x1, v1, x2, v2]; K = C_F/m; F(r) = C_F r^-4; separation r = d + x2 - x1."""
+    x1, v1, x2, v2 = s
+    r = d + x2 - x1
+    dF = K / 4 * (r**-4 - d**-4)        # [F(r) - F(d)] / m  (note K/4 = C_F/m ... see text)
+    a1 = -wa2 * x1 - dF - (2 / tau) * v1
+    a2 = -wb2 * x2 + dF - (2 / tau) * v2
+    return [v1, a1, v2, a2]
+
+sol = solve_ivp(rhs_full, (0, T), [A, 0, 0, 0], args=(d, wa2, wb2, K, tau),
+                rtol=1e-9, atol=1e-12, dense_output=True)
+t = np.arange(0, T, 1 / 240.0); x1, x2 = sol.sol(t)[0], sol.sol(t)[2]
+\end{lstlisting}
+(In the code $K$ is defined as $4C_F/m=\gamma d^5/m$ so that the linear coupling is $\gamma/m=K d^{-5}$.)
+
+\subsection*{G.3 Two-damped-sinusoid fit (Section~\ref{sec:further}, item 4c)}
+\begin{lstlisting}
+def two_tone_fit(t, x, f1_guess, f2_guess, tau0=25.0):
+    def model(p, t):
+        A1, A2, ph1, ph2, fa, fb, ta, tb, c = p
+        return (A1*np.exp(-t/ta)*np.cos(2*np.pi*fa*t + ph1)
+              + A2*np.exp(-t/tb)*np.cos(2*np.pi*fb*t + ph2) + c)
+    p0 = [x.std(), x.std(), 0, 0, f1_guess, f2_guess, tau0, tau0, 0]
+    r = least_squares(lambda p: model(p, t) - x, p0, x_scale="jac")
+    J = r.jac; cov = np.linalg.inv(J.T @ J) * (r.fun @ r.fun) / (len(t) - 9)
+    se = np.sqrt(np.diag(cov))
+    return r.x[4], r.x[5], se[4], se[5]          # f1, f2 and their standard errors
+\end{lstlisting}
+
+\subsection*{G.4 Detuned normal modes and the finite-size force}
+\begin{lstlisting}
+def modes(kappa, fa, fb):
+    """omega_{1,2}^2 = wbar^2 + kappa -/+ sqrt(Delta^2 + kappa^2)  (Appendix C)."""
+    wa2, wb2 = (2*np.pi*fa)**2, (2*np.pi*fb)**2
+    wbar2, Dl = (wa2 + wb2)/2, (wb2 - wa2)/2
+    root = np.sqrt(Dl**2 + kappa**2)
+    return np.sqrt(wbar2 + kappa - root)/(2*np.pi), np.sqrt(wbar2 + kappa + root)/(2*np.pi)
+
+def disc_disc_force(z, R, nr=24, nphi=36):
+    """Axial force between two coaxial uniformly charged discs of radius R, z apart."""
+    r = (np.arange(nr) + 0.5)/nr * R; phi = (np.arange(nphi) + 0.5)/nphi * 2*np.pi
+    dA = (R/nr) * (2*np.pi/nphi) * r
+    rr, pp = np.meshgrid(r, phi, indexing="ij"); x1, y1 = rr*np.cos(pp), rr*np.sin(pp)
+    dAA = np.broadcast_to(dA[:, None], rr.shape); F = 0.0
+    for i in range(nr):                        # disc 2 is axisymmetric: one azimuth suffices
+        dist2 = (x1 - r[i])**2 + y1**2 + z**2
+        F += np.sum(dAA * (dA[i]*nphi) * z / dist2**1.5)
+    return F
+
+def magnet_force(d, D, t):                     # two magnets, like poles facing
+    R = D/2
+    return disc_disc_force(d-t, R) + disc_disc_force(d+t, R) - 2*disc_disc_force(d, R)
+\end{lstlisting}

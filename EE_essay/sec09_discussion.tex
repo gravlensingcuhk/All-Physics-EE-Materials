@@ -1,0 +1,19 @@
+\section{Discussion of the preliminary results}\label{sec:discussion}
+
+The qualitative predictions of Section~2 are confirmed. The coupling term $\Y=f_2^2-f_1^2$ falls steeply with separation, by a factor of $7$ between $21$ and $35\un{mm}$; $f_2$ approaches $f_1$; the beats slow down until, beyond $40\un{mm}$, the two frequencies can no longer be separated in a $30\un{s}$ record; and the dependence is well described by a power law, as the straightness of Graph~1 shows ($R^2=0.989$). The magnetic force does act as a tunable coupling spring, and the coupling can be switched from strong ($2\gamma/k\approx0.7$) to negligible by moving the clamps by a few centimetres.
+
+Quantitatively, however, the data disagree with the point-dipole model in four related ways:
+\begin{enumerate}
+\item the exponent is $\ngradSix\pm\ngradSixErr$ rather than $-5$;
+\item $f_1$ is not constant but rises by $2.6\,\%$ as the magnets approach;
+\item the through-origin line of Graph~2 does not fit, a free intercept of $0.06\un{Hz^2}$ being required;
+\item the residuals of Graph~1 hint at a concave-down curvature.
+\end{enumerate}
+
+It is tempting to conclude that the force between the magnets simply falls as $d^{-3.75}$ rather than $d^{-5}$. But that would contradict a very well established law, and there are several ways in which the \emph{measurement} and the \emph{model} could each produce exactly this kind of deviation. They fall into two families.
+
+\paragraph{Measurement effects.} The frequencies are read from spectra of $30\un{s}$ records. Section~\ref{sec:fftbackground} showed that two peaks closer than $1$--$2$ bins ($33$--$67\un{mHz}$) pull on each other or merge; at $31$ and $35\un{mm}$ the separation is $2.2$ and $1.2$ bins, so the frequencies at the large-$d$ end of the graph, precisely the points that determine the gradient, are the least trustworthy. The release amplitude of $10\un{mm}$ is almost half the smallest separation, so the assumption of small displacements is questionable at the small-$d$ end.
+
+\paragraph{Model effects.} The magnets are not points ($d/D$ of order $2$--$6$); the two springs are not exactly identical; the cantilever tip tilts as it bends; there is damping. Each of these was listed as an assumption in Section~\ref{sec:remarks}.
+
+The strategy of the rest of the essay is to take each effect in turn, work out the \emph{sign} of the error it produces in the gradient of Graph~1, estimate its \emph{size} with the measured numbers, and identify a \emph{remedy}. An effect can only explain the discrepancy if it makes the gradient \emph{shallower} (less negative) than $-5$ by an amount of order $1$; effects that make it steeper, however large, cannot be the culprit and must in fact be corrected for \emph{before} the shallowing effects can be assessed. Section~\ref{sec:evaluation} does this analysis; Sections~\ref{sec:further}--\ref{sec:simulation} then apply the remedies.

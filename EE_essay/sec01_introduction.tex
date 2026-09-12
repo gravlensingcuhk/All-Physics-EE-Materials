@@ -1,0 +1,113 @@
+\section{Introduction}
+
+\subsection{Coupled magnetic-mechanical oscillator}
+
+Simple harmonic motion refers to the motion a body undergoes when the restoring force is directly proportional to the displacement from equilibrium. A simple harmonic oscillator is a system that oscillates with simple harmonic motion. For example, a mass attached to an elastic spring that is freely subjected to gravity is a simple harmonic oscillator.
+
+A coupled harmonic oscillator consists of two or more simple harmonic oscillators that are connected together, such that energy can be transferred between them. The familiar textbook example is two pendulums joined by a light spring \cite{young}; here the ``spring'' that joins the two oscillators is replaced by a magnetic field, so that the coupling is transmitted without any contact and its strength can be varied continuously simply by moving the two oscillators closer together or further apart.
+
+In this extended essay, the coupled magnetic-mechanical oscillator consists of two identical copper leaf springs that are clamped vertically at their lower ends to a rigid and non-magnetic base, as shown in Figure~\ref{fig:setup_sketch}. A permanent neodymium magnet is attached to the free end of each spring. The two magnets are oriented so that they repel, hence the like poles face each other. Because of the repulsion, both springs are slightly bent outwards even at rest.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0,>=Latex]
+  % base
+  \fill[gray!30] (-3.8,0) rectangle (3.8,-0.5);
+  \draw[thick] (-3.8,0) -- (3.8,0);
+  \node at (0,-0.27) {\small non-magnetic base};
+  % clamps
+  \fill[gray!60] (-1.75,0) rectangle (-1.35,0.5);
+  \fill[gray!60] (1.35,0) rectangle (1.75,0.5);
+  % springs (slightly bent outward)
+  \draw[very thick,orange!80!black] (-1.55,0.5) .. controls (-1.55,2.2) and (-1.7,3.2) .. (-1.85,4.0);
+  \draw[very thick,orange!80!black] (1.55,0.5) .. controls (1.55,2.2) and (1.7,3.2) .. (1.85,4.0);
+  \node[font=\small,anchor=east] at (-1.75,2.2) {spring 1};
+  \node[font=\small,anchor=west] at (1.75,1.4) {spring 2};
+  % magnets (centres at x = -1.95 and +1.95)
+  \fill[red!70] (-2.35,3.85) rectangle (-1.95,4.35);
+  \fill[blue!70] (-1.95,3.85) rectangle (-1.55,4.35);
+  \fill[blue!70] (1.55,3.85) rectangle (1.95,4.35);
+  \fill[red!70] (1.95,3.85) rectangle (2.35,4.35);
+  \node[white,font=\scriptsize] at (-2.15,4.1) {S};
+  \node[white,font=\scriptsize] at (-1.75,4.1) {N};
+  \node[white,font=\scriptsize] at (1.75,4.1) {N};
+  \node[white,font=\scriptsize] at (2.15,4.1) {S};
+  % gap g (between facing surfaces)
+  \draw[<->] (-1.55,3.55) -- (1.55,3.55) node[midway,below,font=\small] {$g$ (gap)};
+  % d (centre to centre) above
+  \draw[dotted] (-1.95,4.35) -- (-1.95,5.0);
+  \draw[dotted] (1.95,4.35) -- (1.95,5.0);
+  \draw[<->] (-1.95,4.85) -- (1.95,4.85) node[midway,above,font=\small] {$d=g+t$ (centre to centre)};
+  % magnet thickness t
+  \draw[<->] (1.55,3.75) -- (2.35,3.75);
+  \node[font=\scriptsize,anchor=north] at (1.95,3.72) {$t$};
+  % displacement arrows x1, x2 (dashed positions)
+  \draw[->,thick] (-2.6,5.55) -- (-1.9,5.55) node[right,font=\small] {$x_1$};
+  \draw[->,thick] (1.3,5.55) -- (2.0,5.55) node[right,font=\small] {$x_2$};
+  \node[font=\scriptsize,anchor=south] at (0,5.55) {positive direction};
+  % L
+  \draw[<->] (3.3,0.5) -- (3.3,4.0) node[midway,right,font=\small] {$L$};
+  \draw[dotted] (1.75,0.5) -- (3.3,0.5);
+  \draw[dotted] (2.35,4.0) -- (3.3,4.0);
+\end{tikzpicture}
+\caption{Coupled magnetic-mechanical oscillator. Both springs are slightly bent outwards by the static repulsion between the magnets. $d$ is the centre-to-centre separation of the magnets at equilibrium, $g$ is the surface-to-surface gap and $L$ is the free length of each spring. $x_1$ and $x_2$ are the horizontal displacements of the two magnets from their equilibrium positions, both taken positive in the same direction.}
+\label{fig:setup_sketch}
+\end{figure}
+
+\subsection{Oscillation modes and frequencies}
+
+If one spring is pulled aside and released, it does not simply oscillate at its own natural frequency. Its motion changes the distance between the magnets, which changes the repulsive force on the other spring, which therefore starts to move as well. Energy flows back and forth between the two springs, and the displacement of each spring shows the characteristic ``beats'' of a coupled system (Figure~\ref{fig:beats_example}).
+
+The standard way to understand such motion is in terms of \emph{normal modes} \cite{taylor,french}: special patterns of motion in which every part of the system oscillates at the same single frequency. A system of two coupled oscillators has exactly two normal modes, and any motion whatsoever is a superposition of the two.
+
+\begin{itemize}
+\item \textbf{In-phase mode} (frequency $f_1$). The two magnets move together in the same direction by the same amount, so the separation between them never changes. The magnetic force stays constant at its equilibrium value and does no additional work; each spring simply oscillates at its own natural frequency as if the magnets were not there. This mode therefore ``does not see'' the coupling.
+\item \textbf{Anti-phase mode} (frequency $f_2$). The two magnets move towards and away from each other. The separation, and with it the repulsive force, oscillates. The magnetic repulsion pushes each magnet back towards its equilibrium position whenever the magnets approach, so it acts as an extra restoring force in addition to the spring; the anti-phase mode is therefore stiffer and has the higher frequency, $f_2>f_1$.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.9,>=Latex]
+  \foreach \dx/\lab/\sgnA/\sgnB in {0/{in-phase mode, $f_1$}/1/1, 7/{anti-phase mode, $f_2$}/1/-1}{
+    \begin{scope}[shift={(\dx,0)}]
+      \fill[gray!30] (-2.6,0) rectangle (2.6,-0.35);
+      \draw[thick] (-2.6,0) -- (2.6,0);
+      \fill[gray!60] (-1.4,0) rectangle (-1.1,0.35);
+      \fill[gray!60] (1.1,0) rectangle (1.4,0.35);
+      \draw[very thick,orange!80!black] (-1.25,0.35) .. controls (-1.25,1.6) .. (-1.25+0.5*\sgnA,3.0);
+      \draw[very thick,orange!80!black,dashed,opacity=0.5] (-1.25,0.35) .. controls (-1.25,1.6) .. (-1.25-0.5*\sgnA,3.0);
+      \draw[very thick,orange!80!black] (1.25,0.35) .. controls (1.25,1.6) .. (1.25+0.5*\sgnB,3.0);
+      \draw[very thick,orange!80!black,dashed,opacity=0.5] (1.25,0.35) .. controls (1.25,1.6) .. (1.25-0.5*\sgnB,3.0);
+      \fill[red!70] (-1.25+0.5*\sgnA-0.35,2.85) rectangle (-1.25+0.5*\sgnA+0.35,3.25);
+      \fill[blue!70] (1.25+0.5*\sgnB-0.35,2.85) rectangle (1.25+0.5*\sgnB+0.35,3.25);
+      \draw[<->,thick] (-1.25-0.5,3.6) -- (-1.25+0.5,3.6);
+      \draw[<->,thick] (1.25-0.5,3.6) -- (1.25+0.5,3.6);
+      \node[font=\small] at (0,-0.75) {\lab};
+    \end{scope}}
+\end{tikzpicture}
+\caption{The two normal modes. In the in-phase mode the separation of the magnets is constant, so the magnetic force plays no part and $f_1$ equals the natural frequency of a single spring. In the anti-phase mode the separation oscillates and the magnetic repulsion adds to the restoring force, so $f_2>f_1$.}
+\label{fig:modes_sketch}
+\end{figure}
+
+When a single spring is displaced and released, both modes are set going at once, and the motion of each magnet is a mixture of the two. Because the two modes have slightly different frequencies they drift in and out of step: when they are in step the magnet swings widely, when they are out of step it almost stops. The displacement therefore shows a fast oscillation whose amplitude swells and shrinks periodically---the beats of Figure~\ref{fig:beats_example}. Two time scales can be read from such a trace: the period of the fast oscillation, which corresponds to the \emph{average frequency} $f_{\rm avg}=(f_1+f_2)/2$, and the time between successive swellings, the beat period $T_{\rm beat}$, whose reciprocal is the \emph{beat frequency} $f_{\rm beat}=f_2-f_1$. The proof of these two statements is given with the theory in Section~\ref{sec:modes} (equations~\eqref{eq:beats} and \eqref{eq:beats_identity}). Beats are the visible sign of coupling: the further apart the magnets, the weaker the coupling, the closer $f_2$ is to $f_1$, and the slower the beats, until with the magnets far apart each spring simply oscillates on its own.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{beats_measured_time}
+\caption{Measured motion after spring~1 was displaced and released ($d=23\un{mm}$; Tracker, $240\un{fps}$). Top: displacement of spring~1. The amplitude of the fast oscillation swells and shrinks periodically (dashed envelope) because energy flows back and forth between the springs; the time between successive swellings is the beat period $T_{\rm beat}$. Bottom: three of these beats with both springs shown---spring~2 is at its largest amplitude whenever spring~1 is at its smallest. \TBM{Replace by \texttt{figs/beats\_measured\_time.pdf} produced with \texttt{plot\_beats.py --panels time}; state the trial and $d$ used.}}
+\label{fig:beats_example}
+\end{figure}
+
+\subsection{Motivation and research question}
+
+This experiment originates from problem~6, ``Magnetic-mechanical oscillator'', of the 2023 International Young Physicists' Tournament \cite{iypt}, which asks how the movement of two magnet-tipped leaf springs depends on relevant parameters. Of all the parameters, the separation of the magnets is the most interesting one, for two reasons. First, it is the parameter that controls the coupling, so it directly tests the physics of the normal modes described above. Second, the form of the dependence is a test of the law of force between two magnets: two small magnets facing each other are expected to behave as magnetic dipoles, whose mutual force falls as the inverse fourth power of their separation, and the extra stiffness of the anti-phase mode, which is the \emph{gradient} of that force, should fall as the inverse fifth power. Unlike a mechanical spring, whose stiffness is fixed once it is made, the magnetic ``spring'' has a stiffness that the experimenter can vary continuously by moving the clamps. A contactless, tunable coupling of this kind is also the principle behind magnetically coupled resonators used in wireless power transfer and in some sensors, which gives the investigation an application beyond the desk-top demonstration.
+
+The research question is therefore:
+
+\begin{keybox}
+\textbf{How does the centre-to-centre separation $d$ of the magnets in a coupled magnetic-mechanical oscillator affect its two normal-mode frequencies $f_1$ and $f_2$, and hence its average frequency $f_{\mathrm{avg}}=(f_1+f_2)/2$ and beat frequency $f_{\mathrm{beat}}=f_2-f_1$?}
+\end{keybox}
+
+The first part of the question is answered by measuring $f_1$ and $f_2$ over a range of $d$. The second part follows from the first, because $f_{\rm avg}$ and $f_{\rm beat}$ are combinations of $f_1$ and $f_2$; they are reported because they are the two quantities that can be seen directly in a recording (Figure~\ref{fig:beats_example}). To turn the question into a quantitative test, the essay compares the measurements with a specific prediction: the point-dipole model of the magnets (Section~\ref{sec:theory}) predicts that the coupling term $f_2^2-f_1^2=2f_{\rm beat}f_{\rm avg}$ is proportional to $d^{-5}$.
+
+Throughout the essay the separation $d$ is the \emph{centre-to-centre} distance between the two magnets at equilibrium, with both magnets mounted and the springs already bent outwards by the repulsion. If $g$ is the surface-to-surface gap between the facing poles and $t$ the thickness of each magnet, then $d=g+t$ (Figure~\ref{fig:setup_sketch}). The centre-to-centre distance is the natural variable of the dipole model, and defining $d$ at equilibrium (rather than as the distance between the clamps) removes the static bending of the springs from the problem: the equilibrium position, whatever it is, is simply where each oscillation is centred.

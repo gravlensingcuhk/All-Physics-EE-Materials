@@ -1,0 +1,24 @@
+\section{Further methodology}\label{sec:further}
+
+The evaluation identified four remedies that can be applied without new apparatus. They are combined into the following modified procedure; the numbered items replace or extend the corresponding steps of Section~\ref{sec:mainproc}.
+
+\begin{enumerate}
+\item \textbf{Measure the uncoupled frequencies first.} Before any coupled run, record $f_a$ and $f_b$ of each spring alone (with its own magnet mounted, the other magnet removed) from $60\un{s}$ records, three trials each. This fixes the detuning parameter of equation~\eqref{eq:detunedY} independently, so that it does not have to be fitted from the same data that test the exponent. If $|f_b-f_a|>0.005\un{Hz}$, trim the free length of the faster spring by fractions of a millimetre until the two agree, and re-measure.
+
+\item \textbf{Track both magnets and form the normal coordinates before the FFT.} Tracker can follow two points in the same video. From $x_1(t)$ and $x_2(t)$ compute $\eta=x_1+x_2$ and $\xi=x_1-x_2$. By construction (Section~\ref{sec:modes}) $\eta$ contains only the in-phase frequency and $\xi$ only the anti-phase frequency, so each spectrum has a \emph{single} peak and the question of resolving two neighbouring peaks disappears (Figure~\ref{fig:normalcoords}). Small imperfections (detuning, unequal tracking scales) leave a weak second peak, which is harmless because the main peak is far higher. This is the single most effective improvement: it costs nothing and it extends the usable range to $45$--$60\un{mm}$, where the two frequencies differ by less than $1\,\%$.
+
+\item \textbf{Record longer and release less.} Record $T\geq90\un{s}$ (three times the previous length; the bin width falls to $\nbinTnew\un{mHz}$ and the pulling errors of Table~\ref{tab:resolution} become negligible up to $40\un{mm}$). Release with $A=3\un{mm}$, for which Table~\ref{tab:amplitude} shows the hardening shift is below $0.7\,\%$ at $21\un{mm}$ and below $0.1\,\%$ beyond $30\un{mm}$. In addition, keep one $A=10\un{mm}$ run at each $d$ for the amplitude study of item~5. Keep the camera on a tripod, the scale bar in the plane of motion, and archive every raw video so that the analysis can be repeated with different settings.
+
+\item \textbf{Analyse every record in more than one way.} (a) FFT of $x_1$ alone with rectangular, Hann and Blackman windows, each zero-padded to $2^{20}$ points with parabolic interpolation; (b) FFT of $\eta$ and $\xi$; (c) a least-squares fit of the model
+\begin{equation}
+x_1(t)=A_1e^{-t/\tau_1}\cos(2\pi f_1t+\phi_1)+A_2e^{-t/\tau_2}\cos(2\pi f_2t+\phi_2)+c
+\label{eq:twotone}
+\end{equation}
+directly to the time series, starting from the FFT estimates. Method (c) is not limited by the $1/T$ resolution of the DFT, because it uses the known functional form of the signal rather than decomposing it into arbitrary sinusoids, and it returns a statistical uncertainty for each frequency from the covariance of the fit (Figure~\ref{fig:twotone}). Agreement between (a), (b) and (c) where all three work, and the behaviour of (a) where it fails, is itself a measurement of the analysis error.
+
+\item \textbf{Extrapolate to zero amplitude.} Divide each $A=10\un{mm}$ record into $15\un{s}$ segments, measure the amplitude $a$ and the anti-phase frequency of $\xi$ in each segment, plot the frequency against $a^2$ (equation~\eqref{eq:LL} predicts a straight line) and extrapolate to $a^2=0$. The intercept is the small-amplitude $f_2$, and the gradient is an independent check of the non-linear model (Figure~\ref{fig:extrapolation}).
+
+\item \textbf{Fit physical models to the untransformed data.} Instead of taking logarithms and using LINEST, which discards points with $\Y\leq0$ and gives the noisy large-$d$ points disproportionate weight, fit $f_1(d)$ and $f_2(d)$ together by weighted non-linear least squares to (a) the identical-spring dipole model $\Y=Cd^{-5}$; (b) the same with a free exponent $n$; (c) the detuned model \eqref{eq:detunedY} with $f_a$, $f_b$ fixed from item~1; (d) the finite-size force of Appendix~\ref{app:finite} with the measured $D$ and $t$. Compare the residual patterns and the values of $\chi^2/\text{dof}$; since the half-range uncertainties are not true standard deviations, $\chi^2$ is used only as a \emph{relative} figure of merit between models, not as an absolute goodness-of-fit test.
+\end{enumerate}
+
+Items 4--6 were implemented in a Python script (\texttt{analyse\_tracks.py}, Appendix~\ref{app:code}) that takes a folder of Tracker exports and produces the per-record diagnostics, the frequency tables and the fits, so that the whole analysis is reproducible from the raw videos.

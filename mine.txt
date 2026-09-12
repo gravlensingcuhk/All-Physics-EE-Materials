@@ -1,0 +1,34 @@
+
+--- PAGE 1 ---
+INTERNATIONAL BACCALAUREATE
+PHYSICS HL
+EXTENDED ESSAY
+Candidate code: To be filled in
+Investigation on the frequencies of oscillations of a coupled
+magnetic-mechanical oscillator
+Word count: 4000
+1
+
+--- PAGE 2 ---
+1
+Introduction
+1.1
+Coupled magnetic mechanical oscillator
+Simple harmonic motion refers to the motion a body undergoes when the restoring force is directly propor-
+tional to the displacement from equilibrium.
+A simple harmonic oscillator is a system that oscillates with simple harmonic motion. For example, a mass
+attached to an elastic spring that is freely subjected to gravity is a simple harmonic oscillator.
+A coupled harmonic oscillator consists of two or more simple harmonic oscillators that are connected to-
+gether, such that energy can be transferred between them.
+In this extended essay, the coupled magnetic mechanical oscillator consists of two identical copper leaf
+springs that are clamped vertically at their lower ends to a rigid and non-magnetic base, as shown in Figure 1.
+A permanent neodymium magnet is attached to the free end of each spring. The two magnets are oriented so
+that they repel, hence the like poles face each other.
+non-magnetic base
+S N
+N S
+Figure 1: Coupled magnetic mechanical oscillator. Both springs are slightly bent outward by the static repulsion
+force from the magnets.
+1.2
+Oscillation modes and frequencies
+2

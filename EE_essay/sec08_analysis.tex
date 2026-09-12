@@ -1,0 +1,113 @@
+\section{Analysis}\label{sec:analysis}
+
+\subsection{Processed data and uncertainty propagation}
+
+For each separation the coupling term $\Y=f_2^2-f_1^2$ and its logarithm are computed together with $\ln d$ and $d^{-5}$. The uncertainties follow from the standard rules for propagating independent uncertainties \cite{taylorerr}: for a power, $\Delta(f^2)=2f\,\Delta f$; for a difference, the absolute uncertainties add; for a logarithm, $\Delta(\ln q)=\Delta q/q$. Hence
+\begin{equation}
+\Delta\Y=2f_1\Delta f_1+2f_2\Delta f_2,\qquad
+\Delta(\ln\Y)=\frac{\Delta\Y}{\Y},\qquad
+\Delta(\ln d)=\frac{\Delta d}{d},\qquad
+\Delta\big(d^{-5}\big)=5\,\frac{\Delta d}{d}\,d^{-5}.
+\label{eq:unc}
+\end{equation}
+
+\paragraph{Sample calculation ($d=25\un{mm}$).}
+$\Y=0.953^2-0.812^2=0.9082-0.6593=0.2489\un{Hz^2}$;\;
+$\Delta\Y=2(0.812)(0.005)+2(0.953)(0.005)=0.0176\un{Hz^2}$ ($7.1\,\%$);\;
+$\ln\Y=-1.391\pm0.071$;\;
+$\ln(d/\mathrm{mm})=\ln25=3.219$, $\Delta(\ln d)=0.5/25=0.020$;\;
+$d^{-5}=(0.025\un{m})^{-5}=1.024\times10^{8}\un{m^{-5}}$, $\Delta(d^{-5})=5(0.020)(1.024\times10^8)=0.10\times10^8\un{m^{-5}}$.
+
+Two features of Table~\ref{tab:processed} deserve comment before any graph is drawn. First, although every frequency has the same uncertainty ($\pm5\un{mHz}$), the uncertainty of $\ln\Y$ grows from $0.04$ at $21\un{mm}$ to $0.26$ at $35\un{mm}$ and $1.1$ at $40\un{mm}$, because $\Y$ is a small difference of two nearly equal squares. The points are far from equally reliable, and a fitting procedure that treats them equally will be dominated by the least reliable ones. Second, the horizontal uncertainty $\Delta(\ln d)=\Delta d/d$ is $0.024$ at $21\un{mm}$, comparable to the vertical uncertainty there; in a $d^{-5}$ law a $2.4\,\%$ error in $d$ becomes a $12\,\%$ error in $\Y$. Error bars must therefore be drawn on both axes.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Processed data. $\Delta f_1=\Delta f_2=0.005\un{Hz}$, $\Delta d=0.5\un{mm}$. The $40\un{mm}$ row is shown for completeness but is excluded from the fits because its peaks were not resolved (Table~\ref{tab:rawfreq}).}
+\label{tab:processed}
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}c cc cc cc cc cc@{}}
+\toprule
+$d$/mm & $\ln\frac{d}{\mathrm{mm}}$ & $\Delta$ & $f_1$/Hz & $f_2$/Hz & $\Y$/Hz$^2$ & $\Delta\Y$ & $\ln\frac{\Y}{\mathrm{Hz^2}}$ & $\Delta$ & $\frac{d^{-5}}{10^8\,\mathrm{m^{-5}}}$ & $\Delta$\\
+\midrule
+\tabinput{tables/tab_processed}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Graph 1: \texorpdfstring{$\ln(f_2^2-f_1^2)$}{ln(f2²−f1²)} against \texorpdfstring{$\ln d$}{ln d}}
+
+Figure~\ref{fig:G1} is the main graph of the essay. The six resolved points ($21$--$35\un{mm}$) lie close to a straight line, confirming a power law, but the line is clearly \emph{less steep} than the dipole prediction. An unweighted least-squares fit (Excel's LINEST; Appendix~\ref{app:uncertainty} gives the formulae) returns
+\begin{equation}
+\text{gradient}=\ngradSix\pm\ngradSixErr,\qquad \text{intercept}=\nintSix\pm0.64,\qquad R^2=0.989 .
+\end{equation}
+The best/worst-line method, drawing the steepest and shallowest lines compatible with the error bars of the end points, gives gradients between $\ngradSteep$ and $\ngradShallow$, a somewhat wider range than the statistical one because it uses only two points. A fit that weights each point by $1/[\Delta(\ln\Y)]^2$, so that the precise small-$d$ points count more, gives $\ngradW\pm\ngradWErr$. Whichever way it is done, the measured exponent is between $-3.5$ and $-3.8$, and the predicted value $-5$ lies $5$--$6$ standard errors away. If the unresolved $40\un{mm}$ point is (wrongly) included, the gradient becomes $\ngradSeven$; this shows how strongly a single point with a $\pm1.1$ error bar in $\ln\Y$ can swing an unweighted fit, and is the reason it is excluded.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{G1_lnln}
+\caption{Graph 1: $\ln(f_2^2-f_1^2)$ against $\ln d$ with uncertainties on both axes (equation~\eqref{eq:unc}). The unweighted line has gradient $\ngradSix\pm\ngradSixErr$; the weighted line $\ngradW\pm\ngradWErr$; the dashed green line is the dipole prediction of gradient $-5$, drawn through the $25\un{mm}$ point. The open symbol is the $40\un{mm}$ point, whose peaks were not resolved.}
+\label{fig:G1}
+\end{figure}
+
+\subsection{Graph 2: \texorpdfstring{$f_2^2-f_1^2$}{f2²−f1²} against \texorpdfstring{$d^{-5}$}{d⁻⁵}}
+
+Equation~\eqref{eq:main} can also be tested without logarithms by plotting $\Y$ against $d^{-5}$, where it predicts a straight line through the origin of gradient $C$ (Figure~\ref{fig:G2}). The line of best fit through the origin has gradient
+\begin{equation}
+C_{\rm exp}=(2.08\pm0.15)\times10^{-9}\un{m^5\,s^{-2}},
+\end{equation}
+but the points do not lie on it: the small-$d^{-5}$ points (large $d$) fall above the line and the large-$d^{-5}$ points below, and a line with a free intercept fits much better, with intercept $0.06\un{Hz^2}$. A positive intercept means that $\Y$ does not tend to zero as $d\to\infty$ as fast as $d^{-5}$ does, the same information as the too-shallow gradient of Graph~1 seen from a different angle. The linear plot is the better graph for judging the magnitude $C$ because it does not distort the error bars, while the logarithmic plot is the better one for judging the exponent.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{G2_Y_vs_d5}
+\caption{Graph 2: $f_2^2-f_1^2$ against $d^{-5}$. The dipole model predicts a straight line through the origin. The systematic curvature of the points about the through-origin line is the counterpart of the shallow gradient in Graph 1.}
+\label{fig:G2}
+\end{figure}
+
+\subsection{Graph 3: the individual frequencies}
+
+Figure~\ref{fig:G3} shows $f_1$ and $f_2$ separately. $f_2$ falls steeply towards $f_1$ as predicted. $f_1$, which the model says should be constant, is \emph{not} quite constant: it decreases from $0.823\un{Hz}$ at $21\un{mm}$ to $0.802\un{Hz}$ at $40\un{mm}$, a drift of $2.6\,\%$, or about $4$ times its uncertainty; a straight line through $f_1$ has gradient $(\nfOneSlope\pm0.4)\un{mHz\,mm^{-1}}$. The right-hand panel shows the residuals of the six resolved points from the Graph-1 line. Their signs, $-,+,-,+,+,-$, and their magnitudes, which are not much larger than the error bars, suggest a slight concave-down curvature rather than random scatter, although with six points this cannot be established firmly.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{G3_f_vs_d}
+\caption{Graph 3. Left: $f_1$ and $f_2$ against $d$; the dashed red curve is the dipole prediction $\sqrt{f_1^2+C_{\rm exp}d^{-5}}$ with $C_{\rm exp}$ from Graph 2, and the grey bands mark the separations at which only one peak was found. Right: residuals of $\ln\Y$ from the unweighted line of Graph 1.}
+\label{fig:G3}
+\end{figure}
+
+\subsection{Graph 4: average frequency and beat frequency}
+
+The research question also asks for the two derived quantities $f_{\rm avg}=(f_1+f_2)/2$ and $f_{\rm beat}=f_2-f_1$. Their uncertainties follow from those of $f_1$ and $f_2$ by adding in quadrature: $\Delta f_{\rm avg}=\Delta f/\sqrt2=0.004\un{Hz}$ and $\Delta f_{\rm beat}=\sqrt2\,\Delta f=0.007\un{Hz}$. Figure~\ref{fig:G4} shows both against $d$, together with the predictions of equation~\eqref{eq:favg_fbeat} evaluated with the mean $f_1$ and the $C_{\rm exp}$ of Graph~2.
+
+The average frequency behaves as predicted: it is essentially constant at $f_1$ for $d\gtrsim30\un{mm}$ and rises to $\nfavgSmall\un{Hz}$ at $21\un{mm}$ (prediction $\nfavgPredSmall\un{Hz}$), a rise of $16\,\%$ that is entirely due to $f_2$. The beat frequency falls from $\nfbeatSmall\un{Hz}$ at $21\un{mm}$ (beat period $\nTbeatSmall\un{s}$) to $\nfbeatLarge\un{Hz}$ at $40\un{mm}$ (beat period $\nTbeatLarge\un{s}$, i.e.\ longer than the $30\un{s}$ record, which is why the two peaks were not resolved there). On the log--log axes of the right-hand panel the six resolved points lie close to a straight line of gradient $\ngradBeat\pm\ngradBeatErr$, and at $45$--$60\un{mm}$ only upper limits can be given ($f_{\rm beat}<1/T=33\un{mHz}$, the bin width). The dipole prediction would put the beat period at $60\un{mm}$ near $\nTbeatPredSixty\un{min}$ ($f_{\rm beat}\approx\nfbeatPredSixty\un{mHz}$), far below what a $30\un{s}$ record can resolve. Because $f_{\rm beat}=\Y/(2f_{\rm avg})$ and $f_{\rm avg}$ changes by only $16\,\%$, the beat-frequency graph carries the same information as Graph~1, and its gradient is shallower than $-5$ by the same amount; the exponent problem is therefore analysed once, on $\Y$, in the sections that follow.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{G4_favg_fbeat}
+\caption{Graph 4. Left: average frequency $f_{\rm avg}$ against $d$ with the dipole prediction of equation~\eqref{eq:favg_fbeat}. Right: beat frequency $f_{\rm beat}=f_2-f_1$ on log--log axes with the dipole prediction (dashed), a free power-law fit to the six resolved points (dotted) and upper limits at the three separations where only one peak was found.}
+\label{fig:G4}
+\end{figure}
+
+\subsection{Comparison with the theoretical values}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Measured against predicted values.}
+\label{tab:compare}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{6.4cm}p{3.1cm}p{2.9cm}p{2.6cm}@{}}
+\toprule
+Quantity & Predicted & Measured & Difference \\
+\midrule
+Exponent $n$ in $\Y\propto d^{-n}$ (Graph 1, unweighted) & $5$ & $3.75\pm0.19$ & $-25\,\%$ ($6.4\sigma$)\\
+Exponent $n$ (Graph 1, weighted) & $5$ & $3.48\pm0.24$ & $-30\,\%$ ($6.3\sigma$)\\
+Exponent $n$ (non-linear fit to $\Y$, Section~\ref{sec:nonlinfit}) & $5$ & $\nnFree\pm\nnFreeErr$ & $-30\,\%$\\
+$C$ / $\mathrm{m^5\,s^{-2}}$ (Graph 2, through origin) & $3\muz\mum^2/(\pi^3 m)$ $=\TBM{\ldots}$ & $(2.08\pm0.15)\times10^{-9}$ & \TBM{\ldots}\\
+$\mum^2/m$ / $\mathrm{A^2m^4kg^{-1}}$ implied by $C_{\rm exp}$ & \TBM{from $\mum$, $m$} & $\nmmFromC$ & \TBM{\ldots}\\
+$f_1$ against $d$ & constant & falls by $2.6\,\%$ over 21--40 mm & $\approx4\sigma$\\
+Exponent of $f_{\rm beat}$ against $d$ (Graph 4, 21--35 mm) & $\approx-5$ (weak coupling) & $\ngradBeat\pm\ngradBeatErr$ & $-30\,\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The exponent is the central result. It is measured with a precision of about $5\,\%$ and disagrees with the dipole prediction by $25$--$30\,\%$. Random error cannot account for a discrepancy of six standard errors, so a systematic explanation must be found; this is the task of the next two sections.

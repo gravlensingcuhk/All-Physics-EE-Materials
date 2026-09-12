@@ -1,0 +1,147 @@
+\section{Theoretical model}\label{sec:theory}
+
+The model is built in four steps: (1) each leaf spring with its magnet is reduced to a mass on a spring; (2) the repulsion between the magnets is written down using the point-dipole approximation; (3) the repulsion is linearised about the equilibrium separation, which turns it into a second spring that joins the two masses; (4) the resulting pair of coupled equations is solved for the two normal modes. The result is the tested relation, equation~\eqref{eq:main}. Full derivations of the standard results quoted in steps~1 and 2 are in Appendices~\ref{app:cantilever} and \ref{app:dipole}.
+
+\subsection{The leaf spring as a mass on a spring}\label{sec:spring}
+
+A leaf spring clamped at one end is a cantilever beam. For a beam of length $L$, width $b$, thickness $h$ and Young's modulus $E$, a transverse force $F$ applied at the free end produces a tip deflection \cite{gere}
+\begin{equation}
+x=\frac{FL^3}{3EI},\qquad I=\frac{bh^3}{12},
+\end{equation}
+where $I$ is the second moment of area of the rectangular cross-section (Appendix~\ref{app:cantilever}). The tip therefore behaves as a linear spring of stiffness
+\begin{equation}
+k=\frac{F}{x}=\frac{3EI}{L^3}=\frac{Ebh^3}{4L^3}.
+\label{eq:k}
+\end{equation}
+
+The oscillating mass is not simply the magnet. The strip itself moves, but the parts near the clamp move much less than the tip. Rayleigh's method (Appendix~\ref{app:cantilever}) assumes that the strip vibrates in the shape of its static deflection curve and equates the kinetic energy of the strip to that of an equivalent point mass at the tip; the result is that a strip of mass $\mu L$ ($\mu$ = mass per unit length) contributes $\tfrac{33}{140}\mu L\approx0.236\,\mu L$ to the tip mass \cite{rao}. With a magnet (plus glue and any holder) of mass $M$ at the tip, the effective mass is
+\begin{equation}
+m=M+\tfrac{33}{140}\,\mu L,
+\label{eq:meff}
+\end{equation}
+and the natural angular frequency of one spring is $\omega_0=\sqrt{k/m}$.
+
+This lumped model replaces a continuous beam, which has infinitely many bending modes, by a single degree of freedom. It is accurate when the tip mass dominates: a numerical comparison with the full beam equation (Appendix~\ref{app:cantilever}) shows that the error in $f_2^2-f_1^2$ is below $1\,\%$ once $M\geq0.4\,\mu L$. Higher bending modes of the strip have frequencies at least $\sim 6$ times the fundamental and are easily separated in the spectrum.
+
+\paragraph{Why calibrate dynamically as well as statically.} In principle $k$ and $m$ could be calculated from \eqref{eq:k} and \eqref{eq:meff}. In practice $E$ of a rolled copper strip is uncertain to $\sim10\,\%$ and $h^3$ amplifies the thickness uncertainty threefold, so the model is used only to understand the system while the constants are measured. Two measurements are made. (i) The \emph{ratio} $k/m$ of each spring is obtained by plucking the spring with its own magnet mounted and the other magnet removed; this gives the uncoupled frequencies $f_a$ and $f_b$ of the two springs directly and bypasses $E$, the Rayleigh factor and the lumped approximation altogether. (ii) The static stiffness $k$ is obtained from a load--deflection graph. The two together give $m=k/(2\pi f_a)^2$, which is needed for the \emph{absolute} test of the constant $C$ in equation~\eqref{eq:main}. The test of the \emph{exponent} $-5$ needs neither.
+
+\subsection{Force between the two magnets}\label{sec:force}
+
+A small permanent magnet of dipole moment $\mum$ produces, on its own axis at distance $r$ from its centre, a magnetic field parallel to the axis of magnitude \cite{griffiths}
+\begin{equation}
+B(r)=\frac{\muz}{4\pi}\,\frac{2\mum}{r^3}.
+\label{eq:Baxis}
+\end{equation}
+A second dipole placed on that axis has potential energy $U=-\bm\mu\cdot\bm B$. When the two like poles face each other the second moment is anti-parallel to the field of the first, so $U=+\mum B(r)$ and the force on the second magnet is
+\begin{equation}
+F(r)=-\frac{\dd U}{\dd r}=-\mum\frac{\dd B}{\dd r}=\frac{\muz}{4\pi}\,\frac{6\mum^2}{r^4}
+      =\frac{3\muz\mum^2}{2\pi r^4},
+\label{eq:F}
+\end{equation}
+positive meaning repulsive (the full derivation, starting from the field of a dipole, is in Appendix~\ref{app:dipole}). The force falls as the \emph{fourth} power of the separation: a dipole field falls as $r^{-3}$ and the force is proportional to its gradient.
+
+Equation~\eqref{eq:F} treats each magnet as a point dipole. This is exact only in the limit $r\gg D$, where $D$ is the size of the magnet. For the separations used here $r/D$ is only of order $2$--$6$ (Table~\ref{tab:constants}), so deviations are expected at the smallest separations; this is assumption~(a) in Section~\ref{sec:remarks} and is examined quantitatively in Section~\ref{sec:finite}.
+
+\subsection{Equilibrium}\label{sec:equilibrium}
+
+At rest the repulsion $F(d)$ bends each spring outwards by a static deflection $\delta$ given by $k\delta=F(d)$. If the clamps are set a distance $d_0$ apart, the magnets settle at $d=d_0+2\delta$, and finding $d$ from $d_0$ requires solving $k\,(d-d_0)/2=3\muz\mum^2/(2\pi d^4)$, a fifth-degree equation in $d$. This calculation is avoided entirely by \emph{measuring} $d$ at equilibrium with both magnets mounted, which is why $d$ was defined that way in Section~1.3. All displacements below are measured from this equilibrium.
+
+\subsection{Linearised coupling and the normal modes}\label{sec:modes}
+
+Let $x_1$ and $x_2$ be the horizontal displacements of the two magnets from their equilibrium positions, both positive in the same direction (Figure~\ref{fig:setup_sketch}). The separation of the magnets is then $r=d+x_2-x_1$. Consider magnet~1. Measured from the \emph{unstressed} position of the spring, its displacement is $x_1-\delta$, so the spring exerts $-k(x_1-\delta)$; the magnetic force on it is $-F(r)$ (it is pushed away from magnet~2, i.e.\ in the negative direction). Newton's second law gives
+\begin{equation}
+m\ddot x_1=-k(x_1-\delta)-F(d+x_2-x_1)=-kx_1+\big[F(d)-F(d+x_2-x_1)\big],
+\end{equation}
+where $k\delta=F(d)$ was used. The bracket is the \emph{change} of the magnetic force from its equilibrium value. For small displacements it is expanded to first order in $u=x_2-x_1$:
+\begin{equation}
+F(d+u)\approx F(d)+F'(d)\,u\quad\Rightarrow\quad F(d)-F(d+u)\approx-F'(d)\,u\equiv\gamma\,u ,
+\end{equation}
+where
+\begin{equation}
+\gamma\equiv-\frac{\dd F}{\dd r}\bigg|_{r=d}=\frac{4F(d)}{d}=\frac{6\muz\mum^2}{\pi d^5}
+\label{eq:gamma}
+\end{equation}
+is the \emph{magnetic stiffness}: the extra restoring force per unit change of separation. It is positive because a repulsive force that weakens with distance always pushes the magnets back towards their equilibrium separation. The same steps for magnet~2 (on which the magnetic force is $+F(r)$) give the pair of linear equations
+\begin{equation}
+m\ddot x_1=-kx_1+\gamma(x_2-x_1),\qquad
+m\ddot x_2=-kx_2-\gamma(x_2-x_1).
+\label{eq:eom}
+\end{equation}
+These are exactly the equations of two equal masses on equal springs $k$ joined by a third spring of stiffness $\gamma$ \cite{taylor}; the magnetic field has become that third spring.
+
+Equations~\eqref{eq:eom} are decoupled by adding and subtracting them. With the \emph{normal coordinates}
+\begin{equation}
+\eta\equiv x_1+x_2,\qquad \xi\equiv x_1-x_2,
+\end{equation}
+the sum of the two equations gives $m\ddot\eta=-k\eta$ and the difference gives $m\ddot\xi=-k\xi-2\gamma\xi$. Each normal coordinate therefore performs simple harmonic motion at its own angular frequency:
+\begin{equation}
+\boxed{\;\omega_1^2=\frac{k}{m},\qquad \omega_2^2=\frac{k+2\gamma}{m}\;}
+\label{eq:modes}
+\end{equation}
+$\eta$ is the in-phase mode ($x_1=x_2$, $\xi=0$) and $\xi$ the anti-phase mode ($x_1=-x_2$, $\eta=0$), confirming the qualitative picture of Section~1.2. The factor 2 in $\omega_2^2$ arises because in the anti-phase mode a displacement $x_1=-x_2=\xi/2$ changes the separation by $\xi$, so each magnet feels the full $\gamma\xi$ while having moved only $\xi/2$. Equivalently, in matrix form $m\ddot{\bm x}=-\mathsf K\bm x$ with $\mathsf K=\begin{pmatrix}k+\gamma&-\gamma\\-\gamma&k+\gamma\end{pmatrix}$, whose eigenvalues are $k$ and $k+2\gamma$ with eigenvectors $(1,1)$ and $(1,-1)$.
+
+Subtracting the two frequencies in \eqref{eq:modes} eliminates the spring stiffness $k$ altogether, and inserting \eqref{eq:gamma} gives the relation tested in this essay:
+\begin{equation}
+\boxed{\;f_2^2-f_1^2=\frac{\omega_2^2-\omega_1^2}{4\pi^2}=\frac{\gamma}{2\pi^2 m}
+      =\frac{3\muz\mum^2}{\pi^3 m}\;d^{-5}\equiv C\,d^{-5}\;}
+\label{eq:main}
+\end{equation}
+Taking natural logarithms,
+\begin{equation}
+\ln\!\big(f_2^2-f_1^2\big)=\ln C-5\ln d ,
+\label{eq:lnln}
+\end{equation}
+a straight line of gradient $-5$ and intercept $\ln C$ in a graph of $\ln(f_2^2-f_1^2)$ against $\ln d$. The gradient tests the \emph{form} of the force law; the intercept tests its \emph{magnitude}, and can be compared with $C$ calculated from independently measured $\mum$ and $m$.
+
+\paragraph{Motion after release; average and beat frequency.} The general motion is a superposition of the two modes, $\eta=\eta_0\cos(\omega_1t+\phi_1)$, $\xi=\xi_0\cos(\omega_2t+\phi_2)$; the frequencies are fixed by the system, the amplitudes $\eta_0$, $\xi_0$ by the way the motion is started. Both springs are released from rest, so $\phi_1=\phi_2=0$ and the mode amplitudes are simply the initial values of the normal coordinates, $\eta_0=x_1(0)+x_2(0)$ and $\xi_0=x_1(0)-x_2(0)$. Transforming back with $x_1=(\eta+\xi)/2$, $x_2=(\eta-\xi)/2$,
+\begin{equation}
+x_1(t)=\frac{\eta_0}{2}\cos\omega_1t+\frac{\xi_0}{2}\cos\omega_2t,\qquad
+x_2(t)=\frac{\eta_0}{2}\cos\omega_1t-\frac{\xi_0}{2}\cos\omega_2t .
+\label{eq:solution}
+\end{equation}
+Each displacement is the sum of two cosines at the two mode frequencies, so the Fourier spectrum of either spring contains two peaks, at $f_1$ and $f_2$, whose heights are in the ratio $\xi_0/\eta_0$. The \emph{positions} of the peaks do not depend on how the motion was started; this is the basis of the method of Section~\ref{sec:method}. The \emph{heights} do. For an idealised instantaneous release of spring~1, $x_1(0)=A$, $x_2(0)=0$, the two modes are excited equally ($\eta_0=\xi_0=A$) and the peaks are equal. In the experiment spring~1 is \emph{held} at $A$ before release, and while it is held the changed repulsion shifts spring~2 to a new rest position $x_2(0)=A\gamma/(k+\gamma)$ (from \eqref{eq:eom} with $\ddot x_2=0$), so that
+\begin{equation}
+\frac{\xi_0}{\eta_0}=\frac{A-x_2(0)}{A+x_2(0)}=\frac{k}{k+2\gamma}=\Big(\frac{f_1}{f_2}\Big)^2 ,
+\label{eq:heights}
+\end{equation}
+about $0.65$ at $d=23\un{mm}$: the $f_2$ peak is expected to be lower than the $f_1$ peak, and the beats are not expected to reach zero amplitude (the envelope minimum is $x_2(0)$, not $0$). Both features are seen in Figure~\ref{fig:beats_example}; the observed height ratio, $\approx0.6$, agrees with \eqref{eq:heights} to within the non-linear correction discussed in Section~\ref{sec:nonlinear}.
+
+For the equal-amplitude case the product-to-sum identity $\cos\alpha+\cos\beta=2\cos\frac{\alpha-\beta}{2}\cos\frac{\alpha+\beta}{2}$, with $\omega=2\pi f$, turns the first of \eqref{eq:solution} into
+\begin{equation}
+x_1(t)=A\cos\!\big(\pi(f_2-f_1)\,t\big)\,\cos\!\big(2\pi f_{\rm avg}\,t\big),\qquad f_{\rm avg}=\frac{f_1+f_2}{2},
+\label{eq:beats}
+\end{equation}
+a fast oscillation at the average frequency $f_{\rm avg}$ whose amplitude $A\cos(\pi(f_2-f_1)t)$ varies slowly. The envelope cosine has frequency $(f_2-f_1)/2$, but what is observed is its \emph{modulus}, which reaches a maximum twice per cycle; the swellings of the trace therefore recur at
+\begin{equation}
+f_{\rm beat}=f_2-f_1=\frac{1}{T_{\rm beat}},
+\qquad\text{and}\qquad
+f_2^2-f_1^2=(f_2-f_1)(f_2+f_1)=2\,f_{\rm beat}\,f_{\rm avg}.
+\label{eq:beats_identity}
+\end{equation}
+The same beat period holds for unequal amplitudes (the two cosines drift in and out of step once every $1/(f_2-f_1)$ whatever their sizes); only the depth of the minima changes. Equation~\eqref{eq:beats_identity} links the two quantities that can be read from a trace to the coupling term of \eqref{eq:main}: the beat frequency is the mode splitting itself, and $f_2^2-f_1^2$ is the product of the splitting and twice the average frequency. For spring~2 the same steps give $x_2=A\sin(\pi(f_2-f_1)t)\sin(2\pi f_{\rm avg}t)$: its envelope is a quarter of a beat period behind that of spring~1, so spring~2 is at full amplitude whenever spring~1 is momentarily at rest (Figure~\ref{fig:beats_example}, bottom), which is the energy transfer described qualitatively in the introduction. Finally, because each mode has the same amplitude in both springs (mode shapes $(1,1)$ and $(1,-1)$), the height ratio $\xi_0/\eta_0$ must be the \emph{same} in the spectra of the two springs whatever the starting condition, provided the springs are identical; a difference between the two ratios is a direct sign of non-identical springs (Section~\ref{sec:detuned}).
+
+\subsection{Remarks and assumptions}\label{sec:remarks}
+
+\paragraph{Units.} $[\muz\mum^2]=\mathrm{T\,m\,A^{-1}}\cdot\mathrm{A^2m^4}=\mathrm{T\,A\,m^5}$, and since $1\un{T}=1\un{kg\,A^{-1}s^{-2}}$ this is $\mathrm{kg\,m^5\,s^{-2}}$; dividing by $m$ (kg) and $d^5$ ($\mathrm{m^5}$) leaves $\mathrm{s^{-2}}$, the unit of $f^2$, as required. $C$ has units $\mathrm{m^5\,s^{-2}}$.
+
+\paragraph{Magnitude of the coupling.} From \eqref{eq:modes}, $2\gamma/k=(f_2/f_1)^2-1$. With the values measured later ($f_2/f_1\approx1.29$ at $d=21\un{mm}$) this is about $0.67$, i.e.\ the magnetic ``spring'' is roughly one third as stiff as each leaf spring at the closest separation and about $0.02$ times as stiff at $40\un{mm}$. The static deflection follows from the same numbers: $\delta=F(d)/k=\gamma d/(4k)=\pi^2 (f_2^2-f_1^2)\,d/(2\omega_1^2)$, which is $\approx1.9\un{mm}$ at $21\un{mm}$ and $0.1\un{mm}$ at $40\un{mm}$. This is small compared with $d$ but not negligible compared with the uncertainty in $d$; it is one more reason to measure $d$ at equilibrium.
+
+\paragraph{Predictions for the average and beat frequencies.} Combining \eqref{eq:main} with the definitions gives the two derived quantities named in the research question directly in terms of $d$:
+\begin{equation}
+f_{\rm beat}=\sqrt{f_1^2+Cd^{-5}}-f_1=\frac{Cd^{-5}}{2f_{\rm avg}},\qquad
+f_{\rm avg}=\frac{f_1+\sqrt{f_1^2+Cd^{-5}}}{2}.
+\label{eq:favg_fbeat}
+\end{equation}
+Since $f_{\rm avg}$ can only vary between $f_1$ (weak coupling) and $f_2/2+f_1/2$ (about $15\,\%$ higher at the closest separation used), while $d^{-5}$ varies by a factor of $25$, the beat frequency should fall almost as steeply as $d^{-5}$ itself and the beat period should lengthen roughly as $d^{5}$: from about $4\un{s}$ at $21\un{mm}$ to over $50\un{s}$ at $40\un{mm}$. The average frequency should be nearly constant, rising above $f_1$ only where the coupling is strong. In the weak-coupling limit $Cd^{-5}\ll f_1^2$ the square root can be expanded to give $f_{\rm beat}\approx Cd^{-5}/(2f_1)$, i.e.\ the beat frequency itself then follows the inverse-fifth-power law.
+
+\paragraph{Assumptions.} The derivation assumed:
+\begin{enumerate}[label=(\alph*)]
+\item the magnets are point dipoles ($d\gg D$);
+\item the displacements are small enough for the magnetic force to be linearised;
+\item the two springs are identical ($k$ and $m$ the same for both);
+\item each spring can be represented by a single lumped mass;
+\item there is no damping;
+\item the magnets stay coaxial (the tip of a bending cantilever actually tilts);
+\item the FFT returns the true frequencies of the motion.
+\end{enumerate}
+Each of these is revisited in the evaluation (Section~\ref{sec:evaluation}), where its sign, size and remedy are estimated.

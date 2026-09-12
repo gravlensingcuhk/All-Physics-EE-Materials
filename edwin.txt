@@ -1,0 +1,3392 @@
+
+--- PAGE 1 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Physics Extended Essay  
+ 
+Investigation on the frequencies of oscillations of a coupled 
+physical pendulum 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Word count: 3890 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 2 ---
+ 
+2 
+Table of Contents 
+1) Introduction .................................................................................................................4 
+1.1) 
+Coupled physical pendulums ........................................................................................ 4 
+1.2) 
+Modes of oscillation ..................................................................................................... 4 
+1.3) 
+Research question ........................................................................................................ 6 
+2) 
+Qualitative prediction................................................................................................6 
+3) 
+Hypothesis ................................................................................................................7 
+4) 
+Variable table............................................................................................................7 
+5) 
+Methodology ............................................................................................................8 
+5.1) 
+Experimental set-up ..................................................................................................... 8 
+5.2) 
+Apparatus .................................................................................................................... 8 
+6) 
+Method of data collection..........................................................................................9 
+7) 
+Experimental procedures ......................................................................................... 11 
+7.1) 
+Determination of spring constant ............................................................................... 11 
+7.2) 
+Finding the first and second normal mode frequencies ................................................ 11 
+8) 
+ Data ....................................................................................................................... 12 
+8.1) 
+Raw data ................................................................................................................... 12 
+8.1.1) 
+Basic measurements ......................................................................................................................12 
+8.1.2) 
+Frequency measurements ..............................................................................................................14 
+9) Theoretical model ....................................................................................................... 17 
+10) 
+Preliminary Processed data ........................................................................................ 22 
+10.2.1) 
+Preliminary frequency data .......................................................................................................22 
+10.2.2) 
+Preliminary frequency plot ........................................................................................................23 
+10.3) 
+Further processed data .............................................................................................. 24 
+10.3.1) 
+Further frequency data .............................................................................................................24 
+10.3.2) 
+Final relation ..............................................................................................................................25 
+10.3.3) 
+Final results................................................................................................................................27 
+11) 
+Discussion and conclusion .................................................................................... 29 
+11.1) 
+Discussion .................................................................................................................. 29 
+11.1.1) Preliminary theoretical results .........................................................................................................29 
+11.1.2) 
+Preliminary comparison between experimental and theoretical results ..................................29 
+11.1.3) Final theoretical results ....................................................................................................................32 
+11.1.4) 
+Final comparison between experimental and theoretical results ............................................33 
+11.2) 
+Conclusion ................................................................................................................. 36 
+12) 
+Evaluation ........................................................................................................... 37 
+12.1) 
+Systematic error from large angle oscillation ............................................................... 37 
+12.2) 
+Systematic error from assuming that the pendula are of the same mass ...................... 38 
+12.3) 
+Systematic error from damping .................................................................................. 39 
+12.4) 
+Random error from instruments ................................................................................. 41 
+
+--- PAGE 3 ---
+ 
+3 
+13) 
+Extension............................................................................................................. 41 
+Appendix A ..................................................................................................................... 42 
+A.1) 
+Parallel axis theorem .................................................................................................. 42 
+A.2) 
+Perpendicular axis theorem ........................................................................................ 43 
+A.3) 
+Moment of inertia of half meter rule .......................................................................... 43 
+Appendix B ..................................................................................................................... 45 
+B.1) 
+Uncertainty of the moment of inertia ......................................................................... 45 
+B.2) 
+Uncertainty of (𝝎𝒂𝒗𝒈−𝟏𝟐𝑴𝒈𝒍𝟎𝟐𝑰)𝟐 ..................................................................... 45 
+B.3) 
+Uncertainty of (𝝎𝑩𝒆𝒂𝒕+ 𝟏𝟐𝑴𝒈𝒍𝟎𝟐𝑰)𝟐 ................................................................... 46 
+Appendix C ..................................................................................................................... 47 
+Appendix D ..................................................................................................................... 50 
+D.1) 
+1st and 2nd normal mode angular frequency for unequal masses .................................. 50 
+Appendix E ..................................................................................................................... 52 
+E.1) Modified 1st normal mode angular frequency under damping ........................................... 52 
+E.2) Modified 2nd normal mode angular frequency under damping .......................................... 53 
+References ...................................................................................................................... 55 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 4 ---
+ 
+4 
+1) Introduction  
+1.1) 
+Coupled physical pendulums  
+Simple harmonic motion refers to the motion of a body when the restoring force (on the 
+body) is directly proportional to the displacement from equilibrium1. Such conditions are met 
+in a physical pendulum, which is a rigid body that undergoes fixed axis rotation about a fixed 
+point2.  
+A two-mass coupled pendulum is formed when two identical pendulums are attached by a 
+soft spring3. The spring in between is assumed to obey Hooke’s law (i.e., an ideal spring), 
+which states that the displacement or size of the deformation (of the spring) is directly 
+proportional to the deforming force or load4.  
+1.2) 
+Modes of oscillation  
+A single oscillator has a single natural frequency. However, when two or more oscillators 
+are coupled with springs, they have several natural frequencies and that the general motion 
+(of the oscillator) is a combination of variations at all different natural frequencies5  
+In the case of a oscillations involving two coupled oscillators, the mode of oscillation is 
+divided into two normal modes of oscillation, which are modes at which the masses can 
+oscillate sinusoidally, and the modes which the masses oscillate depend on the initial 
+conditions of oscillation. The pendula will oscillate in the 1st normal mode of oscillation 𝜔1, 
+in which the pendula solely oscillates in the 1st normal angular frequency, when the masses 
+are initially displaced in phase. While the pendula will oscillate in the 2nd normal mode of 
+ 
+1 Reference: Ford, A. L. Young, H. D. Freedman, R. A. Sears and Zemansky’s University Physics With Modern 
+Physics (13th edition). Pearson  
+2 Reference: Peter D. (20th July, 2022). Physical pendulum. Physics LibreTexts. 
+https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Classical_Mechanics_(Dourmashkin)/24%3A_Phy
+sical_Pendulums/24.02%3A_Physical_Pendulum 
+3 Reference: Coupled Pendulum [Online] UC Santa Cruz UCSC PHYSICS DEMONSTRATION ROOM. 
+https://ucscphysicsdemo.sites.ucsc.edu/physics-5a6a/coupled-pendulum/ 
+4 Reference: Elasticity [Online] Britannica. https://www.britannica.com/science/elasticity-physics 
+5 Reference: Taylor, John R. (John Robert), 1939-. (2005). Classical mechanics. Sausalito, Calif. University 
+Science Books  
+
+--- PAGE 5 ---
+ 
+5 
+oscillation 𝜔2, in which the pendula solely oscillates in the 2nd normal mode angular 
+frequency, when the masses are initially displaced in antiphase.  
+ 
+Figure 1. illustration of the (a) 1st normal mode when the masses are displaced in phase 
+and (b) the 2nd normal mode when they are displaced in antiphase 
+ 
+ 
+The initial displacements of the pendula determine the resulting waveform of its 
+motion. A special initial condition, called resonance, occurs when one pendulum stays at rest 
+and the other is placed in an arbitrary initial displacement (shown in Figure 2.)  
+ 
+Figure 2. Illustration of pendula displaced in resonance  
+When the pendula are displaced in resonance, the pendula will oscillate in linear 
+combinations of 𝜔1 and 𝜔2, which are known as the average 𝜔𝑎𝑣𝑔 and beat 𝜔𝑏𝑒𝑎𝑡 angular 
+frequencies, which are given by,6  
+𝜔𝑎𝑣𝑔= 𝜔1 + 𝜔2
+2
+ 
+𝜔𝑏𝑒𝑎𝑡= 𝜔2 −𝜔1
+2
+ 
+ 
+6 Coupled pendulum (N.D.) New York University. 
+https://physics.nyu.edu/~physlab/GenPhysII_PhysIII/Intermediate_Physics_I_writeups/Coupled-Pendulum_08-
+10-017.pdf 
+
+--- PAGE 6 ---
+ 
+6 
+1.3) 
+Research question  
+Coupled pendulums not only frequently appear in clock machineries, and the 
+mechanism of coupled pendulums are also present in molecular vibrations, in which bonds 
+within a molecule are distorted in the same way as springs are stretched and compressed.  
+ 
+The bond strength between different diatomic molecules vary, which in turn affects 
+the atoms’ frequency of vibration. I am interested in investigating such a situation but 
+examining molecular vibration is out of my reach. Instead, such a situation can be simulated 
+classically, by varying the coupling strength between two masses in a coupled pendulum, 
+which can be done so by changing the position of the spring from the pivot.  
+In addition, upon the various possibilities of sending the coupled pendulum in oscillation, I 
+would like to particularly investigate on the oscillation of pendulums in resonance as it 
+exhibits the superposition of the 2 normal modes of oscillation, allowing me to obtain both 
+𝜔1 and 𝜔2, and thus, 𝜔𝑎𝑣𝑔 and 𝜔𝑏𝑒𝑎𝑡 in one go, rather than conducting the experiment in 
+both in-phase and out-of-phase measurement. Therefore, I would like to investigate “In a 
+coupled physical pendulum with pendula oscillating in resonance, how does distance of 
+spring from pivot affect the 1st and 2nd normal mode angular frequencies, hence, the 
+average and beat angular frequencies?”  
+2) 
+Qualitative prediction  
+As the distance of the spring from the pivot increases, the torque exerting on the arms of the 
+pendula increases. The greater the torque acting on the pendula, the greater the 𝜔2. However, 
+the 𝜔1 will remain unchanged since it is independent of the spring extension. As 𝜔𝑎𝑣𝑔 and 
+𝜔𝑏𝑒𝑎𝑡 is a linear combination of the 2 normal mode frequencies, an increases distance of the 
+spring from the pivot would result in an increase in the magnitude of both 𝜔𝑎𝑣𝑔 and 𝜔𝑏𝑒𝑎𝑡. 
+
+--- PAGE 7 ---
+ 
+7 
+3) 
+Hypothesis  
+As the distance of the spring from the pivot increases, 𝜔1 remains unchanged and 𝜔2 
+increases. Hence, 𝜔𝑎𝑣𝑔 and 𝜔𝐵𝑒𝑎𝑡 increases accordingly.  
+4) 
+Variable table  
+Dependent variable 
+Average and beat angular frequencies of oscillation 
+Controlled 
+variable 
+Independent 
+variable  
+Distance of the spring from the pivot 
+Fixed 
+variables 
+1. The masses of the pendula  
+2. The lengths of the pendula   
+3. The length of the spring  
+4. The spring constant of the spring  
+5. The height of the pendula  
+6. The initial separation between the pendula 
+7. The type of rotary motion sensor  
+Uncontrolled variable 
+1. Friction acting on the pendula.   
+2. Air resistance acting on the pendula. 
+ 
+
+--- PAGE 8 ---
+ 
+8 
+5) 
+Methodology 
+5.1) 
+Experimental set-up 
+ 
+Figure 3. Labelled image of experimental set-up 
+5.2) 
+Apparatus  
+ 
+Half meter rule (with holes) 
+x 2 
+PASCO wireless rotary 
+motion sensor x 2 
+Stand and clamp x2 
+Metal rod x 1 
+Spring x 1 
+ 
+Zip ties 
+Laptop with PASCO 
+Capstone installed 
+Electronic balance x 1 
+ 
+ 
+ 
+ 
+
+--- PAGE 9 ---
+ 
+9 
+6) 
+Method of data collection 
+To collect data, two different methods were attempted. The first method was to obtain the 
+average and beat angular frequencies by obtaining their respective periods of oscillation.  
+Graphs of angle (in radians) against time were plotted on a data-logger. The time required 
+for one individual complete oscillation was taken as the period of the average frequency, 
+while the time required for one complete oscillation of the sinusoidal wave envelope was 
+taken as half the period of the beat frequency. The equation for the conversion of period 𝑇 
+into angular frequency 𝜔, which is 𝜔=
+2𝜋
+𝑇 was used to obtain the angular frequencies of 
+oscillation. (Refer to Figure 4)  
+ 
+Figure 4. Angular displacement against time graph when l = 0.15m 
+However, the experimental results showed that as the distance of the spring from the pivot 
+is increased, the angular displacement-time graph lost its sinusoidal envelope waveform, thus, 
+the value for 𝜔𝑏𝑒𝑎𝑡  could not be obtained (as shown in Figure 5). Therefore, this method was 
+abandoned.  
+ 
+Figure 5. Angular displacement against time graph when l = 0.4m. 
+Wave envelope 
+
+--- PAGE 10 ---
+ 
+10 
+Another approach to data collection was to use Fast Fourier Transform (FFT) to obtain 
+the 2 angular frequencies of oscillation. Utilizing Pasco Capstone’s FFT display, the 2 peaks 
+in the FFT spectrum of the greatest amplitude were taken as the angular frequencies of 
+oscillation (refer to Figure 6).  
+ 
+Figure 6. Fast Fourier transform (FFT) spectrum obtained in trial session. 
+The peak that corresponds to a higher frequency gives the value of 𝜔2, while that of the 
+lower frequency gives the value of the 𝜔1. Thus, the angular frequencies of oscillation can be 
+obtained when the spring is connected to different distances from the pivot of the pendulum. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 11 ---
+ 
+11 
+7) 
+Experimental procedures 
+7.1) 
+Determination of spring constant  
+1. Attach the spring on a stand and clamp and measure its equilibrium length.  
+2. Hang 20g slotted masses on the lower end of the spring and record the final length of 
+the spring.  
+3. Deduct the equilibrium length of the spring from its final length to obtain the spring 
+extension 𝑥.  
+4. Repeat step 2 and 3 for 5 more times (with a total of 6 slotted masses).  
+5. Obtain the weight 𝑊 of the slotted masses using 𝑊= 𝑚𝑔, where 𝑚 is the total mass 
+of the slotted masses in kg.  
+6. Plot a graph of weight  𝑊 against extension ∆𝑥, apply a linear line of best fit and plot 
+the worst lines.  
+7. The slope of the line of best fit is the spring constant of the spring, and the uncertainty 
+of the slope can be found by ∆𝑚=
+𝑀𝐴𝑋(𝑚)−𝑀𝐼𝑁(𝑚)
+2
+, where 𝑀𝐴𝑋(𝑚) is the slope of 
+the maximum worst line and 𝑀𝐼𝑁(𝑚) is the slope of the minimum worst line 
+7.2) 
+Finding the first and second normal mode frequencies 
+1. Create an FFT spectrum and an angle-time graph of one of the pendulums on the 
+PASCO Capstone data-logging interface.  
+2. Set the horizontal axis of the FFT spectrum to a maximum of 2.0Hz.  
+3. Set the maximum number of bins to 4096 in FFT properties.  
+4. Set the sample rate of the rotary motion sensor to 40Hz.  
+5. Keep one of the pendulums at rest and displace the other to an arbitrary small angle 
+from equilibrium.  
+6. Press “Start recording”. After 20 seconds, press “stop recording.”  
+7. Use the coordinate tools on the FFT spectrum, find the 2 highest peaks on the graph to 
+obtain the frequencies of the first and second normal mode of oscillation.  
+
+--- PAGE 12 ---
+ 
+12 
+8) 
+ 
+Data  
+8.1) 
+Raw data  
+8.1.1) Basic measurements 
+Length of half meter rule 𝑙0/m 
+0.500 ± 0.001 
+Mass of the ruler 𝑀/g  
+45.55 ± 0.01 
+Spring constant 𝑘/ Nm−1 
+9.6637 ± 0.0000  
+Moment of inertia I / kgm2 
+0.02271 ± 0.00002  
+Table 1. Basic measurements and quantities 
+Determination of the spring constant 𝒌 and 𝚫𝒌 
+𝑊/𝑁 
+∆𝑊/𝑁 
+𝑥/𝑚 
+∆𝑥/𝑚 
+0.0000 
+0.0000 
+0.000 
+0.002 
+0.1962 
+0.0001 
+0.025 
+0.002 
+0.3924 
+0.0001 
+0.048 
+0.002 
+0.5886 
+0.0001 
+0.067 
+0.002 
+0.7848 
+0.0001 
+0.084 
+0.002 
+0.9810 
+0.0001 
+0.107 
+0.002 
+1.1772 
+0.0001 
+0.122 
+0.002 
+Table 2. Weight of slotted mass(es) and spring extension  
+ 
+Graph 1. Weight against spring extension  
+ 
+
+--- PAGE 13 ---
+ 
+13 
+Calculation of ∆𝑾 
+∆𝑊= 𝑔∆𝑚 
+Sample calculation:  
+∆𝑊= (9.81)( 0.01
+1000) = 0.0000981 ≈0.00001 
+As the magnitude of the vertical error bars are too small, worst lines were not drawn such 
+that the spring constant is assumed to be error-free.  
+Therefore, the spring constant of the spring is 9.6637𝑁𝑚−1.  
+ 
+Determination of the moment of inertia and its uncertainty 
+𝑰 of the pendulum:  
+𝐼= 1
+12 𝑀(𝑙0
+2 + 𝑤2) + 𝑀𝐷2 
+Where 𝐷 is the distance between the midpoint of the ruler and the pivot, and 𝑤 is the 
+thickness of the half meter rule.  
+Calculation of 𝚫𝑰 
+∆𝐼 = 
+1
+12 𝑀𝑙0
+2 [
+∆𝑀
+𝑀+ 2 (
+∆𝑙0
+𝑙0 )] + 
+1
+12 𝑀𝑤2 [
+∆𝑀
+𝑀+ 2 (
+∆𝑤
+𝑤)] + 𝑀𝐷2 [
+∆𝑀
+𝑀+ 2 (
+∆𝐷
+𝐷)]    
+Sample calculation:  
+𝐼= 1
+12 [(0.5)2 + (0.026)2)] + (45.55
+1000) (0.20)2 ≈0.0227 kg m2 
+∆𝐼 = 
+1
+12 (
+45.55
+1000)(0.5)2 [
+(0.01)
+(45.55) + 2 (
+0.001
+0.5 )] + 
+1
+12 (
+45.55
+1000)(0.026)2 [
+0.01
+45.55 + 2 (
+0.001
+0.026)] + 
+(
+45.55
+1000)(0.20)2 [
+0.01
+45.55 + 2 (
+0.001
+0.20 )] ≈ ± 2 x 10−5 𝑘𝑔 𝑚2  
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 14 ---
+ 
+14 
+8.1.2) Frequency measurements  
+𝑙 ± ∆𝑙/m 
+±0.001m 
+𝑓1 ± ∆𝑓1/𝐻𝑧  (±0.001𝐻𝑧)  
+𝑓1/̅̅̅̅𝐻𝑧 
+∆𝑓1/̅̅̅̅𝐻𝑧  
+ 
+Trial 1 
+Trial 2 
+Trial 3 
+Trial 4 
+Trial 5 
+ 
+0.400 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.001 
+0.350 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.001 
+0.300 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.001 
+0.250 
+0.482 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.001 
+0.200 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.001 
+0.150 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.001 
+0.100 
+0.302 
+0.302 
+0.302 
+0.285 
+0.302 
+0.302 
+0.001 
+0.050 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.302 
+0.001 
+Table 3. Raw data table for 𝑓1 ± ∆𝑓1 
+𝑙 ± ∆𝑙/m 
+±0.001m 
+𝑓2 ± ∆𝑓2/𝐻𝑧  (±0.001𝐻𝑧)  
+𝑓2/̅̅̅̅𝐻𝑧 
+∆𝑓2/̅̅̅̅𝐻𝑧  
+ 
+Trial 1 
+Trial 2 
+Trial 3 
+Trial 4 
+Trial 5 
+ 
+0.400 
+1.770 
+1.770 
+1.770 
+1.648 
+1.648 
+1.72 
+0.07 
+0.350 
+1.634 
+1.634 
+1.634 
+1.604 
+1.604 
+1.62 
+0.03 
+0.300 
+1.404 
+1.404 
+1.404 
+1.404 
+1.404 
+1.404 
+0.001 
+0.250 
+1.282 
+1.282 
+1.282 
+1.282 
+1.282 
+1.282 
+0.001 
+0.200 
+0.929 
+0.966 
+0.966 
+0.929 
+0.929 
+0.94 
+0.02 
+0.150 
+0.798 
+0.798 
+0.764 
+0.764 
+0.798 
+0.78 
+0.02 
+0.100 
+0.576 
+0.554 
+0.576 
+0.554 
+0.576 
+0.57 
+0.01 
+0.050 
+0.395 
+0.395 
+0.395 
+0.402 
+0.402 
+0.398 
+0.004 
+Table 4. Raw data table for 𝑓2 ± ∆𝑓2 
+Calculation of 𝒇𝟏̅̅̅ and 𝒇𝟐̅̅̅ 
+𝑓1̅ = 
+𝑇𝑟𝑖𝑎𝑙 1 (𝑓0)+𝑇𝑟𝑖𝑎𝑙 2 (𝑓0)+𝑇𝑟𝑖𝑎𝑙 3 (𝑓0)+𝑇𝑟𝑖𝑎𝑙 4 (𝑓0)+𝑇𝑟𝑖𝑎𝑙 5 (𝑓0) 
+5
+  
+𝑓2̅ = 
+𝑇𝑟𝑖𝑎𝑙 1 (𝑓1)+𝑇𝑟𝑖𝑎𝑙 2 (𝑓1)+𝑇𝑟𝑖𝑎𝑙 3 (𝑓1)+𝑇𝑟𝑖𝑎𝑙 4 (𝑓1)+𝑇𝑟𝑖𝑎𝑙 5 (𝑓1) 
+5
+  
+Calculation of ∆𝒇𝟏̅̅̅ and ∆𝒇𝟐̅̅̅ 
+1. Taking the average of the individual scale uncertainties of 𝑓0 
+∆𝑓1̅ = 
+𝑇𝑟𝑖𝑎𝑙 1 (∆𝑓0)+𝑇𝑟𝑖𝑎𝑙 2 (∆𝑓0)+𝑇𝑟𝑖𝑎𝑙 3 (∆𝑓0)+𝑇𝑟𝑖𝑎𝑙 4 (∆𝑓0)+ 𝑇𝑟𝑖𝑎𝑙 5 (∆𝑓0) 
+5
+  
+∆𝑓2̅ = 
+𝑇𝑟𝑖𝑎𝑙 1 (∆𝑓1)+𝑇𝑟𝑖𝑎𝑙 2 (∆𝑓1)+𝑇𝑟𝑖𝑎𝑙 3 (∆𝑓1)+𝑇𝑟𝑖𝑎𝑙 4 (∆𝑓1)+ 𝑇𝑟𝑖𝑎𝑙 5 (∆𝑓1) 
+5
+  
+ 
+ 
+ 
+
+--- PAGE 15 ---
+ 
+15 
+2. Half of range obtained from 5 trials.  
+∆𝑓1̅ =
+𝑀𝐴𝑋(𝑓0)−𝑀𝐼𝑁(𝑓0)
+2
+  
+∆𝑓2̅ =
+𝑀𝐴𝑋(𝑓1)−𝑀𝐼𝑁(𝑓1)
+2
+    
+3. Standard deviation  
+∆𝑓1̅ = √[𝑇𝑟𝑖𝑎𝑙 1 (𝑓0)−𝑓0̅̅̅]2+ [𝑇𝑟𝑖𝑎𝑙 2 (𝑓0)−𝑓0̅̅̅]2+[𝑇𝑟𝑖𝑎𝑙 3 (𝑓0)−𝑓0̅̅̅]2+[𝑇𝑟𝑖𝑎𝑙 4(𝑓0)−𝑓0̅̅̅]2+[𝑇𝑟𝑖𝑎𝑙 5 (𝑓0)−𝑓0̅̅̅]2
+5
+  
+∆𝑓2̅ = √[𝑇𝑟𝑖𝑎𝑙 1 (𝑓1)−𝑓1̅̅̅]2+ [𝑇𝑟𝑖𝑎𝑙 2 (𝑓1)−𝑓1̅̅̅]2+[𝑇𝑟𝑖𝑎𝑙 3 (𝑓1)−𝑓1̅̅̅]2+[𝑇𝑟𝑖𝑎𝑙 4(𝑓1)−𝑓1̅̅̅]2+[𝑇𝑟𝑖𝑎𝑙 5 (𝑓1)−𝑓1̅̅̅]2
+5
+  
+The method which propagates a larger uncertainty would be used to obtain the uncertainty.  
+Sample calculation:  
+𝒇𝟏̅̅̅ and 𝒇𝟐̅̅̅ when 𝒍= 𝟎. 𝟒𝟎m 
+𝑓1̅ = 0.302 + 0.302 + 0.302 + 0.302 + 0.302
+5
+= 0.302𝐻𝑧 
+𝑓2̅ = 1.770 + 1.770 + 1.770 + 1.648 + 1.648
+5
+= 1.721𝐻𝑧 
+∆𝒇𝟏̅̅̅ and ∆𝒇𝟐̅̅̅ when 𝒍= 𝟎. 𝟒𝟎m 
+∆𝑓1̅ = 0.001 + 0.001 + 0.001 + 0.001 + 0.001
+5
+= ±0.001𝐻𝑧 
+∆𝑓2̅ = 0.001 + 0.001 + 0.001 + 0.001 + 0.001
+5
+= ±0.001𝐻𝑧 
+∆𝑓1̅ = 0.302 −0.302 
+2
+= ±0.000𝐻𝑧 
+∆𝑓2̅ = 0.770 −0.648 
+2
+≈±0.06𝐻𝑧 
+∆𝑓1̅ = √+(0.302−0.302)2+(0.302−0.302)2+(0.302−0.302)2+(0.302−0.302)2+(0.302−0.302)2
+5
+≈±0.0𝐻𝑧  
+∆𝑓2̅ = √(1.770−1.720)2+(1.770−1.942)2+(1.770−1.942)2+(1.648−1.942)2+(1.648−1.942)2
+5
+≈±0.07𝐻𝑧  
+Therefore, 𝑓1̅ = (0.302 ± 0.001)𝐻𝑧 and 𝑓2̅ = (1.72 ± 0.07) 𝐻𝑧  
+
+--- PAGE 16 ---
+ 
+16 
+ 
+𝑙/m 
+(±0.001m) 
+𝜔1̅̅̅̅ /𝑟𝑎𝑑𝑠−1 
+∆𝜔1̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+𝜔2̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+∆𝜔2̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+0.400 
+1.898 
+0.006 
+10.8 
+0.4 
+0.350 
+1.898 
+0.006 
+10.2 
+0.2 
+0.300 
+1.898 
+0.006 
+8.821 
+0.006 
+0.250 
+1.898 
+0.006 
+8.055 
+0.006 
+0.200 
+1.898 
+0.006 
+5.9 
+0.1 
+0.150 
+1.898 
+0.006 
+4.9 
+0.1 
+0.100 
+1.898 
+0.006 
+3.56 
+0.06 
+0.050 
+1.898 
+0.006 
+2.50 
+0.03 
+Table 5. Processed data table for 𝜔1̅̅̅̅ ± ∆𝜔1̅̅̅̅  and 𝜔2̅̅̅̅ ± ∆𝜔2̅̅̅̅ 
+ 
+Calculation of 𝝎𝟏̅̅̅̅ and 𝝎𝟐̅̅̅̅:  
+ 
+𝜔1̅̅̅̅ = 2𝜋𝑓1̅ 
+ 
+𝜔2̅̅̅̅ = 2𝜋𝑓2̅ 
+Calculation of ∆𝝎𝟏̅̅̅̅ and ∆𝝎𝟐̅̅̅̅:  
+ 
+∆𝜔1̅̅̅̅ = (∆𝑓1̅
+𝑓1̅
+) 𝜔1̅̅̅̅ 
+ 
+∆𝜔2̅̅̅̅ = (∆𝑓2̅
+𝑓2̅
+)𝜔2̅̅̅̅ 
+ 
+Sample calculation:  
+ 
+𝜔1̅̅̅̅ and 𝜔2̅̅̅̅ when 𝑙= 0.4m,  
+ 
+𝜔1̅̅̅̅ = 2𝜋(0.793) ≈4.983 𝑟𝑎𝑑𝑠−1 
+ 
+𝜔2̅̅̅̅ = 2𝜋(1.924) ≈12.1 𝑟𝑎𝑑𝑠−1 
+ 
+∆𝜔1̅̅̅̅ and ∆𝜔2̅̅̅̅ when 𝑙= 0.4m,  
+ 
+∆𝜔0̅̅̅̅ = (0.001
+0.302) (1.898) ≈±0.006 𝑟𝑎𝑑𝑠−1 
+ 
+∆𝜔1̅̅̅̅ = ( 0.1
+1.720)(10.8) ≈±0.4 𝑟𝑎𝑑𝑠−1 
+ 
+
+--- PAGE 17 ---
+ 
+17 
+9) Theoretical model 
+ 
+Figure 7. Schematic diagram showing the experimental set-up 
+A relationship between the angular frequencies of oscillation and the distance of the spring 
+from the pivot shall be derived in order to theoretically model the motion of the pendula. 
+Consider the free body diagram of the coupled physical pendulum shown below:  
+ 
+Figure 8. Free body diagrams of the arms of couple physical pendulum  
+ 
+ 
+
+--- PAGE 18 ---
+ 
+18 
+When one pendulum is displaced 𝜃 from equilibrium while the other is displaced by 𝜙, the 
+extension of the spring 𝑥 is given by,  
+ 
+𝑥= 𝑙(𝑠𝑖𝑛𝜃−sin 𝜙)  
+(1)  
+Where 𝑙 is the distance between the spring and the pivot, and 𝑙0 is the length between the 
+brass mass and the pivot. The torque 𝜏 of the pendula are given by,  
+ 
+𝜏= 𝐼𝛼 
+(2)  
+Where 𝐼 is the moment of inertia and 𝛼 is the angular acceleration. The restoring force 
+applied by the spring on the pendulum is given by,  
+ 
+𝐹= −𝑘𝑥 
+(3)  
+In which 𝑘 is the spring constant and 𝑥 being the extension of the spring. Defining M as the 
+mass of the half meter rule, assuming the mass distribution along it is uniform and that the 
+mass of both pendula are equal. By expressing 𝛼=𝜃̈, the torque about the pivot of the left 
+pendulum is given by,  
+ 
+− 𝑙𝑘𝑥cos 𝜃−𝑀𝑔𝑙0
+2
+𝑠𝑖𝑛𝜃= 𝐼𝜃̈ 
+(4)  
+The torque about the pivot of the right pendulum is given by,  
+ 
+𝑙𝑘𝑥cos 𝜙−𝑀𝑔𝑙0
+2
+𝑠𝑖𝑛𝜙= 𝐼𝜙̈ 
+(5)  
+Assuming that the initial angle of release is small, we can apply small angle approximation, 
+in which, 𝑠𝑖𝑛 𝜃≈𝜃 ,cos 𝜃≈1 , 𝑠𝑖𝑛𝜙≈𝜙  and cos 𝜙≈1.  The extension of string now 
+becomes,  
+ 
+𝑥= 𝑙(𝜃−𝜙) 
+(6)  
+The approximated torque about the pivot of the left pendulum is given by,  
+ 
+− 𝑙𝑘𝑥 −𝑀𝑔𝑙0
+2
+𝜃= 𝐼𝜃̈ 
+(7)  
+ 
+ 
+
+--- PAGE 19 ---
+ 
+19 
+The approximated torque about the pivot of the right pendulum is given by,  
+ 
+𝑙𝑘𝑥−𝑀𝑔𝑙0
+2
+𝜙 = 𝐼𝜙̈ 
+(8)  
+Adding (7) and (8) yields,  
+ 
+𝐼(𝜃̈ + 𝜙̈) + (𝑀𝑔𝑙0
+2
+) (𝜃+ 𝜙) = 0 
+ 
+ 
+ 
+ 
+(𝜃̈ + 𝜙̈) + 𝑀𝑔𝑙0
+2𝐼
+(𝜃+ 𝜙) = 0 
+ 
+(9)  
+Subtracting (8) from (7) yields,  
+ 
+𝐼(𝜃̈ −𝜙̈) = − 𝑙𝑘𝑥−𝑀𝑔𝑙0
+2
+ 𝜃− 𝑙𝑘𝑥+ 𝑀𝑔𝑙0
+2
+𝜙 
+ 
+ 
+ 
+ 
+𝐼(𝜃̈ −𝜙̈) + (𝑀𝑔𝑙0
+2
+) (𝜃−𝜙) + 2𝑘𝑥𝑙= 0  
+ 
+ 
+(10) 
+ 
+Substituting 𝑥= 𝑙(𝜃−𝜙) and regrouping the terms,  
+ 
+𝐼(𝜃̈ −𝜙̈) + (
+𝑀𝑔𝑙0
+2 ) (𝜃−𝜙) + 2𝑙2𝑘 (𝜃−𝜙) = 0  
+ 
+ 
+ 
+ 
+𝐼(𝜃̈ −𝜙̈) + (
+𝑀𝑔𝑙0
+2 ) (𝜃−𝜙) + 2𝑙2𝑘 (𝜃−𝜙) = 0  
+ 
+ 
+ 
+ 
+(𝜃̈ −𝜙̈) + (
+𝑀𝑔𝑙0
+2𝐼+
+2𝑘𝑙2
+𝐼) (𝜃−𝜙) = 0  
+ 
+(11) 
+ 
+Therefore, the 2 linear second order homogenous differential equations are obtained:   
+ 
+(𝜃̈ + 𝜙̈) + 𝑀𝑔𝑙0
+2𝐼
+(𝜃+ 𝜙) = 0 
+ 
+ 
+ 
+ 
+(𝜃̈ −𝜙̈) + (
+𝑀𝑔𝑙0
+2𝐼+
+2𝑘𝑙2
+𝐼) (𝜃−𝜙) = 0  
+              
+ 
+ 
+ 
+Combining the 2 second order differential equitation into a compact matrix form of 𝑀𝑥̈ +
+𝐾𝑥= 0, the matrix equation below would be obtained. 
+ 
+[1
+0
+0
+1] [𝜃̈ + 𝜙̈
+𝜃̈ − 𝜙̈] + [
+𝑀𝑔𝑙0
+2𝐼
+0
+0
+𝑀𝑔𝑙0
+2𝐼+
+2𝑘𝑙2
+𝐼
+] [𝜃+ 𝜙
+𝜃−𝜙] = [0
+0]  
+ 
+(12) 
+ 
+ 
+ 
+
+--- PAGE 20 ---
+ 
+20 
+Solving the characteristic equation of this matrix equation,  
+ 
+det(𝐾− 𝜔2𝑀) = 0  
+ 
+(13) 
+ 
+In which 𝐾= [
+𝑀𝑔𝑙0
+2𝐼
+0
+0
+𝑀𝑔𝑙0
+2𝐼+
+2𝑘𝑙2
+𝐼
+] and 𝑀= [1
+0
+0
+1]. Substituting the above matrices into the 
+characteristic equation,  
+ 
+det ([
+𝑀𝑔𝑙0
+2𝐼
+0
+0
+𝑀𝑔𝑙0
+2𝐼+
+2𝑘𝑙2
+𝐼
+] −𝜔2 [1
+0
+0
+1]) = 0  
+ 
+(14) 
+ 
+ 
+ 
+(
+𝑀𝑔𝑙0
+2𝐼 − 𝜔2) (
+𝑀𝑔𝑙0
+2𝐼+
+2𝑘𝑙2
+𝐼 − 𝜔2) = 0  
+ 
+ 
+ 
+ 
+ 
+𝜔1
+2 =
+𝑀𝑔𝑙0
+2𝐼  or 𝜔2
+2 = 
+𝑀𝑔𝑙0
+2𝐼+
+2𝑘𝑙2
+𝐼  
+ 
+ 
+ 
+ 
+ 
+ 
+𝜔1 = √𝑀𝑔𝑙0
+2𝐼 or 𝜔2 = √𝑀𝑔𝑙0
+2𝐼+
+2𝑘𝑙2
+𝐼  
+(15) 
+ 
+ 
+It is worth noting that for a coupled pendulum system, 𝜔2 > 𝜔1.  
+The general solution to (9) is,   
+ 
+𝜃+ 𝜙= 𝐴cos (𝜔1𝑡) 
+  
+             (16) 
+The general solution to (11) is,  
+𝜃− 𝜙= 𝐵cos(𝜔2𝑡) 
+ 
+             (17) 
+Solving (16) and (17) simultaneously,  
+𝜃= 𝐴
+2 cos(𝜔1𝑡) + 𝐵
+2 cos(𝜔2𝑡)  
+             (18) 
+ 
+𝜙= 𝐴
+2 cos(𝜔1𝑡) −𝐵
+2 cos(𝜔2𝑡) 
+             (19) 
+ 
+ 
+ 
+ 
+
+--- PAGE 21 ---
+ 
+21 
+Using the trigonometric sum to product formulas and assuming that the amplitudes A and B 
+are equal,  
+𝜃(𝑡) = 𝐴cos (𝜔1 + 𝜔2
+2
+) 𝑡 cos (𝜔1 −𝜔2
+2
+) 𝑡  
+             (20) 
+𝜙(𝑡) = −𝐴sin (𝜔1 + 𝜔2
+2
+) 𝑡 sin (𝜔1 −𝜔2
+2
+) 𝑡  
+             (21) 
+in which 𝜔𝑎𝑣𝑔=
+(𝜔0+𝜔1)
+2
+ , which is the angular frequency of each individual oscillation.  
+While 𝜔𝑏𝑒𝑎𝑡=
+(𝜔1−𝜔0)
+2
+ , which is the angular frequency which the sinusoidal wave envelop 
+oscillates with. 7 Thus, substituting (15) into  𝜔𝑎𝑣𝑔=
+(𝜔0+𝜔1)
+2
+ and 𝜔𝑏𝑒𝑎𝑡=
+(𝜔1−𝜔0)
+2
+,  
+ 𝜔𝑎𝑣𝑔= 1
+2 √𝑀𝑔𝑙0
+2𝐼
++ 1
+2
+√𝑀𝑔𝑙0
+2𝐼
++ 2𝑘𝑙2
+𝐼
+    
+             (22) 
+ 
+ 
+ 
+𝜔𝑏𝑒𝑎𝑡= 1
+2
+√𝑀𝑔𝑙0
+2𝐼
++ 2𝑘𝑙2
+𝐼
+  −1
+2 √𝑀𝑔𝑙0
+2𝐼 
+             (23) 
+ 
+ 
+ 
+Hence, the average and beat angular frequency, which are the dependent variables, can be 
+expressed as a function of 𝑙, the independent variable. Therefore, this allows us to determine 
+the relationship between the angular frequencies of oscillation and the distance of the spring 
+from the pivot. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 Reference: EX-5563 Coupled pendula [Online] PASCO. https://cdn.pasco.com/lab_experiment/l_1224/EX-
+5563_Coupled_Pendula.pdf  
+
+--- PAGE 22 ---
+ 
+22 
+10) 
+Preliminary Processed data  
+10.2.1) Preliminary frequency data  
+According to the theoretical predictions made above,  
+𝜔1 = √𝑀𝑔𝑙0
+2𝐼
+ or 𝜔2 = √𝑀𝑔𝑙0
+2𝐼
++ 2𝑘𝑙2
+𝐼
+ 
+ 
+(15) 
+ 
+ 
+Taking the square on both sides of the formulas above  
+𝜔1
+2 = 𝑀𝑔𝑙0
+2𝐼
+ or 𝜔2
+2 = 𝑀𝑔𝑙0
+2𝐼
++ 2𝑘𝑙2
+𝐼 
+ 
+(24) 
+ 
+Theoretically, referring to (24), as 𝜔1 is independent of the distance of the spring from the 
+pivot 𝑙, a graph of 𝜔1 against 𝑙 would result in a horizontal straight line, while a graph of 𝜔2
+2 
+against 𝑙2 would result in a linear graph. Displaying the experimental results graphically:  
+𝑙/m 
+(±0.001m) 
+𝜔1̅̅̅̅ /𝑟𝑎𝑑𝑠−1 
+∆𝜔1̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+0.400 
+1.898 
+0.006 
+0.350 
+1.898 
+0.006 
+0.300 
+1.898 
+0.006 
+0.250 
+1.898 
+0.006 
+0.200 
+1.898 
+0.006 
+0.150 
+1.898 
+0.006 
+0.100 
+1.898 
+0.006 
+0.050 
+1.898 
+0.006 
+Table 6. Table of 𝑙 and 𝜔0̅̅̅̅ 
+𝑙2 ± ∆(𝑙2)/𝑚2 
+𝜔2
+2̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+∆(𝜔2
+2)̅̅̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+0.1600 ±0.0008 
+116.64 
+9 
+0.1225 ±0.0007 
+104.04 
+4 
+0.0900 ±0.0006 
+77.810 
+0.1 
+0.0625 ±0.0005 
+64.88 
+0.1 
+0.0400 ±0.0004 
+34.81 
+1 
+0.0225 ±0.0003 
+24.01 
+1 
+0.0100 ±0.0002 
+12.67 
+0.4 
+0.0025 ±0.0001 
+6.25 
+0.2 
+Table 7. Table of 𝑙2 and 𝜔1
+2̅̅̅̅ 
+ 
+ 
+ 
+
+--- PAGE 23 ---
+ 
+23 
+Calculation of ∆(𝝎𝟐
+𝟐)  
+∆(𝜔2
+2) = 2𝜔2∆𝜔2 
+Sample calculation  
+∆(𝜔2
+2) when 𝑙= 0.4m, 
+∆(𝜔2
+2) = 2(10.8)(0.4) = ±8.64 𝑟𝑎𝑑2𝑠−2 ≈9 𝑟𝑎𝑑2𝑠−2  
+Therefore, 𝜔2
+2 ± ∆(𝜔2
+2) = (117 ± 9) 𝑟𝑎𝑑2𝑠−2 
+ 
+10.2.2) Preliminary frequency plot  
+ 
+Graph 2. Graphical relationship between ω1 and l 
+ 
+Graph 3. Graphical relationship between ω2
+2 and l2 
+Graph of 𝜔1 against 𝑙 
+Graph of 𝜔2
+2 against 𝑙 
+𝜔2
+2/ 𝑟𝑎𝑑𝑠−1   
+
+--- PAGE 24 ---
+ 
+24 
+As the error bars of most of the data points are too small, worst lines cannot be drawn. 
+Therefore, making use the LINEST function and taking reference to Graph 2 and Graph 3., 
+𝜔1 = 4.983 ± 0.006  
+(25) 
+ 
+𝜔2
+2 = (735 ± 50) 𝑙2 + (8 ± 4) 
+(26) 
+ 
+ 
+10.3) Further processed data 
+10.3.1) Further frequency data 
+𝑙/m 
+(±0.001m) 
+𝜔𝑎𝑣𝑔̅̅̅̅̅̅ /𝑟𝑎𝑑𝑠−1 
+∆𝜔𝑎𝑣𝑔̅̅̅̅̅̅/ 𝑟𝑎𝑑𝑠−1 
+𝜔𝐵𝑒𝑎𝑡̅̅̅̅̅̅̅/ 𝑟𝑎𝑑𝑠−1 
+∆𝜔𝐵𝑒𝑎𝑡̅̅̅̅̅̅̅
+/ 𝑟𝑎𝑑𝑠−1 
+0.400 
+6.349 
+0.4 
+4.451 
+0.4 
+0.350 
+6.049 
+0.2 
+4.151 
+0.2 
+0.300 
+5.3595 
+0.01 
+3.461 
+0.01 
+0.250 
+4.9765 
+0.01 
+3.0785 
+0.01 
+0.200 
+3.899 
+0.1 
+2.001 
+0.1 
+0.150 
+3.399 
+0.1 
+1.501 
+0.1 
+0.100 
+2.729 
+0.07 
+0.831 
+0.07 
+0.050 
+2.199 
+0.04 
+0.301 
+0.04 
+Table 8. Processed data for higher and lower frequencies 
+ 
+The average and beat frequency.  
+𝜔𝑎𝑣𝑔̅̅̅̅̅̅ = 𝜔1̅̅̅̅ + 𝜔2̅̅̅̅
+2
+ 
+𝜔𝐵𝑒𝑎𝑡̅̅̅̅̅̅̅ = 𝜔2̅̅̅̅ −𝜔1̅̅̅̅
+2
+ 
+The uncertainty of the average and beat frequency.   
+∆𝜔𝑎𝑣𝑔̅̅̅̅̅̅ = ∆𝜔1̅̅̅̅ + ∆𝜔2̅̅̅̅  
+∆𝜔𝐵𝑒𝑎𝑡̅̅̅̅̅̅̅ = ∆𝜔1̅̅̅̅ + ∆𝜔2̅̅̅̅  
+Sample calculation:  
+𝜔𝑎𝑣𝑔̅̅̅̅̅̅ and 𝜔𝐵𝑒𝑎𝑡̅̅̅̅̅̅̅ when 𝑙= 0.4m,  
+𝜔𝑎𝑣𝑔̅̅̅̅̅̅ = 1.898 + 10.8 
+2
+= 6.349 𝑟𝑎𝑑𝑠−1  
+𝜔𝐵𝑒𝑎𝑡̅̅̅̅̅̅̅ = 10.8 −1.898 
+2
+= 4.451 𝑟𝑎𝑑𝑠−1 
+
+--- PAGE 25 ---
+ 
+25 
+∆𝜔𝑎𝑣𝑔̅̅̅̅̅̅ and ∆𝜔𝐵𝑒𝑎𝑡̅̅̅̅̅̅̅ when 𝑙= 0.4m, 
+∆𝜔𝑎𝑣𝑔̅̅̅̅̅̅ = 0.006 + 0.4 ≈±0.4 𝑟𝑎𝑑𝑠−1  
+∆𝜔𝐵𝑒𝑎𝑡̅̅̅̅̅̅̅ = 0.006 + 0.4 ≈±0.4 𝑟𝑎𝑑𝑠−1 
+ 
+According to the theoretical predictions made above,  
+ 𝜔𝑎𝑣𝑔= 1
+2 √𝑀𝑔𝑙0
+2𝐼
++ 1
+2
+√𝑀𝑔𝑙0
+2𝐼
++ 2𝑘𝑙2
+𝐼
+    
+              
+(22) 
+ 
+ 
+𝜔𝐵𝑒𝑎𝑡= 1
+2
+√𝑀𝑔𝑙0
+2𝐼
++ 2𝑘𝑙2
+𝐼
+  −1
+2 √𝑀𝑔𝑙0
+2𝐼 
+            
+(23) 
+ 
+ 
+ 
+Rearranging the terms in (22) and (23),  
+(𝜔𝑎𝑣𝑔−1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = 𝑀𝑔𝑙0
+8𝐼
++ ( 𝑘
+2𝐼) 𝑙2 
+              
+(27) 
+(𝜔𝐵𝑒𝑎𝑡+ 1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = 𝑀𝑔𝑙0
+8𝐼
++ ( 𝑘
+2𝐼) 𝑙2  
+ 
+(28) 
+ 
+Theoretically, plotting a graph of (𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 against 𝑙2 and a graph of (𝜔𝐵𝑒𝑎𝑡+
+ 
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 against 𝑙2 would result in a linear graph.  
+10.3.2) Final relation  
+𝑙2 ± ∆(𝑙2)/𝑚2 
+(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2/𝑟𝑎𝑑2𝑠−2  
+∆[(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2] /𝑟𝑎𝑑2𝑠−2  
+0.1600 ± 0.0008 
+27 
+4 
+0.1225 ± 0.0007 
+24 
+2 
+0.0900 ± 0.0006 
+18.1 
+0.1 
+0.0625 ± 0.0005 
+15.0 
+0.1 
+0.0400 ± 0.0004 
+7.8 
+0.6 
+0.0225 ± 0.0003 
+5.2 
+0.5 
+0.0100 ± 0.0002 
+2.6 
+0.2 
+0.0025 ± 0.0001 
+1.19 
+0.09 
+Table 9. Processed data for (ωavg −
+1
+2 √Mgl0
+2I )2 and l2 
+
+--- PAGE 26 ---
+ 
+26 
+𝑙2 ± ∆(𝑙2)/𝑚2 
+(𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2/𝑟𝑎𝑑2𝑠−2  
+∆[(𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2] /𝑟𝑎𝑑2𝑠−2  
+0.1600 ± 0.0008 
+31 
+4 
+0.1225 ± 0.0007 
+28 
+2 
+0.0900 ± 0.0006 
+20.9 
+0.1 
+0.0625 ± 0.0005 
+17.5 
+0.1 
+0.0400 ± 0.0004 
+9.7 
+0.6 
+0.0225 ± 0.0003 
+6.8 
+0.5 
+0.0100 ± 0.0002 
+3.8 
+0.3 
+0.0025 ± 0.0001 
+2.0 
+0.1 
+Table 10. Processed data for (ωBeat +
+1
+2 √Mgl0
+2I )2 and l2 
+Calculation of 𝚫(𝝎𝒂𝒗𝒈−
+𝟏
+𝟐√𝑴𝒈𝒍𝟎
+𝟐𝑰)𝟐 
+∆[((𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)
+2
+] = 2 (𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼) [∆𝜔𝑎𝑣𝑔+ 
+1
+2 √𝑀𝑔𝑙0
+2𝐼(
+∆𝑀
+𝑀+
+∆𝑙0
+𝑙0 +
+∆𝐼
+𝐼)]  
+Calculation of 𝚫(𝝎𝑩𝒆𝒂𝒕+
+𝟏
+𝟐√𝑴𝒈𝒍𝟎
+𝟐𝑰)𝟐 
+∆[((𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)
+2
+] = 2 (𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼) [∆𝜔𝐵𝑒𝑎𝑡+ 
+1
+2 √𝑀𝑔𝑙0
+2𝐼(
+∆𝑀
+𝑀+
+∆𝑙0
+𝑙0 +
+∆𝐼
+𝐼)]  
+Sample calculation:  
+(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 and (𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 when 𝑙= 0.4m,  
+(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = (6.349 −
+1
+2 √(45.55
+1000)(9.81)(0.5)
+2(0.0227)
+)
+2
+≈27 𝑟𝑎𝑑2𝑠−2  
+(𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = (4.451 +
+1
+2 √(45.55
+1000)(9.81)(0.5)
+2(0.0227)
+)
+2
+≈ 31 𝑟𝑎𝑑2𝑠−2  
+∆[((𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)
+2
+]  and ∆[(𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2] when 𝑙= 0.4𝑚, 
+∆[((𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)
+2
+]  
+
+--- PAGE 27 ---
+ 
+27 
+= 2 (6.349 −
+1
+2 √(45.55
+1000)(9.81)(0.5)
+2(0.0227)
+) [0.4 + 
+1
+2 √(45.55
+1000)(9.81)(0.5)
+2(0.0227)
+(
+0.01
+45.55 +
+0.001
+0.500 +
+0.00002
+0.02271)]  
+≈ ±4 𝑟𝑎𝑑2𝑠−2   
+∆[(𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2]  
+= 2 (4.451 +
+1
+2 √(45.55
+1000)(9.81)(0.5)
+2(0.0227)
+) [0.4 + 
+1
+2 √(45.55
+1000)(9.81)(0.5)
+2(0.0227)
+(
+0.01
+45.55 +
+0.001
+0.500 +
+0.00002
+0.02271)]  
+≈ ± 4 𝑟𝑎𝑑2𝑠−2   
+ 
+10.3.3) Final results  
+ 
+Graph 4. Graph of (ωavg −
+1
+2 √Mgl0
+2I )2 against l2 
+
+--- PAGE 28 ---
+ 
+28 
+ 
+Graph 5. Graph of (ωBeat +
+1
+2 √Mgl0
+2I )2 against l2 
+As the error bars of most data points are too small, the LINEST function had to be used to 
+determine the uncertainty of the slope and y-intercept of the graphs. Taking reference to 
+Graph 4 and Graph 5 respectively,  
+(𝜔𝑎𝑣𝑔−1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = (172 ± 11) 𝑙2 + (1.6 ± 0.9) 
+ 
+(29) 
+ 
+(𝜔𝐵𝑒𝑎𝑡+ 1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = (194 ± 12) 𝑙2 + (3 ± 1) 
+ 
+(30) 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 29 ---
+ 
+29 
+11) Discussion and conclusion  
+11.1) Discussion  
+11.1.1) Preliminary theoretical results 
+𝑙/m 
+(±0.001m) 
+𝜔1̅̅̅̅ /𝑟𝑎𝑑𝑠−1 
+∆𝜔1̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+0.400 
+2.218 
+0.0007 
+0.350 
+2.218 
+0.0007 
+0.300 
+2.218 
+0.0007 
+0.250 
+2.218 
+0.0007 
+0.200 
+2.218 
+0.0007 
+0.150 
+2.218 
+0.0007 
+0.100 
+2.218 
+0.0007 
+0.050 
+2.218 
+0.0007 
+Table 11. Table of theoretical l and ω0̅̅̅̅ 
+𝑙2 ± ∆(𝑙2)/𝑚2 
+𝜔2
+2̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+∆(𝜔2
+2)̅̅̅̅̅̅/𝑟𝑎𝑑𝑠−1 
+0.1600 ±0.0008 
+141.1 
+0.8 
+0.1225 ±0.0007 
+109.2 
+0.7 
+0.0900 ±0.0006 
+81.5 
+0.6 
+0.0625 ±0.0005 
+58.1 
+0.5 
+0.0400 ±0.0004 
+39.0 
+0.4 
+0.0225 ±0.0003 
+24.1 
+0.3 
+0.0100 ±0.0002 
+13.4 
+0.2 
+0.0025 ±0.0001 
+7.05 
+0.1 
+Table 12. Table of theoretical l2 and ω1
+2̅̅̅̅ 
+11.1.2) Preliminary comparison between experimental and theoretical results 
+From (25), experimentally, 𝜔1 = (1.898 ± 0.006) 𝑟𝑎𝑑𝑠−1, while theoretically, given by 
+(15), 𝜔1 = (2.218 ± 0.0007) 𝑟𝑎𝑑𝑠−1. On the other hand, from (26), 𝜔2
+2 = (735 ± 50) 𝑙2 +
+(8 ± 4), while theoretically, given by (16), 𝜔2
+2 = (850.99 ± 0.03) 𝑙2 + (4.9 ± 0.4).  
+ 
+The experimental and theoretical graphs of 𝜔1 against 𝑙 and that of 𝜔2
+2 against 𝑙2 can be 
+placed on the same axes for comparison.  
+
+--- PAGE 30 ---
+ 
+30 
+ 
+Graph 6. Comparison between the experimental and theoretical graph of ω1 against l 
+ 
+ 
+Graph 7. Comparison between the experimental and theoretical graph of ω2
+2 against l2 
+ 
+ 
+ 
+𝜔2
+2/ 𝑟𝑎𝑑𝑠−1   
+
+--- PAGE 31 ---
+ 
+31 
+ 
+ 
+ 
+Gradient  y-intercept 
+ 
+ 
+Gradient  
+y-intercept 
+Theoretical  
+0.000 
+2.218 
+ 
+Theoretical  
+851.05 
+4.919 
+Experimental 0.000 
+1.898 
+ 
+Experimental 
+735.88 
+8.226 
+Percentage 
+error 
+0.000% 
+14.43% 
+ 
+Percentage 
+error 
+%13.532 
+67.23% 
+Table 13. Comparison in Graph 6.  
+ 
+   Table 14. Comparison in Graph 7.  
+From Graph 2, the line of best fit is a horizontal line, indicating that 𝜔0 is 
+independent of 𝑙, which matches with the theoretical model. All the data points in Graph 2. 
+lie on the horizontal line of best-fit, indicating a high precision in the results. However, from 
+Graph 6., it was shown that (𝜔1)𝐸𝑥𝑝< (𝜔1)𝑇ℎ𝑒𝑜𝑟𝑦 for all 𝑙, indicating that the experimental 
+data are systematically lower than that of the theoretical ones, demonstrating a low accuracy.  
+From Graph 3, the line of best fit is a straight line that has a positive y-intercept with 
+an 𝑅2 value of 0.9777, showing that 𝜔2
+2 increases linearly with 𝑙2, which coincides with the 
+theoretical model. However, the data points on Graph 3 alternate above and below the line of 
+best-fit, showing a relatively low precision in the results. From Graph 7, it was shown that 
+generally, (𝜔2
+2)𝐸𝑥𝑝< (𝜔2
+2)𝑇ℎ𝑒𝑜𝑟𝑦 for the same value of 𝑙2, indicating that the experimental 
+data are systematically lower than that of the theoretical model, indicating a relatively low 
+accuracy.  
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 32 ---
+ 
+32 
+11.1.3) Final theoretical results 
+ 
+𝑙2 ± ∆(𝑙2)/𝑚2 
+(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2/𝑟𝑎𝑑2𝑠−2  
+∆[(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2] /𝑟𝑎𝑑2𝑠−2  
+0.1600 ± 0.0008 
+35.3 
+0.2 
+0.1225 ± 0.0007 
+27.3 
+0.2 
+0.0900 ± 0.0006 
+20.4 
+0.1 
+0.0625 ± 0.0005 
+14.5 
+0.1 
+0.0400 ± 0.0004 
+9.7 
+0.1 
+0.0225 ± 0.0003 
+6.02 
+0.07 
+0.0100 ± 0.0002 
+3.36 
+0.05 
+0.0025 ± 0.0001 
+1.76 
+0.03 
+Table 15. Theoretical data for (ωavg −
+1
+2 √Mgl0
+2I )2 and 𝑙2 
+ 
+𝑙2 ± ∆(𝑙2)/𝑚2 
+(𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2/𝑟𝑎𝑑2𝑠−2  
+∆[(𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2] /𝑟𝑎𝑑2𝑠−2  
+0.1600 ± 0.0008 
+35.3 
+0.2 
+0.1225 ± 0.0007 
+27.3 
+0.2 
+0.0900 ± 0.0006 
+20.4 
+0.1 
+0.0625 ± 0.0005 
+14.5 
+0.1 
+0.0400 ± 0.0004 
+9.7 
+0.1 
+0.0225 ± 0.0003 
+6.02 
+0.07 
+0.0100 ± 0.0002 
+3.36 
+0.05 
+0.0025 ± 0.0001 
+1.76 
+0.03 
+Table 16. Theoretical data for (ωBeat +
+1
+2 √Mgl0
+2I )2 and 𝑙2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 33 ---
+ 
+33 
+11.1.4) Final comparison between experimental and theoretical results 
+From (29),  
+(𝜔𝑎𝑣𝑔−1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = (172 ± 11) 𝑙2 + (1.6 ± 0.9) 
+while given by (27), theoretically,  
+(𝜔𝑎𝑣𝑔−1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = (213.0 ± 0.1) 𝑙2 + (1.22 ± 0.01) 
+From (30),  
+(𝜔𝐵𝑒𝑎𝑡+ 1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = (194 ± 12) 𝑙2 + (3 ± 1) 
+While given by (28), theoretically,  
+(𝜔𝐵𝑒𝑎𝑡+ 1
+2 √𝑀𝑔𝑙0
+2𝐼)2 = (213.0 ± 0.1) 𝑙2 + (1.22 ± 0.01) 
+The Experimental and theoretical graphs of (𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 against 𝑙2 and (𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 against 𝑙2 can be placed on the same axes for comparison.  
+ 
+
+--- PAGE 34 ---
+ 
+34 
+ 
+Graph 8. Comparison between experimental and theoretical graph of (𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 
+against 𝑙2 
+ 
+ 
+Graph 9. Comparison between experimental and theoretical graph of (𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 
+against 𝑙2 
+
+--- PAGE 35 ---
+ 
+35 
+ 
+Gradient  y-intercept 
+ 
+ 
+Gradient  
+y-intercept 
+Theoretical  
+212.96 
+1.216 
+ 
+Theoretical  
+212.96 
+1.216 
+Experimental 172.67 
+1.6034 
+ 
+Experimental 
+193.52 
+2.6257 
+Percentage 
+error 
+18.919% 31.86% 
+ 
+Percentage 
+error 
+9.1285% 
+116% 
+Table 17. Comparison in Graph 8.  
+ 
+   Table 18. Comparison in Graph 9.  
+From both Graph 3 and Graph 4, a best fit straight line that has a positive y-intercept 
+is applied and shows an 𝑅2 value of 0.9764, showing that both 𝜔𝑎𝑣𝑔 and 𝜔𝑏𝑒𝑎𝑡 increases with 
+𝑙, which matches with the theoretical model.  
+In Graph 3, the data points again alternate above and below the line of best fit, 
+showing a relatively low precision in the results. Generally, the error bars are of a small 
+magnitude. However, there are exceptions such as when 𝑙2 = 0.1225m2 and 𝑙2 = 0.1600m2, 
+which contain a relatively large vertical error bar. In addition, from Graph 8. ,(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2
+𝑒𝑥𝑝
+< (𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2
+𝑡ℎ𝑒𝑜𝑟𝑦
+for the same 𝑙2, showing that the experimental data 
+are systematically lower than that of the theoretical one, indicating a low accuracy in the 
+results.  
+In Graph 4, the data points again deviate above and below the line of best fit, also 
+indicating the low precision of the results. However, from Graph 9, the experimental and 
+theoretical curve are in proximity, showing the low systematic error in between, and a high 
+accuracy in the results.  
+ 
+ 
+ 
+ 
+
+--- PAGE 36 ---
+ 
+36 
+11.2) Conclusion  
+ 
+The hypothesis is verified. 𝜔1 remains unchanged with the distance of the spring from 
+the pivot 𝑙, 𝜔2
+2 increases linearly with 𝑙2; while 𝜔𝑎𝑣𝑔
+2
+ and 𝜔𝑏𝑒𝑎𝑡
+2
+ increases with 𝑙. This 
+concludes how an increase in the distance increases the angular frequencies of oscillation. 
+Such results are a classical analogue to how an increase in bond strength increases the 
+angular frequency of oscillation in molecules, executing such phenomenon on a macroscopic 
+scale.  
+However, despite the verified relationships obtained, there are evidence of existing 
+systematic and random errors in the data collected, which would be further explained in the 
+later session in which different sources of error would be investigated upon and their effects 
+on the results of the experiment will be considered.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 37 ---
+ 
+37 
+12) Evaluation  
+The systematic errors in this experiment mainly stem from the assumptions made 
+when deriving the theoretical model to explain the relationship between the angular 
+frequencies of oscillation and the length of the spring from the pivot. The assumptions made 
+in the model were small angle approximation, assumption of the same masses of the pendula, 
+and the absence of any external damping forces. Below are the evaluation of such factors and 
+the significance on how they would affect the experimental results systematically, in addition 
+with the random errors, and how such errors can be reduced to give more accurate and 
+precise results respectively.  
+12.1) Systematic error from large angle oscillation  
+Small angle approximation was used throughout the theoretical calculations. Such was 
+adopted as the initial angle of release of the pendulum was kept at an angle less than 10°. 
+However, when the experiment is conducted, the angle which the pendulum oscillates is 
+larger than 10°, resulting in significant inaccuracies in small angle approximation to calculate 
+the beat and average frequencies of oscillation. To decrease the discrepancies between the 
+theoretical and experimental angular frequencies, a new model, which includes large angle 
+oscillations, shall be introduced to describe the oscillations of the pendulum. From Appendix 
+C, the modified periods for the first and second normal mode of oscillation, which are given 
+by 𝑇1
+′′ and 𝑇2
+′′ respectively are,  
+𝑇1
+′′ = 2𝜋√2𝐼
+𝑀𝑔𝑙0
+(1 + 1
+4 sin2 𝜃0
+2 + ⋯)  
+𝑇2
+′′ = 2𝜋√
+2𝐼
+𝑀𝑔𝑙0 + 4𝑘𝑙2 (1 + 1
+4 sin2 𝜃0
+2 + ⋯)  
+ 
+
+--- PAGE 38 ---
+ 
+38 
+By 𝜔=
+2𝜋
+𝑇, the modified 1st and 2nd normal mode angular frequencies are given by,  
+ 
+𝜔1
+′′ = √𝑀𝑔𝑙0
+2𝐼
+(
+1
+1 + 1
+4 sin2 𝜃0
+2 + ⋯
+)  
+(31) 
+ 
+𝜔2
+′′ = √𝑀𝑔𝑙0
+2𝐼
++ 2𝑘𝑙2
+𝐼
+(
+1
+1 + 1
+4 sin2 𝜃0
+2 + ⋯
+) 
+(32) 
+Therefore, the modified average angular frequencies are given by,  
+ 
+𝜔𝑎𝑣𝑔
+′′
+= 𝜔1
+′′ + 𝜔2
+′′
+2
+ 
+(33) 
+ 
+ 
+𝜔𝑎𝑣𝑔
+′′
+= (1
+2 √𝑀𝑔𝑙0
+2𝐼
++ 1
+2
+√𝑀𝑔𝑙0
+2𝐼
++ 2𝑘𝑙2
+𝐼
+) (
+1
+1 + 1
+4 sin2 𝜃0
+2 + ⋯
+) 
+(34) 
+As Shown above, 𝜔𝑎𝑣𝑒𝑟𝑎𝑔𝑒
+′′
+ is lower than 𝜔𝑎𝑣𝑒𝑟𝑎𝑔𝑒 for the same values of 𝑙 since 
+(
+1
+1+1
+4sin2𝜃0
+2 +⋯) < 1, which decreases the discrepancies between the theoretical model and the 
+experimental results (as shown in Graph 8.)  
+To reduce such a systematic error, the pendulum should be carefully displaced from rest 
+without applying any external forces. The initial angle of release should also be kept at a 
+smaller angle (preferably less than 10°) to ensure the accuracy of small angle approximation.  
+12.2) Systematic error from assuming that the pendula are of the same mass  
+The masses of the pendulum are assumed to be the same throughout the theoretical 
+calculations. This assumption was originally justified since the mass of both pendula are 
+similar, being (45.55 ± 0.01)g and (46.19 ± 0.01)g, which have a percentage difference of 
+1.395%. However, the experimental results suggest that such contributes to the systematic 
+errors. As both pendula are assumed to have a mass of (45.55 ± 0.01)g, the mass of the 
+second pendulum is underestimated. 𝜔1
+2 and 𝜔2
+2 for unequal masses are given by,  
+
+--- PAGE 39 ---
+ 
+39 
+ 
+𝜔1
+2′′ = 2𝑔𝑀1𝑙0 + 4𝑙2𝑘+ 𝑔𝑙0𝛼−√𝑔2𝑙0
+2𝛼2 + 16𝑙4𝑘2
+4𝐼
+  
+       (84) 
+ 
+𝜔2
+2′′ = 2𝑔𝑀1𝑙0 + 4𝑙2𝑘+ 𝑔𝑙0𝛼+ √𝑔2𝑙0
+2𝛼2 + 16𝑙4𝑘2
+4𝐼
+  
+       (85) 
+(Appendix D) where 𝑀1 is the mass of the (45.55 ± 0.01)g pendulum and 𝛼= 6 x 10−4 kg 
+is the mass difference between the pendula. By substituting in the parameters into (60) and 
+(62) it is found out that the first and second normal mode, it was found out that 𝜔1
+2′′ and 𝜔2
+2′′ 
+takes up a similar value to that of 𝜔1
+2 and 𝜔2
+2, showing that the assumption that the mass of 
+the pendula are the same is accurate and has insignificant contribution to the systematic error 
+in the experimental results.   
+12.3) Systematic error from damping 
+ 
+As observed from the angular displacement-time graphs, the separation between 
+successive crests/troughs and beats increases over time, indicating an increase in the period of 
+oscillation, thus, a decrease in angular frequencies. One of the reasons for such a decrease 
+would be due to the presence of external damping forces (e.g., air resistance) acting on the 
+system. The presence of damping forces can be supported by the observation that the 
+amplitude of the sinusoidal wave envelop decreases with time (shown in Figure 9.)  
+Figure 9. Angular displacement-time graph showing the decrease in amplitude of wave 
+envelop with time 
+
+--- PAGE 40 ---
+ 
+40 
+Such resistive forces decrease the angular velocity, and thus, angular frequency of oscillation. 
+Quantitatively, the effect of damping by air resistance on the average and beat angular 
+frequency can be evaluated using a modified Lagrangian ℒ′′, given by,8  
+ 
+ℒ′′ = 𝑒𝑐𝑡(𝑇−𝑉) 
+(35) 
+Where 𝑐 is the damping coefficient, and 𝑇 and 𝑉 are the total kinetic and potential energy of 
+the system respectively. From Appendix E, when the pendula are subjected to air resistance, 
+the first and second normal mode angular frequencies are given by,  
+ 
+𝜔1
+′′2 = 𝑀𝑔𝑙0
+2𝐼 −(𝑐
+2)
+2
+ 
+         (95) 
+ 
+𝜔2
+′′2 = (𝑀𝑔𝑙0
+2𝐼 + 2𝑘𝑙2
+𝐼
+) −(𝑐
+2)
+2
+ 
+        (102) 
+In which both 𝜔1
+2′′ and 𝜔2
+2′′ are smaller than that of 𝜔1
+2 and 𝜔2
+2, reducing discrepancies 
+between the theoretical model and the experimental results (shown in Graph 6 and Graph 7). 
+In addition, the modified average angular frequencies 𝜔𝑎𝑣𝑔
+′′ is given by,  
+𝜔𝑎𝑣𝑔
+′′
+= 𝜔1
+′′ + 𝜔2
+′′
+2
+ 
+ 
+𝜔𝑎𝑣𝑔
+′′
+= 1
+2 (√𝑀𝑔𝑙0
+2𝐼 −𝑐2
+4 + √𝑀𝑔𝑙0
+2𝐼 + 2𝑘𝑙2
+𝐼
+−𝑐2
+4 ) 
+(36) 
+In which both 𝜔𝑎𝑣𝑔
+′′ is smaller than 𝜔𝑎𝑣𝑔, decreasing the discrepancies between the 
+experimental results and the theoretical model (shown in Graph 8).  
+ 
+One way to reduce such error is to use heavier pendula (i.e., half meter rules) which 
+can decrease the rate of damping, which decreases the rate of decrease of the period of 
+oscillation. An alternative method would be to use a pendulum of a shorter thickness to 
+reduce its contact surface area with air molecules when oscillating. Different geometries of 
+ 
+8 Lagrangian mechanics with Friction: Step by Step Guide with example. (n.d.). 
+https://profoundphysics.com/friction-in-lagrangian-mechanics/ 
+
+--- PAGE 41 ---
+ 
+41 
+pendula can also be considered (e.g., rods) which could reduce the drag coefficient, reducing 
+the air resistance acting on it. The above methods could reduce the effect of damping on the 
+reduction in the angular frequencies of oscillation.  
+12.4) Random error from instruments  
+ 
+The instruments used in the investigation have scale error.  
+The rotary motion sensor could measure and record frequencies with a scale 
+uncertainty of ±0.001Hz. The random uncertainty associated with frequency measurements 
+were minimized by taking he average over 5 separate trials for the same 𝑙. The error 
+associated with such can also be minimized by using more precise rotary motion sensors for 
+frequency measurement, which are not available in the school laboratory.  
+The electronic balance also has a scale uncertainty of ±0.01g. Such random error can 
+be reduced by using a more precise electronic balance with gives more significant figures.  
+13) Extension  
+ 
+A possible extension is to alter other parameters, such as the lengths or masses of the 
+pendula, and investigate their respective effect on the angular frequencies of oscillation. 
+Further investigation can be done on 3-mass coupled pendula, in which a combination of 
+different springs and masses can be used.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 42 ---
+ 
+42 
+Appendix A 
+The expression for the moment of inertia of the pendulum is required for deriving the 
+theoretical relationship between the angular frequencies of oscillation and the distance of the 
+spring from the pivot. Considering the set-up of a single pendulum below,  
+ 
+Figure 10. 3D model of a half meter rule 
+It was assumed that the spring connected to the half meter rule has neglectable mass as 
+compared to it, the diameter of the holes on the ruler are neglectable, and that mass is 
+uniformly distributed about the whole ruler.  
+A.1) 
+Parallel axis theorem  
+The parallel axis theorem states that the moment of inertia about any axis parallel to the 
+axis through the center of mass 𝐼𝑝𝑎𝑟𝑎𝑙𝑙𝑒𝑙 𝑎𝑥𝑖𝑠 is given by, 9 
+ 
+𝐼𝑝𝑎𝑟𝑎𝑙𝑙𝑒𝑙 𝑎𝑥𝑖𝑠= 𝐼𝑐𝑚+ 𝑚𝑑2 
+(37) 
+Where 𝐼𝑐𝑚 is the moment of inertia of the body, 𝑚 is the mass of the body, and 𝑑 is the 
+distance between the axis of through the center of mass of the body and the axis of rotation.  
+ 
+9 Reference: Parallel Axis theorem [Online]. HyperPhysics Concepts http://hyperphysics.phy-
+astr.gsu.edu/hbase/parax.html 
+
+--- PAGE 43 ---
+ 
+43 
+A.2) 
+Perpendicular axis theorem  
+For a planar object, the moment of inertia about an axis perpendicular to the plane is the sum 
+of the moments of inertia of two perpendicular axes through the same point in the plane of 
+the object10 
+A.3) 
+Moment of inertia of half meter rule 
+ 
+Figure 11. 2D Top view of the half meter rule 
+Considering the moment of inertia of the half meter rule when it rotates about its center of 
+mass. The equation for the moment of inertia of the wooden rule about the y-axis is given by,  
+ 
+𝐼𝑦= ∫
+𝑥2
+𝑙0
+2
+−𝑙0
+2
+𝑑𝑀  
+(38) 
+Taking an infinitesimal volume of cuboid along the 𝑦-𝑧 plane, the volume of the section is,   
+ 
+𝑑𝑉= 𝑤ℎ 𝑑𝑥  
+(39) 
+Where ℎ and 𝑤 is the thickness and the width of the half meter rule respectively. The 
+expression for the mass of the half meter rule is thus given by,  
+ 
+𝑑𝑀= 𝜌 𝑑𝑉= 𝜌𝑤ℎ 𝑑𝑥 
+(40) 
+ 
+ 
+10 Reference: Perpendicular Axis theorem [Online]. HyperPhysics Concepts http://hyperphysics.phy-
+astr.gsu.edu/hbase/perpx.html#:~:text=For%20a%20planar%20object%2C%20the,moments%20of%20strictly%
+20planar%20objects. 
+
+--- PAGE 44 ---
+ 
+44 
+Substituting 𝑑𝑀 into the (38) and evaluating the integral  
+ 
+𝐼𝑦= ∫
+𝑥2
+𝑙0
+2
+−𝑙0
+2
+𝜌𝑤ℎ 𝑑𝑥 
+ 
+(41) 
+= 𝜌𝑤ℎ∫
+𝑥2
+𝑙0
+2
+−𝑙0
+2
+ 𝑑𝑥  
+=
+1
+3 𝜌𝑤ℎ [(
+𝑙0
+2)
+3
++ (
+𝑙0
+2)
+3
+] =
+2
+3 𝜌𝑤ℎ [(
+𝑙0
+2)
+3
+]  
+ 
+𝐼𝑦=
+1
+12 𝜌𝑤ℎ 𝑙0
+3  
+(42) 
+As the mass of the half meter rule 𝑚 is given by 𝑚= 𝜌𝑉= 𝜌𝑤ℎ𝑙0, the moment of inertia of 
+the half meter rule about its center of mass is given by,  
+ 
+𝐼𝑦=
+1
+12 𝑀𝑙0
+2  
+(43) 
+Similarly, its moment of inertia about the x-axis is given by,  
+ 
+𝐼𝑥=
+1
+12 𝑀𝑤2  
+(44) 
+Where 𝑤 is the width of the half meter rule. According to the perpendicular axis theorem, the 
+moment of inertia about the z-axis 𝐼𝑧 is given by,  
+ 
+𝐼𝑧= 𝐼𝑥+ 𝐼𝑦 
+(45) 
+ 
+𝐼𝑧= 1
+12 𝑀(𝑤2 + 𝑙0
+2)  
+(46) 
+According to the parallel axis theorem, the moment of inertia of the half meter rule, about the 
+pivot, is given by,  
+ 
+𝐼=
+1
+12 𝑀(𝑤2 + 𝑙0
+2) + 𝑀𝐷2  
+(47) 
+In which 𝐷 is the distance of the pivot from the closer end of the half meter rule. 
+ 
+ 
+ 
+
+--- PAGE 45 ---
+ 
+45 
+Appendix B 
+B.1) 
+Uncertainty of the moment of inertia  
+Referring to Appendix A, the moment of inertia 𝐼 of a pendulum is given by,   
+ 
+𝐼=
+1
+12 𝑀(𝑤2 + 𝑙0
+2) + 𝑀𝐷2  
+(48) 
+The uncertainty of the moment of inertia is given by,  
+ 
+∆𝐼 = ∆(
+1
+12𝑀𝑙0
+2) + ∆(
+1
+12 𝑀𝑤2) + ∆(𝑀𝐷2)  
+(49) 
+In which ∆(
+1
+12 𝑀𝑙0
+2) is given by,  
+∆( 1
+12𝑀𝑙02)
+1
+12𝑀𝑙02
+=
+∆𝑀
+𝑀+ 2 (
+∆𝑙0
+𝑙0 )  
+ 
+∆(
+1
+12𝑀𝑙0
+2) =
+1
+12 𝑀𝑙0
+2 [
+∆𝑀
+𝑀+ 2 (
+∆𝑙0
+𝑙0 )]  
+(50) 
+And which +∆(
+1
+12 𝑀𝑤2) is given by,  
+∆( 1
+12𝑀𝑤2)
+1
+12𝑀𝑤2
+=
+∆𝑀
+𝑀+ 2 (
+∆𝑤
+𝑤)  
+ 
+∆(
+1
+12𝑀𝑤2) = 
+1
+12 𝑀𝑤2 [
+∆𝑀
+𝑀+ 2 (
+∆𝑤
+𝑤)]  
+(51) 
+And ∆(𝑀𝐷2) is given by,  
+∆(𝑀𝐷2)
+𝑀𝐷2
+=
+∆𝑀
+𝑀+ 2 (
+∆𝐷
+𝐷)  
+ 
+∆(𝑀𝐷2) = 𝑀𝐷2 [
+∆𝑀
+𝑀+ 2 (
+∆𝐷
+𝐷)]  
+(52) 
+Taking the sum of (50), (51) and (52),  
+ 
+∆𝐼 = 
+1
+12 𝑀𝑙0
+2 [
+∆𝑀
+𝑀+ 2 (
+∆𝑙0
+𝑙0 )] + 
+1
+12 𝑀𝑤2 [
+∆𝑀
+𝑀+ 2 (
+∆𝑤
+𝑤)] + 𝑀𝐷2 [
+∆𝑀
+𝑀+ 2 (
+∆𝐷
+𝐷)]   (53) 
+B.2) Uncertainty of (𝝎𝒂𝒗𝒈−
+𝟏
+𝟐√𝑴𝒈𝒍𝟎
+𝟐𝑰)𝟐 
+∆[(𝜔𝑎𝑣𝑔−1
+2√𝑀𝑔𝑙0
+2𝐼)2]
+(𝜔𝑎𝑣𝑔−1
+2√𝑀𝑔𝑙0
+2𝐼)2 = 2 [ 
+∆(𝜔𝑎𝑣𝑔−1
+2√𝑀𝑔𝑙0
+2𝐼)
+(𝜔𝑎𝑣𝑔−1
+2√𝑀𝑔𝑙0
+2𝐼)
+]  
+
+--- PAGE 46 ---
+ 
+46 
+ 
+∆[(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2] = 2 (𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼) ∆(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)  
+(54) 
+In which ∆(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼) is given by,  
+∆(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼) = ∆𝜔𝑎𝑣𝑔+ ∆√𝑀𝑔𝑙0
+2𝐼  
+     (55) 
+Where ∆√𝑀𝑔𝑙0
+2𝐼 is given by,  
+∆(𝑀𝑔𝑙0
+2𝐼)
+1
+2
+(𝑀𝑔𝑙0
+2𝐼)
+1
+2 =
+1
+2
+∆(𝑀𝑔𝑙0
+2𝐼)
+(𝑀𝑔𝑙0
+2𝐼)  
+∆(
+𝑀𝑔𝑙0
+2𝐼)
+1
+2 =
+1
+2 √𝑀𝑔𝑙0
+2𝐼(
+∆𝑀
+𝑀+
+∆𝑙0
+𝑙0 +
+∆𝐼
+𝐼)  
+     
+(56) 
+Substituting (49) into (48),  
+∆(𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼) = ∆𝜔𝑎𝑣𝑔+ 
+1
+2 √𝑀𝑔𝑙0
+2𝐼(
+∆𝑀
+𝑀+
+∆𝑙0
+𝑙0 +
+∆𝐼
+𝐼)  
+     
+(57) 
+Substituting (50) into (47) yields,  
+∆[((𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼)
+2
+] = 2 (𝜔𝑎𝑣𝑔−
+1
+2 √𝑀𝑔𝑙0
+2𝐼) [∆𝜔𝑎𝑣𝑔+ 
+1
+2 √𝑀𝑔𝑙0
+2𝐼(
+∆𝑀
+𝑀+
+∆𝑙0
+𝑙0 +
+∆𝐼
+𝐼)]  
+  
+(58) 
+B.3) Uncertainty of (𝝎𝑩𝒆𝒂𝒕+
+𝟏
+𝟐√𝑴𝒈𝒍𝟎
+𝟐𝑰)𝟐 
+As the uncertainty of additions and subtractions can be found with the same method, the 
+uncertainty of (𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)2 can be found with a similar manner as above. Following 
+the form of (58), ∆[((𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)
+2
+] is given by,  
+∆[((𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼)
+2
+] = 2 (𝜔𝐵𝑒𝑎𝑡+
+1
+2 √𝑀𝑔𝑙0
+2𝐼) [∆𝜔𝐵𝑒𝑎𝑡+ 
+1
+2 √𝑀𝑔𝑙0
+2𝐼(
+∆𝑀
+𝑀+
+∆𝑙0
+𝑙0 +
+∆𝐼
+𝐼)]  
+ 
+  
+(59) 
+
+--- PAGE 47 ---
+ 
+47 
+Appendix C 
+To find the period of the first and second normal mode of oscillation at large initial angles 
+To calculate the period of the first and second normal mode of oscillation, we may consider 
+setting up equations by utilizing the conservation of energy. To find the period of the first 
+normal mode of oscillation, we consider the total energy of one of the pendulums,  
+ 
+𝐸𝑇𝑜𝑡= 𝑀𝑔𝑙0
+2
+(1 −cos 𝜃0)  
+(60) 
+where 𝜃0 is the initial angle of release, of which corresponds to the energy when it is at 
+maximum angular displacement. While the energy of the pendulum at an arbitrary moment is 
+given by,  
+ 
+𝐸𝑎𝑟𝑏𝑖𝑡𝑟𝑎𝑟𝑦= 1
+2 𝐼𝜔2 + 𝑀𝑔𝑙0
+2
+(1 −cos 𝜃)  
+             (61) 
+By the law of conservation of energy,  
+𝐸𝑇𝑜𝑡= 𝐸𝑎𝑟𝑏𝑖𝑡𝑟𝑎𝑟𝑦 
+ 
+𝑀𝑔𝑙0
+2
+(1 −cos 𝜃0) = 1
+2 𝐼𝜔2 + 𝑀𝑔𝑙0
+2
+(1 −cos 𝜃)  
+ (62) 
+Substituting 𝜔=
+𝑑𝜃
+𝑑𝑡 into (62) and rearranging the terms,  
+𝑀𝑔𝑙0(1 −cos 𝜃0) −𝑀𝑔𝑙0(1 −cos 𝜃) = 𝐼(𝑑𝜃
+𝑑𝑡)
+2
+ 
+𝑀𝑔𝑙0
+𝐼
+(cos 𝜃−cos 𝜃0) = (𝑑𝜃
+𝑑𝑡)
+2
+ 
+ 
+𝑑𝜃
+𝑑𝑡= √𝑀𝑔𝑙0
+𝐼
+√cos 𝜃−cos 𝜃0 
+ (63) 
+By 1 −cos 𝜃= 2 sin2 𝜃
+2,  
+𝑑𝜃
+√sin2 𝜃0
+2 −sin2 𝜃
+2
+= 2√𝑀𝑔𝑙0
+2𝐼
+ 𝑑𝑡  
+
+--- PAGE 48 ---
+ 
+48 
+ 
+ 
+𝑑𝜃
+(sin2 𝜃0
+2 )√1 −
+sin2 𝜃
+2
+sin2 𝜃0
+2
+= 2√𝑀𝑔𝑙0
+2𝐼
+ 𝑑𝑡 
+    (64) 
+The Ratio 
+sin2𝜃
+2
+sin2𝜃0
+2
+  in the square root of the denominator will oscillate (but not with simple 
+harmonic motion) between -1 and +1, and so we will make the identification sin 𝜙= 
+sin2𝜃
+2
+sin2𝜃0
+2
+, 
+and by letting 𝑏= sin
+𝜃0
+2 , so that  
+ 
+sin 𝜃
+2 = 𝑏sin 𝜙 
+ (65) 
+ 
+cos 𝜃
+2 = (1 −sin2 𝜃
+2)
+1
+2
+= (1 −𝑏2 sin2 𝜙)
+1
+2 
+  
+(66) 
+Hence, (64) can be rewritten in the form of,  
+ 
+∫
+𝑑𝜃
+𝑏√1 −sin2 𝜙
+= 2 ∫√𝑚𝑔𝑙0
+2𝐼
+𝑑𝑡 
+ 
+ (67) 
+From differentiating (65), we have  
+𝑑
+𝑑𝜃(sin 𝜃
+2) = 𝑑
+𝑑𝜃(𝑏sin 𝜙) 
+1
+2 cos 𝜃
+2 𝑑𝜃= 𝑏cos 𝜙 𝑑𝜙 
+ 
+𝑑𝜃= 2𝑏√1 −sin2 𝜙
+√1 −𝑏2 sin2 𝜙
+ 𝑑𝜙 
+  
+(68) 
+Substituting (68) into (67) gives,  
+ 
+∫
+2𝑏
+𝑏√1 −sin2 𝜙
+√1 −sin2 𝜙
+√1 −𝑏2 sin2 𝜙
+𝑑𝜙= 2 ∫
+𝑑𝜙
+√1 −𝑏2 sin2 𝜙
+ 
+        
+      (69) 
+ 
+
+--- PAGE 49 ---
+ 
+49 
+Thus, the integral in (67) becomes,  
+ 
+∫
+𝑑𝜙
+√1 −𝑏2 sin2 𝜙
+= ∫√𝑚𝑔𝑙0
+2𝐼
+𝑑𝑡 
+  
+                (70) 
+Obtaining an elliptical integral of the first kind, we may find the power series solution to this 
+integral by expanding the function  
+1
+√1−𝑏2 sin2 𝜙,  
+ 
+(1 −𝑏2 sin2 𝜙)−1
+2 = 1 + 1
+2 𝑏2 sin2 𝜙+ 3
+8 𝑏4 sin4 𝜙+ ⋯   
+(71) 
+Therefore, the integral (70) becomes,  
+ 
+∫(1 + 1
+2 𝑏2 sin2 𝜙+ 3
+8 𝑏4 sin4 𝜙+ ⋯) 𝑑𝜙= ∫√𝑀𝑔𝑙0
+2𝐼
+𝑑𝑡   
+ 
+(72) 
+Suppose initially at 𝑡= 0, 𝜃= 0 such that sin 𝜙= 0 and 𝜙 =0. As the pendulum oscillate for 
+one period at 𝑡= 𝑇1
+′′, the pendulum returns to its lowest position, when 𝜙= 2𝜋. Inserting 
+such limits into the integral and integrating them term by term,  
+ 
+∫
+(1 + 1
+2 𝑏2 sin2 𝜙+ 3
+8 𝑏4 sin4 𝜙+ ⋯) 𝑑𝜙= ∫
+√𝑀𝑔𝑙0
+2𝐼
+𝑇1′′
+0
+𝑑𝑡 
+2𝜋
+0
+ 
+ 
+(73) 
+2𝜋+ 1
+2 𝜋sin2 𝜃0
+2 + ⋯= 𝑇1
+′′√𝑀𝑔𝑙0
+2𝐼  
+ 
+𝑇1
+′′ = 2𝜋√2𝐼
+𝑀𝑔𝑙0
+(1 + 1
+4 sin2 𝜃0
+2 + ⋯)  
+ 
+(74) 
+Applying the same arguments for the 2nd normal mode of oscillation, the period becomes,  
+𝑇2
+′′ = 2𝜋√
+2𝐼
+𝑀𝑔𝑙0 + 4𝑘𝑙2 (1 + 1
+4 sin2 𝜃0
+2 + ⋯)  
+ 
+ (75) 
+11  
+ 
+11 Chapter 24 Physical pendulums (N.D.) MIT OpenCourseWare OCW. https://ocw.mit.edu/courses/8-01sc-
+classical-mechanics-fall-2016/mit8_01scs22_chapter24.pdf 
+
+--- PAGE 50 ---
+ 
+50 
+Appendix D 
+ 
+D.1) 
+1st and 2nd normal mode angular frequency for unequal masses  
+ 
+When the masses of the 2 pendula are different, the equations of motion are,  
+ 
+𝜃̈ + 𝑙2𝑘
+𝐼(𝜃−𝜙) + 𝑀1𝑔𝑙0
+2𝐼
+𝜃= 0 
+ 
+(76) 
+ 
+ 
+𝜙̈ −𝑙2𝑘
+𝐼(𝜃−𝜙) + 𝑀2𝑔𝑙0
+2𝐼
+𝜙= 0 
+       (77) 
+ 
+Where 𝑀1 and 𝑀2 are the (45.55 ± 0.01)g and (46.19 ± 0.01)g pendulum respectively. 
+Expressing (76) and (77) in matrix representation,  
+ 
+[
+ 
+ 
+ 𝑑2
+𝑑𝑡2 + 𝑙2𝑘
+𝐼+ 𝑀1𝑔𝑙0
+2𝐼
+ 
+−𝑙2𝑘
+𝐼  
+−𝑙2𝑘
+𝐼 
+𝑑2
+𝑑𝑡2 + 𝑙2𝑘
+𝐼+ 𝑀2𝑔𝑙0
+2𝐼
+]
+ 
+ 
+ 
+[𝜃
+𝜙] = [0
+0] 
+        
+      (78) 
+Defining the 𝜃 and 𝜙 in terms of complex constants and assume an oscillatory solution of the 
+form 𝑒𝑖𝜔𝑡 , 12 
+ 
+[𝜃
+𝜙] = ℜ[𝑋
+𝑌] 𝑒𝑖𝜔𝑡  
+ (79) 
+Substituting (79) to form the eigenfunction equation,  
+ 
+[
+ 
+ 
+ −𝜔2 + 𝑙2𝑘
+𝐼+ 𝑀1𝑔𝑙0
+2𝐼
+ 
+−𝑙2𝑘
+𝐼  
+−𝑙2𝑘
+𝐼 
+−𝜔2 + 𝑙2𝑘
+𝐼+ 𝑀2𝑔𝑙0
+2𝐼
+]
+ 
+ 
+ 
+[𝑋
+𝑌] = [0
+0] 
+        
+      (80) 
+Setting the deterministic equation to 0,  
+ 
+||
+−𝜔2 + 𝑙2𝑘
+𝐼+ 𝑀1𝑔𝑙0
+2𝐼
+ 
+−𝑙2𝑘
+𝐼  
+−𝑙2𝑘
+𝐼 
+−𝜔2 + 𝑙2𝑘
+𝐼+ 𝑀2𝑔𝑙0
+2𝐼
+|| = 0 
+        
+      (81) 
+ 
+12 Jarvis M. (2016) Waves and normal mode. University of Oxford Department of Physics  
+
+--- PAGE 51 ---
+ 
+51 
+(−𝜔2 + 𝑙2𝑘
+𝐼+ 𝑀1𝑔𝑙0
+2𝐼
+) (−𝜔2 + 𝑙2𝑘
+𝐼+ 𝑀2𝑔𝑙0
+2𝐼
+) −(𝑙2𝑘
+𝐼)
+2
+= 0 
+ 
+𝜔2 = 1
+4𝐼(𝑀1𝑔𝑙0 + 𝑀2𝑔𝑙0 + 4𝑙2𝑘) ± 1
+4𝐼√𝑀2
+2𝑔2𝑙0
+2 + 𝑀1
+2𝑔2𝑙0
+2 −2𝑔2𝑀1𝑀2𝑙0
+2 + 16𝑙4𝑘2  
+(82) 
+Given that 𝑀2 > 𝑀1, let 𝑀2 = 𝑀1 + 𝛼, where 𝛼 is the mass difference,  
+ 
+𝜔2 = 2𝑔𝑀1𝑙0 + 4𝑙2𝑘+ 𝑔𝑙0𝛼 ± √𝑔2𝑙0
+2𝛼2 + 16𝑙4𝑘2
+4𝐼
+ 
+       (83) 
+In which 𝜔1
+2 and 𝜔2
+2 are given by,  
+ 
+𝜔1
+2′′ = 2𝑔𝑀1𝑙0 + 4𝑙2𝑘+ 𝑔𝑙0𝛼−√𝑔2𝑙0
+2𝛼2 + 16𝑙4𝑘2
+4𝐼
+  
+       (84) 
+ 
+𝜔2
+2′′ = 2𝑔𝑀1𝑙0 + 4𝑙2𝑘+ 𝑔𝑙0𝛼+ √𝑔2𝑙0
+2𝛼2 + 16𝑙4𝑘2
+4𝐼
+  
+       (85) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 52 ---
+ 
+52 
+Appendix E  
+E.1) Modified 1st normal mode angular frequency under damping 
+The total kinetic energy of the system 𝑇 is given by,  
+ 
+𝑇= 1
+2 𝐼(𝑑𝜃
+𝑑𝑡)
+2
++ 1
+2 𝐼(𝑑𝜃
+𝑑𝑡)
+2
+= 𝐼(𝑑𝜃
+𝑑𝑡)
+2
+ 
+ 
+(85) 
+The total potential energy of the system is given by,  
+ 
+𝑉= −𝑀𝑔𝑙0 cos 𝜃
+2
+− 𝑀𝑔𝑙0 cos 𝜃
+2
+= −𝑀𝑔𝑙0 cos 𝜃 
+ 
+(86) 
+Therefore, the modified Lagrangian of the system is given by,  
+ 
+ℒ′′ = 𝑒𝑐𝑡(𝑇−𝑉) 
+                   (35) 
+ 
+ℒ′′ = 𝑒𝑐𝑡[𝐼(𝑑𝜃
+𝑑𝑡)
+2
++ 𝑀𝑔𝑙0 cos 𝜃] 
+                   (87) 
+When 𝜃 is very small, cos 𝜃≈1 −
+𝜃2
+2 , such that,  
+ 
+ℒ′′ = 𝑒𝑐𝑡[𝐼(𝑑𝜃
+𝑑𝑡)
+2
++ 𝑀𝑔𝑙0 (1 −𝜃2
+2 ) ] 
+          (88) 
+Applying the Euler-Lagrange equation to ℒ′′,  
+ 
+𝑑
+𝑑𝑡(𝜕ℒ′′
+𝜕𝜃̇ ) = 𝜕ℒ′′
+𝜕𝜃  
+          (89) 
+where,   
+ 
+𝜕ℒ′′
+𝜕𝜃= 𝑒𝑐𝑡(−𝑀𝑔𝑙0𝜃) 
+          (90) 
+ 
+𝜕ℒ′′
+𝜕𝜃̇ = 𝑒𝑐𝑡(2𝐼𝑑𝜃
+𝑑𝑡)   
+          (91) 
+ 
+𝑑
+𝑑𝑡(𝜕ℒ′′
+𝜕𝜃̇ ) = 𝑑
+𝑑𝑡𝑒𝑐𝑡(2𝐼𝑑𝜃
+𝑑𝑡) = 2𝐼𝑒𝑐𝑡( 𝑑2𝜃
+𝑑𝑡2 + 𝑐𝑑𝜃
+𝑑𝑡) 
+ 
+     (92) 
+
+--- PAGE 53 ---
+ 
+53 
+Combining (90), (91) and (92),  
+2𝐼𝑒𝑐𝑡( 𝑑2𝜃
+𝑑𝑡2 + 𝑐𝑑𝜃
+𝑑𝑡) = 𝑒𝑐𝑡(−𝑀𝑔𝑙0𝜃)  
+2𝐼(𝑑2𝜃
+𝑑𝑡2 + 𝑐𝑑𝜃
+𝑑𝑡) = −𝑀𝑔𝑙0𝜃 
+ 
+𝑑2𝜃
+𝑑𝑡2 + 𝑐𝑑𝜃
+𝑑𝑡+ 𝑀𝑔𝑙0
+2𝐼 𝜃= 0  
+          (93) 
+Noticing that this second-ordered differential equations take the same form as the one for 
+damped harmonic motion, the general solution can be given by,  
+ 
+𝜃= 𝐴0 exp (−𝑐𝑡
+2 ) cos 𝜔0
+′′𝑡  
+          (94) 
+13where 𝐴0 is the initial amplitude of oscillation, and 𝜔0
+′′ is the modified frequency after 
+damping. As 𝜔𝑜
+′′ is given by,  
+𝜔0
+′′2 = 𝜔0
+2 −(𝑐
+2)
+2
+14 
+ 
+𝜔0
+′′2 = 𝑀𝑔𝑙0
+2𝐼 −(𝑐
+2)
+2
+ 
+          (95) 
+E.2) Modified 2nd normal mode angular frequency under damping 
+Applying the same arguments as shown from E.1, the modified Lagrangian thus becomes,  
+ 
+ℒ′′ = 𝑒𝑐𝑡[𝐼(𝑑𝜃
+𝑑𝑡)
+2
++ 𝑀𝑔𝑙0 (1 −𝜃2
+2 ) −2𝑘𝑙2𝜃2] 
+ 
+(96) 
+ 
+ 
+ 
+ 
+ 
+13 Reference: Ford, A. L. Young, H. D. Freedman, R. A. Sears and Zemansky’s University Physics with Modern 
+Physics (13th edition). Pearson 
+14 Reference: Ford, A. L. Young, H. D. Freedman, R. A. Sears and Zemansky’s University Physics with Modern 
+Physics (13th edition). Pearson 
+
+--- PAGE 54 ---
+ 
+54 
+Applying the Euler-Lagrange equation on ℒ′′,  
+ 
+𝜕ℒ′′
+𝜕𝜃= 𝑒𝑐𝑡(−𝑀𝑔𝑙0𝜃−4𝑘𝑙2𝜃) 
+          (97) 
+ 
+𝜕ℒ′′
+𝜕𝜃̇ = 𝑒𝑐𝑡(2𝐼𝑑𝜃
+𝑑𝑡)   
+          (98) 
+ 
+𝑑
+𝑑𝑡(𝜕ℒ′′
+𝜕𝜃̇ ) = 𝑑
+𝑑𝑡𝑒𝑐𝑡(2𝐼𝑑𝜃
+𝑑𝑡) = 2𝐼𝑒𝑐𝑡( 𝑑2𝜃
+𝑑𝑡2 + 𝑐𝑑𝜃
+𝑑𝑡)   
+          (99) 
+Combining (97), (98) and (99),  
+2𝐼𝑒𝑐𝑡( 𝑑2𝜃
+𝑑𝑡2 + 𝑐𝑑𝜃
+𝑑𝑡) = 𝑒𝑐𝑡(−𝑀𝑔𝑙0𝜃−4𝑘𝑙2𝜃) 
+2𝐼( 𝑑2𝜃
+𝑑𝑡2 + 𝑐𝑑𝜃
+𝑑𝑡) = −𝑀𝑔𝑙0𝜃−4𝑘𝑙2𝜃  
+ 
+𝑑2𝜃
+𝑑𝑡2 + 𝑐𝑑𝜃
+𝑑𝑡+ (𝑀𝑔𝑙0
+2𝐼 + 2𝑘𝑙2
+𝐼
+) 𝜃= 0 
+          (100) 
+Again, the general solution to the equation is,  
+ 
+𝜃= 𝐴0 exp (−𝑐𝑡
+2 ) cos 𝜔1
+′′𝑡  
+          (101) 
+where,  
+𝜔1
+′′2 = 𝜔1
+2 −(𝑐
+2)
+2
+ 
+ 
+𝜔1
+′′2 = (𝑀𝑔𝑙0
+2𝐼 + 2𝑘𝑙2
+𝐼
+) −(𝑐
+2)
+2
+ 
+          (102) 
+ 
+ 
+ 
+ 
+
+--- PAGE 55 ---
+ 
+55 
+References 
+[1] Ford, A. L. Young, H. D. Freedman, R. A. Sears and Zemansky’s University Physics with 
+Modern Physics (13th edition). Pearson  
+ 
+[2] Coupled Pendulum [Online] UC Santa Cruz UCSC PHYSICS DEMONSTRATION 
+ROOM. https://ucscphysicsdemo.sites.ucsc.edu/physics-5a6a/coupled-pendulum/ 
+ 
+[3] Elasticity [Online] Britannica. https://www.britannica.com/science/elasticity-physics 
+ 
+[4] Taylor, John R. (John Robert), (1939-2005). Classical mechanics. Sausalito, Calif. 
+University Science Books  
+ 
+[5] EX-5563 Coupled pendula [Online] PASCO. 
+https://cdn.pasco.com/lab_experiment/l_1224/EX-5563_Coupled_Pendula.pdf  
+ 
+[6] Parallel Axis theorem [Online]. HyperPhysics Concepts http://hyperphysics.phy-
+astr.gsu.edu/hbase/parax.html 
+[7] Perpendicular Axis theorem [Online]. HyperPhysics Concepts http://hyperphysics.phy-
+astr.gsu.edu/hbase/perpx.html#:~:text=For%20a%20planar%20object%2C%20the,moments
+%20of%20strictly%20planar%20objects. 
+[8] Jarvis M. (2016) Waves and normal mode. University of Oxford Department of Physics 
+[9[ Lagrangian mechanics with Friction: Step by Step Guide with example. (n.d.). 
+https://profoundphysics.com/friction-in-lagrangian-mechanics/ 
+ 
+[10] Chapter 24 Physical pendulums (N.D.) MIT OpenCourseWare OCW. 
+https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-
+2016/mit8_01scs22_chapter24.pdf 
+ 
+[11] Peter D. (20th July, 2022). Physical pendulum. Physics LibreTexts. 
+https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Classical_Mechanics_(Dourmas
+hkin)/24%3A_Physical_Pendulums/24.02%3A_Physical_Pendulum 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,33 @@
+\section{Numerical simulation}\label{sec:simulation}
+
+Several results quoted above (Tables~\ref{tab:resolution}, \ref{tab:amplitude}, \ref{tab:simmethods}; Figures~\ref{fig:amplitude}, \ref{fig:simlnln}) come from a numerical model of the oscillator. This section explains what the model is and why it is trustworthy.
+
+\subsection{Equations integrated}
+
+The simulation integrates the \emph{full} equations of motion, without linearising the magnetic force and with damping:
+\begin{equation}
+\begin{aligned}
+m\ddot x_1&=-k_ax_1-\big[F(d+x_2-x_1)-F(d)\big]-\frac{2m}{\tau}\dot x_1,\\
+m\ddot x_2&=-k_bx_2+\big[F(d+x_2-x_1)-F(d)\big]-\frac{2m}{\tau}\dot x_2,
+\end{aligned}
+\qquad F(r)=\frac{C_F}{r^4},
+\label{eq:fulleom}
+\end{equation}
+with $k_a=k_b$ unless stated otherwise. Dividing by $m$, the only parameters are $\omega_a^2=k_a/m$, $\omega_b^2=k_b/m$, $\tau$ and $C_F/m$. The last is fixed by the measured coupling at $25\un{mm}$: from equation~\eqref{eq:main}, $C_F/m=\gamma d^5/(4m)=\pi^2\Y d^5/2$, i.e.\ $C_F/m=\tfrac12\pi^2(0.2489\un{Hz^2})(25\un{mm})^5=1.20\times10^{7}\un{mm^5\,s^{-2}}=1.20\times10^{-8}\un{m^5\,s^{-2}}$, with $\Y=0.2489\un{Hz^2}$ at $d=25\un{mm}$. Every simulated frequency is therefore anchored to the real apparatus; no value of $E$, $\mum$ or $M$ is required.
+
+The equations are integrated with SciPy's adaptive Runge--Kutta method of order 5(4) with relative tolerance $10^{-9}$, and the solution is sampled at $240\un{Hz}$ to mimic the camera; Gaussian noise of $0.1\un{mm}$ rms is added to each sample to mimic the tracking error. The synthetic $x_1(t)$, $x_2(t)$ are then passed through the identical Python functions used for the real data (detrend, window, zero-pad, peak search, normal coordinates, two-tone fit), so that any bias introduced by the analysis is reproduced faithfully.
+
+\subsection{Checks}
+
+Three checks establish that the simulation is correct. (i) For very small amplitude ($A=0.1\un{mm}$) and $\tau\to\infty$ the recovered frequencies agree with the linear formulae \eqref{eq:modes} to better than $10^{-5}$, and the ln--ln gradient is $-5.000$. (ii) The amplitude shift at moderate amplitude follows the perturbation formula~\eqref{eq:LL} (Figure~\ref{fig:amplitude}, left, dashed against solid), departing from it only where $a/d$ is no longer small, as expected. (iii) Energy is conserved to $10^{-8}$ over $90\un{s}$ when damping is switched off.
+
+\subsection{Uses}
+
+The simulation was used for three purposes, each of which would be impossible or very laborious experimentally.
+\begin{enumerate}
+\item \textbf{The amplitude correction} (Section~\ref{sec:nonlinear}): the frequency of the anti-phase coordinate was measured by counting zero crossings of $\xi(t)$ over $60\un{s}$ for release amplitudes $1$--$10\un{mm}$ at every $d$, giving Table~\ref{tab:amplitude}. The hardening and its steepening of the ln--ln plot are pure consequences of the $r^{-4}$ force law, independent of any apparatus constant except $C_F/m$.
+\item \textbf{The analysis bias} (Sections~\ref{sec:fftres}, \ref{sec:simmethods}): records with the original conditions ($T=30\un{s}$, $A=10\un{mm}$) and with the improved conditions ($T=90\un{s}$, $A=3\un{mm}$) were generated for all ten separations and analysed by every method of Section~\ref{sec:further}. Since the input exponent is exactly $-5$, the recovered gradient measures the bias of each method directly: $\nsimGradoldrect$ for the original procedure, $\nsimGradnormal$ for the normal-coordinate FFT.
+\item \textbf{The design of the re-measurement}: the required record length, the amplitude below which the hardening is negligible, and the separations at which each method fails were all read off the simulation before any new video was taken.
+\end{enumerate}
+
+The code is listed in Appendix~\ref{app:code}. It runs in about one minute on a laptop, and every figure and number in this essay that depends on it can be regenerated with a single command, with the measured values substituted for the assumed ones.

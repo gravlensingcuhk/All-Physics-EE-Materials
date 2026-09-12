@@ -1,0 +1,117 @@
+\section{Methodology}\label{sec:method}
+
+\subsection{Background: measuring frequencies with the fast Fourier transform}\label{sec:fftbackground}
+
+The frequencies $f_1$ and $f_2$ are extracted from the recorded displacement $x_1(t)$ by a discrete Fourier transform (DFT), computed with the fast Fourier transform (FFT) algorithm. Because every subsequent uncertainty estimate depends on how the DFT behaves, its relevant properties are set out here \cite{lyons,harris}.
+
+\paragraph{Definition.} A record of $N$ samples $x_n=x(n\Delta t)$, $n=0,\dots,N-1$, taken at sampling frequency $f_s=1/\Delta t$ over a total time $T=N\Delta t$, is transformed into $N$ complex coefficients
+\begin{equation}
+X_k=\sum_{n=0}^{N-1}x_n\,e^{-2\pi i kn/N},\qquad k=0,\dots,N-1 .
+\label{eq:dft}
+\end{equation}
+$|X_k|$ is the amplitude of the component at frequency $f_k=k/T$: coefficient $k$ corresponds to the sinusoid that completes exactly $k$ cycles in the record. Only $k\leq N/2$ carry independent information (frequencies up to the Nyquist frequency $f_s/2$). Here $f_s=240\un{Hz}$ is far above $2f_2\approx2\un{Hz}$, so aliasing is not an issue; the high frame rate is useful mainly because it gives many samples per cycle and hence low tracking noise per unit bandwidth.
+
+\paragraph{Resolution.} The spectrum is evaluated only at the discrete frequencies $f_k=k/T$, spaced $1/T$ apart. For $T=30\un{s}$ the spacing (``bin width'') is $1/30\un{Hz}=\nbinT\un{mHz}$. Two sinusoids of frequencies $f_1$ and $f_2$ produce two separate maxima in $|X_k|$ only if their separation is at least of the order of one bin, $|f_2-f_1|\gtrsim1/T$; if they are closer, the two peaks merge into one. This is the fundamental ``uncertainty principle'' of spectral analysis: to separate two frequencies $\Delta f$ apart one must observe for at least $T\approx1/\Delta f$, i.e.\ long enough for the two oscillations to drift one full cycle out of step. In the language of beats, one must record at least one full beat period, $T\geq 1/(2 f_{\rm beat})=1/(f_2-f_1)$.
+
+\paragraph{Leakage and windows.} The DFT implicitly assumes that the record repeats periodically. Unless a sinusoid completes a whole number of cycles in $T$, the repetition has a jump at the joins, and the energy of the sinusoid spreads (``leaks'') into neighbouring bins in a pattern determined by the Fourier transform of the record's rectangular boundary, a $\sin x/x$ shape with a main lobe two bins wide and side lobes only $13\un{dB}$ below the peak (Figure~\ref{fig:windows}). Multiplying the record by a smooth \emph{window} that tapers to zero at both ends (Hann, Blackman, \ldots) removes the jump and suppresses the side lobes, but at the price of a \emph{wider} main lobe: four bins for Hann, six for Blackman. Two tones must be separated by roughly the main-lobe half-width to be resolved, so the choice of window is a trade-off between resolution and leakage. For the present measurement the two peaks have similar heights and there is no strong interfering component, so the rectangular window (or the Hann window when its resolution suffices) is appropriate; this is the opposite of the usual ``always use a Hann window'' advice, which applies when weak components must be seen next to strong ones.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{F_windows}
+\caption{Left: the three window functions. Right: their spectra in units of the bin width $1/T$. The rectangular window has the narrowest main lobe (best resolution) but the highest side lobes (most leakage); Hann and Blackman suppress leakage at the cost of doubling and tripling the main-lobe width.}
+\label{fig:windows}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{F_leakage}
+\caption{Leakage for a single $0.85$--$0.87\un{Hz}$ tone recorded for $30\un{s}$ at $240\un{fps}$. Left: the tone completes exactly 26 cycles, so with a rectangular window all the energy falls in one bin (red dot). Right: $25.5$ cycles; the rectangular window spreads energy into many bins (red dots), the Hann window (blue) confines it to a few. Lines show the zero-padded (interpolated) spectra.}
+\label{fig:leakage}
+\end{figure}
+
+\paragraph{Zero-padding and peak interpolation.} Appending zeros to the record before the FFT evaluates the same underlying spectrum at more closely spaced frequencies. It does \emph{not} improve the resolution (the main-lobe width is set by $T$), but it locates the maximum of an isolated peak more precisely than the nearest bin. In this essay every spectrum is zero-padded to $2^{20}$ points, and the peak position is refined by fitting a parabola through the three highest points, so the bin-centring error $\pm1/(2T)$ that would otherwise apply is removed.
+
+\paragraph{Peak pulling.} When two peaks are close enough that their main lobes overlap, each maximum is displaced by the tail of the other: the peaks are pushed apart (or, for some phase differences, pulled together). This bias, not the random noise, turns out to be the dominant error at the larger separations, and it is quantified in Section~\ref{sec:fftres}.
+
+\paragraph{Damping linewidth.} A decaying oscillation $e^{-t/\tau}\cos2\pi ft$ recorded for $T\gg\tau$ has a Lorentzian amplitude spectrum whose full width at half maximum is $\sqrt3/(\pi\tau)$ (the more often quoted $1/(\pi\tau)$ is the width of the \emph{power} spectrum). For the observed decay time $\tau\approx25\un{s}$ this is $\nlwAmp\un{Hz}$: a floor on the resolution that no record length can remove, comparable to $f_2-f_1$ at $d\geq35\un{mm}$.
+
+\paragraph{Pre-processing.} The tracked coordinate contains a large constant offset (the pixel coordinate of the equilibrium position, typically $50$ times the oscillation amplitude) and possibly a slow drift. A constant is a zero-frequency component; with a rectangular window its leakage at $\approx16$ bins from zero (where $f_1\approx0.8\un{Hz}$ sits at $T=20\un{s}$) is only $\sim34\un{dB}$ down, comparable to the signal peaks. The mean and any linear trend are therefore subtracted (``detrending'') before the transform. Video frames are not perfectly uniformly spaced; the time stamps are checked and the data resampled to a uniform grid by linear interpolation if the timing jitter exceeds $1\,\%$ of a frame.
+
+\subsection{Set-up and apparatus}
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][6.5cm][c]{0.85\textwidth}{\centering\TBM{Insert labelled photograph of the actual apparatus: base, clamps, springs, magnets, scale bar in the plane of motion, camera position. Label $d$, $L$ and the tracked point.}}}
+\caption{Photograph of the apparatus. \TBM{to be inserted}}
+\label{fig:photo}
+\end{figure}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Apparatus.}
+\label{tab:apparatus}
+\begin{tabular}{@{}p{4.2cm}p{10.5cm}@{}}
+\toprule
+Item & Specification \\
+\midrule
+Leaf springs (2) & copper strip, free length $L=\TBM{\ldots}\un{mm}$, width $b=\TBM{\ldots}\un{mm}$, thickness $h=\TBM{\ldots}\un{mm}$\\
+Magnets (2) & NdFeB, \TBM{shape, $D\times t$}, mass $M=\TBM{\ldots}\un{g}$, grade \TBM{N\ldots}\\
+Base and clamps & aluminium/wooden base with two sliding aluminium clamps; brass screws (non-magnetic)\\
+Camera & smartphone in slow-motion mode, $240\un{fps}$, $1080\times1920$ pixels, on a tripod $\approx\TBM{\ldots}\un{m}$ from the apparatus, optical axis perpendicular to the plane of motion\\
+Scale & steel rule with $1\un{mm}$ divisions placed in the plane of motion for calibration; digital calliper ($\pm0.02\un{mm}$) for $g$, $t$, $b$, $h$\\
+Balance & electronic balance, resolution $0.01\un{g}$, for $M$, $\mu$ and the magnetic-force measurement\\
+Masses & slotted masses $1$--$20\un{g}$ for the static stiffness measurement\\
+Software & Tracker 6 (video analysis) \cite{tracker}; Python 3 with NumPy/SciPy for FFT, fitting and simulation (Appendix~\ref{app:code})\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Method of data collection}
+
+\paragraph{First attempt: reading the beat period.} The natural first approach, used in many coupled-pendulum experiments, is to read the average period and the beat period directly from the recorded $x_1(t)$ and use equation~\eqref{eq:beats_identity}. This worked at the smallest separations, where several beats fit into one record, but failed beyond about $30\un{mm}$: the beat period becomes longer than $10\un{s}$, fewer than three envelope minima fit into the record, the envelope minima are shallow and their positions cannot be read to better than a quarter of a cycle. It also breaks down completely once the beat period exceeds the decay time of the oscillation.
+
+\paragraph{Adopted method: FFT of the displacement.} The recorded displacement is transformed as described in Section~\ref{sec:fftbackground} and the two mode frequencies are read as the positions of the two highest peaks (Figure~\ref{fig:tracker}). This uses the whole record rather than a few envelope minima, gives both frequencies directly, and its limitations (resolution, leakage, pulling) can be quantified. It is the method used for all the data in Section~\ref{sec:rawdata}.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][5.5cm][c]{0.85\textwidth}{\centering\TBM{Insert a screenshot of Tracker with the tracked point on the magnet, the measured $x_1(t)$ for one run (e.g.\ $d=25\un{mm}$) and its FFT with $f_1$ and $f_2$ labelled. (Figure~\ref{fig:beats_example} shows the trace of one run; here the spectrum should be shown as well, e.g.\ with \texttt{plot\_beats.py --panels fft}.)}}}
+\caption{Measured displacement $x_1(t)$ and its amplitude spectrum for one trial. \TBM{to be inserted}}
+\label{fig:tracker}
+\end{figure}
+
+\subsection{Procedures}
+
+\subsubsection{Static stiffness \texorpdfstring{$k$}{k} of each spring}
+\begin{enumerate}
+\item Clamp the spring horizontally with the same free length $L$ as in the oscillation experiment, with a mm scale behind the tip.
+\item Hang slotted masses $m_i=1,2,\ldots,10\un{g}$ from the tip with a light loop of thread; record the tip deflection $x_i$ for each load, loading and unloading.
+\item Plot $F_i=m_ig$ against $x_i$; the gradient of the best-fit line through the origin is $k$. The straightness of the graph also checks that the spring is linear over the range of deflections used ($\pm12\un{mm}$).
+\end{enumerate}
+
+\subsubsection{Uncoupled frequencies \texorpdfstring{$f_a$, $f_b$}{fa, fb} of each spring (dynamic calibration)}
+\begin{enumerate}
+\item With only spring~1 (and its own magnet) mounted, displace it by $3\un{mm}$, release, and record $60\un{s}$ of video.
+\item Track the magnet and take the FFT; the single peak is $f_a$. Repeat three times.
+\item Repeat for spring~2 alone to obtain $f_b$. The difference $f_b-f_a$ measures how far assumption~(c) (identical springs) is from the truth and is used in Section~\ref{sec:detuned}.
+\end{enumerate}
+
+\subsubsection{Magnetic moment \texorpdfstring{$\mum$}{mu\_m}}
+\begin{enumerate}
+\item Fix one magnet on the pan of the electronic balance (on a non-magnetic spacer) and tare.
+\item Hold the second magnet coaxially above it, like poles facing, on a non-magnetic stand whose height is set with a calliper; record the apparent mass change $\Delta m$ at 6 separations $r$ between $20$ and $40\un{mm}$.
+\item $F=\Delta m\,g$. Plot $\ln F$ against $\ln r$: the gradient tests the $r^{-4}$ law directly (independent of any oscillation) and the intercept gives $\mum$ through equation~\eqref{eq:F}. Compare with the datasheet value $\mum=B_rV/\muz$, where $B_r$ is the remanence and $V$ the volume of the magnet.
+\end{enumerate}
+
+\subsubsection{Masses}
+Weigh each magnet (with its glue/holder) to obtain $M$, and weigh a measured length of the same copper strip to obtain $\mu$; hence $m$ from equation~\eqref{eq:meff} as a cross-check on $m=k/(2\pi f_a)^2$.
+
+\subsubsection{Mode frequencies against separation}\label{sec:mainproc}
+\begin{enumerate}
+\item Mount both springs. Slide clamp~2 until the centre-to-centre separation of the magnets, read from a calibrated video frame with the system at rest, is the required $d$ (checked as $g+t$ with the calliper; $\pm0.5\un{mm}$ because of the outward bending). Values used: $d=21,23,25,28,31,35,40,45,50,60\un{mm}$.
+\item Displace spring~1 by $A=10\un{mm}$ using a card held against the magnet, with spring~2 at rest; withdraw the card horizontally to release.
+\item Record $30\un{s}$ at $240\un{fps}$. Repeat three times at each $d$.
+\item In Tracker, calibrate the scale, define the $x$ axis along the line joining the magnets and auto-track the centre of magnet~1. Export $t$, $x_1$.
+\item Detrend, apply the window, zero-pad to $2^{20}$ points, compute the amplitude spectrum, and read the two highest peaks with parabolic interpolation. Record $f_1$ (lower) and $f_2$ (higher). If only one peak is present, record ``unresolved''.
+\end{enumerate}
+
+\paragraph{Safety.} Neodymium magnets pinch strongly and shatter if allowed to snap together; they were handled one at a time and kept away from the phone, cards and the balance's electronics when not in use. The spring tips were not sharp, but eye protection was worn while the springs were plucked.

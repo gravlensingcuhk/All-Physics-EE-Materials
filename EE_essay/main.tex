@@ -1,0 +1,106 @@
+% =====================================================================
+%  IB Physics HL Extended Essay -- full draft
+%  Investigation on the frequencies of oscillations of a coupled
+%  magnetic-mechanical oscillator
+%
+%  Build:  pdflatex main  (x2)   or   tectonic -X compile main.tex
+%  All figures are in figs/, all generated numbers in numbers.tex and
+%  tables/*.tex (produced by make_figures.py).
+%  Red text in square brackets = value still to be measured / filled in.
+%  Everything labelled SIMULATED must be replaced by real measurements.
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,array,multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,decorations.pathmorphing}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figs/}}
+\onehalfspacing
+\setlength{\parskip}{0.35em}
+\captionsetup{font=small,labelfont=bf,width=0.92\textwidth}
+\setlist{itemsep=2pt,topsep=3pt}
+
+% ---------- generated numbers (from make_figures.py) ----------
+\input{numbers.tex}
+\input{numbers2.tex}
+
+% ---------- helpers ----------
+% \input inside tabular triggers file hooks -> 'Misplaced \noalign'; use the primitive instead
+\makeatletter
+\newcommand{\tabinput}[1]{\@@input #1.tex }
+\makeatother
+\newcommand{\un}[1]{\,\mathrm{#1}}                  % unit inside maths
+\newcommand{\muz}{\mu_0}
+\newcommand{\mum}{\mu_{\mathrm m}}
+\newcommand{\Y}{Y}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\TBM}[1]{\textcolor{red}{[#1]}}          % to be measured / filled in
+\newcommand{\SIM}{\textcolor{blue!60!black}{\textbf{SIMULATED}}}
+\newtcolorbox{simbox}{colback=blue!4,colframe=blue!50!black,boxrule=0.6pt,
+  title=\textbf{Note on the data in this section},fonttitle=\small,left=4pt,right=4pt}
+\newtcolorbox{keybox}{colback=green!4,colframe=green!40!black,boxrule=0.6pt,left=4pt,right=4pt}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,columns=fullflexible,
+  keepspaces=true,frame=single,framerule=0.3pt,language=Python,
+  commentstyle=\color{gray},showstringspaces=false}
+
+\title{Investigation on the frequencies of oscillations of a coupled magnetic-mechanical oscillator}
+\begin{document}
+
+% =====================================================================
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Large\bfseries INTERNATIONAL BACCALAUREATE\par}
+\vspace{0.6cm}
+{\Large\bfseries PHYSICS HL\par}
+\vspace{0.6cm}
+{\Large\bfseries EXTENDED ESSAY\par}
+\vspace{2.5cm}
+{\large Candidate code: \TBM{to be filled in}\par}
+\vspace{2.5cm}
+{\LARGE\bfseries Investigation on the frequencies of oscillations of a coupled magnetic-mechanical oscillator\par}
+\vspace{1.5cm}
+{\large\itshape Research question: How does the centre-to-centre separation $d$ of the magnets in a coupled magnetic-mechanical oscillator affect its two normal-mode frequencies $f_1$ and $f_2$, and hence its average frequency $f_{\mathrm{avg}}=(f_1+f_2)/2$ and beat frequency $f_{\mathrm{beat}}=f_2-f_1$?\par}
+\vfill
+{\large Word count: \TBM{to be counted after trimming}\par}
+\vspace{1cm}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\input{sec01_introduction}
+\input{sec02_prediction_hypothesis_variables}
+\input{sec05_theory}
+\input{sec06_methodology}
+\input{sec07_rawdata}
+\input{sec08_analysis}
+\input{sec09_discussion}
+\input{sec10_evaluation}
+\input{sec11_further_methodology}
+\input{sec12_further_data}
+\input{sec13_simulation}
+\input{sec14_conclusion}
+\input{bibliography}
+
+\appendix
+\input{appendices}
+
+\end{document}

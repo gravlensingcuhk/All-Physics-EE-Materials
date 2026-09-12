@@ -1,0 +1,33 @@
+\section{Qualitative prediction}
+
+Before any equations are written, the behaviour can be predicted qualitatively from the two facts established in the introduction.
+
+\begin{enumerate}
+\item In the in-phase mode the separation of the magnets does not change, so the magnetic force does not enter. Whatever $d$ is, $f_1$ should equal the natural frequency of a single spring carrying its magnet. \textbf{Prediction: $f_1$ is independent of $d$.}
+\item In the anti-phase mode the magnetic repulsion acts as an extra spring. The stiffness of that extra spring is the rate at which the repulsive force changes with separation, $\gamma=-\dd F/\dd d$. The repulsion between two facing magnets weakens very rapidly with distance, faster than an inverse square, and its gradient weakens faster still. \textbf{Prediction: $f_2$ is largest when the magnets are close and falls towards $f_1$ as $d$ grows}; the beats slow down and eventually cannot be distinguished from a single oscillation.
+\end{enumerate}
+
+The difference between the two mode frequencies therefore measures the magnetic stiffness $\gamma$ alone, with the mechanical stiffness of the springs cancelling out. This is what makes the pair of frequencies such a clean probe of the magnetic force law.
+
+\section{Hypothesis}
+
+Modelling the two magnets as point magnetic dipoles (Section~\ref{sec:theory}) gives a repulsive force proportional to $d^{-4}$ and hence a magnetic stiffness $\gamma\propto d^{-5}$. Because the squared angular frequencies of the two modes differ by exactly $2\gamma/m$ (Section~\ref{sec:modes}), the hypothesis is:
+
+\begin{keybox}
+\begin{enumerate}[label=(\roman*)]
+\item $f_1$ does not depend on $d$, so that $f_{\rm avg}$ and $f_{\rm beat}$ both approach constant values ($f_1$ and $0$ respectively) as $d$ increases;
+\item $f_2^2-f_1^2=C\,d^{-5}$ with $C=\dfrac{3\muz\mum^2}{\pi^3 m}$, so that a graph of $\ln(f_2^2-f_1^2)$ against $\ln d$ is a straight line of gradient $-5$;
+\item the intercept of that line, $\ln C$, agrees with the value calculated from the independently measured magnetic moment $\mum$ and effective mass $m$.
+\end{enumerate}
+\end{keybox}
+
+Here $\muz=4\pi\times10^{-7}\un{T\,m\,A^{-1}}$ is the permeability of free space, $\mum$ is the magnetic dipole moment of each magnet and $m$ is the effective oscillating mass of one spring-plus-magnet.
+
+\section{Variables}
+
+\begin{description}[leftmargin=3.2cm,style=sameline]
+\item[Independent] Centre-to-centre separation $d$ of the magnets at equilibrium, with both magnets mounted ($d=g+t$). Varied from $21\un{mm}$ to $60\un{mm}$ by moving one clamp along the base.
+\item[Dependent] The two normal-mode frequencies $f_1$ and $f_2$, obtained from the Fourier spectrum of the recorded displacement $x_1(t)$; from them the average frequency $f_{\rm avg}=(f_1+f_2)/2$, the beat frequency $f_{\rm beat}=f_2-f_1$ and the coupling term $\Y\equiv f_2^2-f_1^2=2f_{\rm beat}f_{\rm avg}$, which is the quantity compared with the model.
+\item[Controlled] The same pair of springs and the same pair of magnets throughout, in the same orientation; the clamped length $L$ of each spring (marked on the spring, clamp tightened to the same torque); the initial displacement (size and which spring is displaced); the release method (a card withdrawn horizontally); camera model, frame rate ($240\un{fps}$), resolution and distance from the apparatus; record length $T$; all settings of the analysis (tracking point, detrending, window, zero-padding).
+\item[Uncontrolled / monitored] Room temperature (Young's modulus of copper and the remanence of the magnets both drift slightly with temperature, so all runs were done in one session); air currents (doors closed); residual slip in the clamps (checked by re-measuring $f_1$ at the start and end of the session).
+\end{description}
