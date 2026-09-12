@@ -1,0 +1,125 @@
+36 files, separations: [24.5, 26.5, 28.5, 31.0, 33.5, 36.0, 39.0, 42.0]
+d = 24.5 mm trial 1: T = 10.6 s, fs = 119.39 Hz, f1 = 6.4194, f2 = 8.5403 Hz (eta/xi), A-only: 6.419/8.540, T_beat env 0.472 vs 1/(f2-f1) 0.471 s, rA 0.48 rB 0.53 pred 0.56
+      WARNING: mean(xB) - mean(xA) = 27.1 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: mass B was already swinging (+-2.8 mm) during 0.08-0.31 s while A was still held -> f1, f2 unaffected (analysis starts at A's release), but the peak-height-ratio / beat-minimum tests do not apply to this trial (hold A, pull it slowly, wait until B is still, release)
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 24.5 mm trial 2: T = 10.9 s, fs = 119.38 Hz, f1 = 6.4191, f2 = 8.5409 Hz (eta/xi), A-only: 6.419/8.541, T_beat env 0.469 vs 1/(f2-f1) 0.471 s, rA 0.50 rB 0.55 pred 0.56
+      WARNING: mean(xB) - mean(xA) = 27.2 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 24.5 mm trial 3: T = 10.8 s, fs = 119.39 Hz, f1 = 6.4199, f2 = 8.5404 Hz (eta/xi), A-only: 6.420/8.540, T_beat env 0.469 vs 1/(f2-f1) 0.472 s, rA 0.49 rB 0.53 pred 0.57
+      WARNING: mean(xB) - mean(xA) = 27.0 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 24.5 mm trial 4: T = 10.8 s, fs = 119.39 Hz, f1 = 6.4184, f2 = 8.5410 Hz (eta/xi), A-only: 6.419/8.541, T_beat env 0.468 vs 1/(f2-f1) 0.471 s, rA 0.51 rB 0.56 pred 0.56
+      WARNING: mean(xB) - mean(xA) = 27.2 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 24.5 mm trial 5: T = 10.8 s, fs = 119.38 Hz, f1 = 6.4190, f2 = 8.5413 Hz (eta/xi), A-only: 6.419/8.541, T_beat env 0.467 vs 1/(f2-f1) 0.471 s, rA 0.49 rB 0.54 pred 0.56
+      WARNING: mean(xB) - mean(xA) = 27.2 mm but folder says d = 24.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 26.5 mm trial 1: T = 10.8 s, fs = 119.38 Hz, f1 = 6.4186, f2 = 8.1470 Hz (eta/xi), A-only: 6.419/8.147, T_beat env 0.575 vs 1/(f2-f1) 0.579 s, rA 0.55 rB 0.61 pred 0.62
+      WARNING: mean(xB) - mean(xA) = 289.9 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 26.5 mm trial 2: T = 10.9 s, fs = 119.38 Hz, f1 = 6.4192, f2 = 8.1478 Hz (eta/xi), A-only: 6.419/8.148, T_beat env 0.573 vs 1/(f2-f1) 0.579 s, rA 0.53 rB 0.60 pred 0.62
+      WARNING: mean(xB) - mean(xA) = 29.0 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 26.5 mm trial 3: T = 10.8 s, fs = 119.38 Hz, f1 = 6.4201, f2 = 8.1467 Hz (eta/xi), A-only: 6.420/8.146, T_beat env 0.576 vs 1/(f2-f1) 0.579 s, rA 0.53 rB 0.59 pred 0.62
+      WARNING: mean(xB) - mean(xA) = 28.6 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 26.5 mm trial 4: T = 10.7 s, fs = 119.39 Hz, f1 = 6.4199, f2 = 8.1476 Hz (eta/xi), A-only: 6.420/8.147, T_beat env 0.577 vs 1/(f2-f1) 0.579 s, rA 0.54 rB 0.60 pred 0.62
+      WARNING: mean(xB) - mean(xA) = 28.7 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 26.5 mm trial 5: T = 10.6 s, fs = 119.38 Hz, f1 = 6.4201, f2 = 8.1462 Hz (eta/xi), A-only: 6.420/8.146, T_beat env 0.578 vs 1/(f2-f1) 0.579 s, rA 0.51 rB 0.57 pred 0.62
+      WARNING: mean(xB) - mean(xA) = 28.8 mm but folder says d = 26.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 28.5 mm trial 1: T = 10.7 s, fs = 119.39 Hz, f1 = 6.4059, f2 = 7.7900 Hz (eta/xi), A-only: 6.406/7.790, T_beat env 0.719 vs 1/(f2-f1) 0.723 s, rA 0.54 rB 0.64 pred 0.68
+      WARNING: mean(xB) - mean(xA) = 30.6 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 28.5 mm trial 2: T = 10.7 s, fs = 119.39 Hz, f1 = 6.4058, f2 = 7.7916 Hz (eta/xi), A-only: 6.406/7.791, T_beat env 0.710 vs 1/(f2-f1) 0.722 s, rA 0.53 rB 0.62 pred 0.68
+      WARNING: mean(xB) - mean(xA) = 30.6 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 28.5 mm trial 3: T = 10.7 s, fs = 119.39 Hz, f1 = 6.4068, f2 = 7.7941 Hz (eta/xi), A-only: 6.407/7.794, T_beat env 0.716 vs 1/(f2-f1) 0.721 s, rA 0.55 rB 0.65 pred 0.68
+      WARNING: mean(xB) - mean(xA) = 30.5 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 28.5 mm trial 4: T = 10.8 s, fs = 119.38 Hz, f1 = 6.4061, f2 = 7.7948 Hz (eta/xi), A-only: 6.406/7.795, T_beat env 0.712 vs 1/(f2-f1) 0.720 s, rA 0.57 rB 0.67 pred 0.68
+      WARNING: mean(xB) - mean(xA) = 30.5 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 28.5 mm trial 5: T = 10.8 s, fs = 119.38 Hz, f1 = 6.4065, f2 = 7.7951 Hz (eta/xi), A-only: 6.407/7.795, T_beat env 0.713 vs 1/(f2-f1) 0.720 s, rA 0.55 rB 0.64 pred 0.68
+      WARNING: mean(xB) - mean(xA) = 30.5 mm but folder says d = 28.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 31.0 mm trial 1: T = 10.7 s, fs = 119.38 Hz, f1 = 6.4124, f2 = 7.5163 Hz (eta/xi), A-only: 6.413/7.516, T_beat env 0.901 vs 1/(f2-f1) 0.906 s, rA 0.54 rB 0.66 pred 0.73
+      WARNING: mean(xB) - mean(xA) = 32.0 mm but folder says d = 31.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 31.0 mm trial 2: T = 10.9 s, fs = 119.38 Hz, f1 = 6.4112, f2 = 7.5177 Hz (eta/xi), A-only: 6.411/7.517, T_beat env 0.893 vs 1/(f2-f1) 0.904 s, rA 0.58 rB 0.70 pred 0.73
+      WARNING: mean(xB) - mean(xA) = 32.2 mm but folder says d = 31.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 31.0 mm trial 3: T = 12.2 s, fs = 119.39 Hz, f1 = 6.4115, f2 = 7.5178 Hz (eta/xi), A-only: 6.412/7.518, T_beat env 0.896 vs 1/(f2-f1) 0.904 s, rA 0.59 rB 0.71 pred 0.73
+      WARNING: fs = 119.39 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 31.0 mm trial 4: T = 12.4 s, fs = 119.38 Hz, f1 = 6.4082, f2 = 7.5176 Hz (eta/xi), A-only: 6.408/7.517, T_beat env 0.897 vs 1/(f2-f1) 0.901 s, rA 0.59 rB 0.73 pred 0.73
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 31.0 mm trial 5: T = 12.3 s, fs = 119.38 Hz, f1 = 6.4082, f2 = 7.5175 Hz (eta/xi), A-only: 6.408/7.517, T_beat env 0.896 vs 1/(f2-f1) 0.901 s, rA 0.59 rB 0.72 pred 0.73
+      WARNING: mean(xB) - mean(xA) = 32.2 mm but folder says d = 31.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 33.5 mm trial 1: T = 15.8 s, fs = 119.38 Hz, f1 = 6.4047, f2 = 7.2080 Hz (eta/xi), A-only: 6.405/7.208, T_beat env 1.238 vs 1/(f2-f1) 1.245 s, rA 0.57 rB 0.78 pred 0.79
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 33.5 mm trial 2: T = 16.0 s, fs = 119.38 Hz, f1 = 6.4047, f2 = 7.2099 Hz (eta/xi), A-only: 6.405/7.210, T_beat env 1.227 vs 1/(f2-f1) 1.242 s, rA 0.57 rB 0.76 pred 0.79
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 33.5 mm trial 3: T = 15.9 s, fs = 119.38 Hz, f1 = 6.4026, f2 = 7.2106 Hz (eta/xi), A-only: 6.403/7.210, T_beat env 1.225 vs 1/(f2-f1) 1.237 s, rA 0.57 rB 0.78 pred 0.79
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 33.5 mm trial 4: T = 16.1 s, fs = 119.38 Hz, f1 = 6.4033, f2 = 7.2111 Hz (eta/xi), A-only: 6.403/7.211, T_beat env 1.235 vs 1/(f2-f1) 1.238 s, rA 0.58 rB 0.79 pred 0.79
+      WARNING: mean(xB) - mean(xA) = 34.5 mm but folder says d = 33.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 33.5 mm trial 5: T = 16.2 s, fs = 119.38 Hz, f1 = 6.4033, f2 = 7.2102 Hz (eta/xi), A-only: 6.403/7.210, T_beat env 1.233 vs 1/(f2-f1) 1.239 s, rA 0.56 rB 0.76 pred 0.79
+      WARNING: mean(xB) - mean(xA) = 34.6 mm but folder says d = 33.5 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 36.0 mm trial 1: T = 20.3 s, fs = 119.38 Hz, f1 = 6.4025, f2 = 6.9776 Hz (eta/xi), A-only: 6.403/6.977, T_beat env 1.727 vs 1/(f2-f1) 1.739 s, rA 0.55 rB 0.84 pred 0.84
+      WARNING: mean(xB) - mean(xA) = 37.7 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 36.0 mm trial 2: T = 20.3 s, fs = 119.38 Hz, f1 = 6.4019, f2 = 6.9779 Hz (eta/xi), A-only: 6.402/6.978, T_beat env 1.724 vs 1/(f2-f1) 1.736 s, rA 0.56 rB 0.86 pred 0.84
+      WARNING: mean(xB) - mean(xA) = 37.8 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 36.0 mm trial 3: T = 20.2 s, fs = 119.38 Hz, f1 = 6.4028, f2 = 6.9784 Hz (eta/xi), A-only: 6.403/6.978, T_beat env 1.727 vs 1/(f2-f1) 1.737 s, rA 0.55 rB 0.84 pred 0.84
+      WARNING: mean(xB) - mean(xA) = 37.7 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 36.0 mm trial 4: T = 20.3 s, fs = 119.38 Hz, f1 = 6.4019, f2 = 6.9775 Hz (eta/xi), A-only: 6.402/6.977, T_beat env 1.725 vs 1/(f2-f1) 1.738 s, rA 0.52 rB 0.80 pred 0.84
+      WARNING: mean(xB) - mean(xA) = 37.8 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 36.0 mm trial 5: T = 20.3 s, fs = 119.38 Hz, f1 = 6.4029, f2 = 6.9786 Hz (eta/xi), A-only: 6.403/6.979, T_beat env 1.732 vs 1/(f2-f1) 1.737 s, rA 0.55 rB 0.84 pred 0.84
+      WARNING: mean(xB) - mean(xA) = 37.6 mm but folder says d = 36.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 39.0 mm trial 1: T = 30.4 s, fs = 119.38 Hz, f1 = 6.4002, f2 = 6.8018 Hz (eta/xi), A-only: 6.400/6.802, T_beat env 2.488 vs 1/(f2-f1) 2.490 s, rA 0.47 rB 0.88 pred 0.89
+      WARNING: mean(xB) - mean(xA) = 41.3 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 39.0 mm trial 2: T = 30.3 s, fs = 119.38 Hz, f1 = 6.3997, f2 = 6.8018 Hz (eta/xi), A-only: 6.400/6.802, T_beat env 2.477 vs 1/(f2-f1) 2.487 s, rA 0.47 rB 0.88 pred 0.89
+      WARNING: mean(xB) - mean(xA) = 41.3 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 39.0 mm trial 3: T = 30.4 s, fs = 119.38 Hz, f1 = 6.4000, f2 = 6.8023 Hz (eta/xi), A-only: 6.400/6.802, T_beat env 2.479 vs 1/(f2-f1) 2.485 s, rA 0.50 rB 0.93 pred 0.89
+      WARNING: mean(xB) - mean(xA) = 41.4 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 39.0 mm trial 4: T = 30.3 s, fs = 119.38 Hz, f1 = 6.3996, f2 = 6.8020 Hz (eta/xi), A-only: 6.400/6.802, T_beat env 2.479 vs 1/(f2-f1) 2.486 s, rA 0.49 rB 0.91 pred 0.89
+      WARNING: mean(xB) - mean(xA) = 41.3 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 39.0 mm trial 5: T = 30.4 s, fs = 119.38 Hz, f1 = 6.4009, f2 = 6.8026 Hz (eta/xi), A-only: 6.401/6.803, T_beat env 2.484 vs 1/(f2-f1) 2.490 s, rA 0.47 rB 0.86 pred 0.89
+      WARNING: mean(xB) - mean(xA) = 41.2 mm but folder says d = 39.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+d = 42.0 mm trial 1: T = 40.2 s, fs = 119.38 Hz, f1 = 6.3947, f2 = 6.6860 Hz (eta/xi), A-only: 6.395/6.686, T_beat env 3.430 vs 1/(f2-f1) 3.433 s, rA 0.42 rB 1.04 pred 0.91
+      WARNING: mean(xB) - mean(xA) = 44.6 mm but folder says d = 42.0 mm: if both templates are centred on the magnets this IS d (check ruler value / calibration stick); if the templates sit on different features the offset is harmless
+      WARNING: fs = 119.38 Hz is not a round frame rate: fine if this is the true rate from the video-file properties typed into Clip Settings (a 0.5 % error in fs shifts every frequency by 0.5 %)
+
+FITS
+  ln-ln: n = 3.973 (LINEST s.e. 0.160); max/min gradient lines: n_max = 3.936, n_min = 3.929 -> n = 3.973 กำ 0.004; R^2 = 0.9904
+         ln C = -11.180 +- 0.550 -> C = 1.395e-05 m^5 s^-2 (+- 7.0e-07 from max/min lines)
+  fixed n = 5: C = 3.192e-07 (least squares); mean of C_i = 0.00000042 กำ 0.00000011; chi^2/dof = 91.3/7
+  f1: mean 6.4070 Hz, half-range 0.0124, slope vs d -1.35 +- 0.21 mHz/mm, largest deviation 0.0126 Hz vs mean uncertainty 0.0334 Hz
+
+WINDOW COMPARISON (same records, same trimming; only the FFT window / extraction method changes)
+  normal coordinates: single peak of FFT(xA+xB) and FFT(xB-xA)
+    rectangular : n = 3.973 +- 0.004 (max/min), s.e. 0.160, R^2 = 0.9904, C = 1.395e-05, mean f1 = 6.4070 Hz
+    Hann        : n = 3.974 +- 0.004 (max/min), s.e. 0.160, R^2 = 0.9904, C = 1.388e-05, mean f1 = 6.4071 Hz
+    Hamming     : n = 3.974 +- 0.004 (max/min), s.e. 0.160, R^2 = 0.9904, C = 1.391e-05, mean f1 = 6.4070 Hz
+    Blackman    : n = 3.975 +- 0.004 (max/min), s.e. 0.160, R^2 = 0.9904, C = 1.388e-05, mean f1 = 6.4071 Hz
+    spread of n over the four windows: +-0.001   (max/min-gradient uncertainty of one fit: +-0.00)
+  conventional: two peaks in FFT(xA) alone
+    rectangular : n = 3.966 +- 0.003 (max/min), s.e. 0.160, R^2 = 0.9903, C = 1.433e-05, mean f1 = 6.4065 Hz
+    Hann        : n = 3.975 +- 0.004 (max/min), s.e. 0.160, R^2 = 0.9904, C = 1.386e-05, mean f1 = 6.4071 Hz
+    Hamming     : n = 3.972 +- 0.004 (max/min), s.e. 0.160, R^2 = 0.9904, C = 1.403e-05, mean f1 = 6.4069 Hz
+    Blackman    : n = 3.975 +- 0.004 (max/min), s.e. 0.160, R^2 = 0.9904, C = 1.386e-05, mean f1 = 6.4071 Hz
+    spread of n over the four windows: +-0.004   (max/min-gradient uncertainty of one fit: +-0.00)
